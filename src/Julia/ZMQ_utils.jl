@@ -36,7 +36,6 @@ function puttogether(;
    end
 
    jsonstring = Bytar(jsonstring)
-   # err = Bytar(err)
 
    shorterrcode = UInt8(shorterrcode)
 
