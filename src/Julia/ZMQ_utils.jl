@@ -24,7 +24,7 @@ end
 
 function puttogether(;
                       bindata::Bytar=UInt8[],
-                      jsonstring="{\"status\":false,\"source\":\"\",\"code\":0,\"longdescr\":\"\"}",
+                      jsonstring="{\"status\":false,\"source\":\"\",\"code\":0,\"longdescr\":\"this is a looong description\"}",
                       err=err_dict(),
                       opt_header::Bytar=UInt8[],
                       shorterrcode::Int=0
