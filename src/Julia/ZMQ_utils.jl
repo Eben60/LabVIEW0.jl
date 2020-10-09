@@ -22,6 +22,11 @@ function int2bytar(i::Int; i_type=UInt32)
    reinterpret(UInt8, [i_type(i)])
 end
 
+function bytar2int(b::Bytar; i_type=UInt32)
+   i=reinterpret(i_type, b)[1]
+end
+
+
 function puttogether(;
                       bindata::Bytar=UInt8[],
                       jsonstring="{\"status\":false,\"source\":\"\",\"code\":0,\"longdescr\":\"this is a looong description\"}",
