@@ -41,4 +41,5 @@
 		<Item Name="trivial_rep.vi" Type="VI" URL="../VIs/trivial_rep.vi"/>
 		<Item Name="trivial_req.vi" Type="VI" URL="../VIs/trivial_req.vi"/>
 	</Item>
+	<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 </Library>
