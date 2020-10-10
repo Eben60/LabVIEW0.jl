@@ -58,7 +58,7 @@ end
 function parse_REQ(b)
    command = b[1]
    stop = command == UInt8('p')
-   opt_header = fun2call = json_data = json_dict = bin_data = bytearr_lng = version = nothing
+   opt_header = fun2call = json_data = json_dict = args = bin_data = bytearr_lng = version = nothing
 
 
    if ! stop
@@ -82,6 +82,21 @@ function parse_REQ(b)
       json_data = String(b[json_start:end])
       json_dict = Dict(JSON3.read(json_data))
       fun2call = Symbol(pop!(json_dict, :fun2call))
+      args = json_dict # the rest
+      if !isnothing(bin_data)
+         push!(json_dict, :bin_data=>bin_data)
+      end
+
+
    end
-   return (; stop, version, bin_data, opt_header, json_data, json_dict, fun2call, args=json_dict)
+   return (;
+            stop,
+            version,
+            opt_header,
+            # bin_data,
+            # json_data,
+            # json_dict,
+            fun2call,
+            args
+            )
 end
