@@ -23,7 +23,6 @@ function ZMQ_server()
 
          if ! pr.stop
             if pr.fun2call == :start
-               println("told to start")
                response = UInt8.([0])
             else
                f = eval(pr.fun2call)
