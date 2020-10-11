@@ -18,26 +18,28 @@ function ZMQ_server()
 
          bytesreceived = ZMQ.recv(socket)
 
-         pr = parse_REQ(bytesreceived)
-         @show pr
+         cmnd = parse_cmnd(bytesreceived)
+         @show cmnd
 
-         if ! pr.stop
-            if pr.fun2call == :start
-               response = UInt8.([0])
-            else
-               f = eval(pr.fun2call)
-               y = f(; pr.args...)
-               jsonstring = JSON3.write(y)
-               response = puttogether(; jsonstring)
-            end
+         if cmnd.command == :stop
+            response = UInt8.([1]) # LV_ZMQ_Jl_PROTOCOL_VERSION
+         elseif cmnd.command == :ping
+            response = UInt8.([2])    # LV_ZMQ_Jl_PROTOCOL_VERSION
+         elseif cmnd.command == :callfun
+            pr = parse_REQ(bytesreceived)
+            @show pr
+            f = eval(pr.fun2call)
+            y = f(; pr.args...)
+            jsonstring = JSON3.write(y)
+            response = puttogether(; jsonstring)
          else
-            response = UInt8.([1])
+            response = UInt8.([254]) # LV_ZMQ_Jl_PROTOCOL_VERSION
          end
 
          # Send reply back to client
          ZMQ.send(socket, response)
 
-         pr.stop && break
+         cmnd.command==:stop && break
       end
 
 
