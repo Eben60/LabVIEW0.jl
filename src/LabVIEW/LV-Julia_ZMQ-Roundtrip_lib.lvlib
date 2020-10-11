@@ -20,14 +20,19 @@
 		<Item Name="tests" Type="Folder">
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
 		</Item>
+		<Item Name="unused" Type="Folder">
+			<Item Name="REQ full lifecycle v3.vi" Type="VI" URL="../VIs/REQ full lifecycle v3.vi"/>
+		</Item>
 		<Item Name="Utils" Type="Folder"/>
 		<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 		<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 		<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 		<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
+		<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 		<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 		<Item Name="example1.vi" Type="VI" URL="../VIs/example1.vi"/>
 		<Item Name="example2.vi" Type="VI" URL="../VIs/example2.vi"/>
+		<Item Name="example3.vi" Type="VI" URL="../VIs/example3.vi"/>
 		<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
 		<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 		<Item Name="Parse JSON detailed err.vi" Type="VI" URL="../VIs/Parse JSON detailed err.vi"/>
@@ -35,6 +40,7 @@
 		<Item Name="REQ full lifecycle v2.vi" Type="VI" URL="../VIs/REQ full lifecycle v2.vi"/>
 		<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 		<Item Name="send request, get response.vi" Type="VI" URL="../VIs/send request, get response.vi"/>
+		<Item Name="single REQ.vi" Type="VI" URL="../VIs/single REQ.vi"/>
 		<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 		<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
@@ -43,5 +49,5 @@
 		<Item Name="trivial_rep.vi" Type="VI" URL="../VIs/trivial_rep.vi"/>
 		<Item Name="trivial_req.vi" Type="VI" URL="../VIs/trivial_req.vi"/>
 	</Item>
-	<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
+	<Item Name="example4.vi" Type="VI" URL="../VIs/example4.vi"/>
 </Library>
