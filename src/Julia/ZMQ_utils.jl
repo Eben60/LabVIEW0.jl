@@ -1,6 +1,6 @@
 using JSON3
 
-LV_ZMQ_Jl_PROTOCOL_VERSION = UInt8(1)
+PROTOC_V = UInt8(1)
 
 function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr::String="")
    if err
@@ -49,7 +49,7 @@ function puttogether(;
    bin_lng = int2bytar(length(bin_data))
    js_lng = int2bytar(length(jsonstring))
 
-   r = vcat(shorterrcode, LV_ZMQ_Jl_PROTOCOL_VERSION, o_h_lng, err_lng, bin_lng, opt_header, err, bin_data, jsonstring)
+   r = vcat(shorterrcode, PROTOC_V, o_h_lng, err_lng, bin_lng, opt_header, err, bin_data, jsonstring)
 
 
    return r
@@ -58,7 +58,7 @@ end
 function parse_cmnd(b)
    c = b[1]
    prot_v = b[2]
-   prot_OK = prot_v <= LV_ZMQ_Jl_PROTOCOL_VERSION
+   prot_OK = prot_v <= PROTOC_V
    if c == UInt8('p')
       command = :ping
    elseif c == UInt8('s')

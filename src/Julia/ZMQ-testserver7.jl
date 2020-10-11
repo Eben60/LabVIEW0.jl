@@ -22,9 +22,9 @@ function ZMQ_server()
          @show cmnd
 
          if cmnd.command == :stop
-            response = UInt8.([1]) # LV_ZMQ_Jl_PROTOCOL_VERSION
+            response = UInt8.([1, PROTOC_V])
          elseif cmnd.command == :ping
-            response = UInt8.([2])    # LV_ZMQ_Jl_PROTOCOL_VERSION
+            response = UInt8.([2, PROTOC_V])
          elseif cmnd.command == :callfun
             pr = parse_REQ(bytesreceived)
             @show pr
@@ -33,7 +33,7 @@ function ZMQ_server()
             jsonstring = JSON3.write(y)
             response = puttogether(; jsonstring)
          else
-            response = UInt8.([254]) # LV_ZMQ_Jl_PROTOCOL_VERSION
+            response = UInt8.([254, PROTOC_V])
          end
 
          # Send reply back to client
@@ -45,7 +45,8 @@ function ZMQ_server()
 
    catch y
       println("Exception: ", y)
-      ZMQ.send(socket, UInt8.([255]))
+      response = UInt8.([255, PROTOC_V])
+      ZMQ.send(socket, response)
       print(stacktrace())
 
    finally

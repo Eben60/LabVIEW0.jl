@@ -25,6 +25,7 @@
 		<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 		<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 		<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
+		<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 		<Item Name="example1.vi" Type="VI" URL="../VIs/example1.vi"/>
 		<Item Name="example2.vi" Type="VI" URL="../VIs/example2.vi"/>
 		<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
@@ -37,10 +38,9 @@
 		<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 		<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
+		<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
 		<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 		<Item Name="trivial_rep.vi" Type="VI" URL="../VIs/trivial_rep.vi"/>
 		<Item Name="trivial_req.vi" Type="VI" URL="../VIs/trivial_req.vi"/>
 	</Item>
-	<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
-	<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
 </Library>
