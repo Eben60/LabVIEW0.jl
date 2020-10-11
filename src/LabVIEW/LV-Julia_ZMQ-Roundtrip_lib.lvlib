@@ -43,4 +43,5 @@
 		<Item Name="trivial_rep.vi" Type="VI" URL="../VIs/trivial_rep.vi"/>
 		<Item Name="trivial_req.vi" Type="VI" URL="../VIs/trivial_req.vi"/>
 	</Item>
+	<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 </Library>
