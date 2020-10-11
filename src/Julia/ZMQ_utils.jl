@@ -1,6 +1,6 @@
 using JSON3
 
-PROTOC_V = UInt8(1)
+const PROTOC_V = UInt8(1)
 
 function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr::String="")
    if err
