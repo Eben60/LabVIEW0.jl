@@ -33,6 +33,7 @@
 		<Item Name="example1.vi" Type="VI" URL="../VIs/example1.vi"/>
 		<Item Name="example2.vi" Type="VI" URL="../VIs/example2.vi"/>
 		<Item Name="example3.vi" Type="VI" URL="../VIs/example3.vi"/>
+		<Item Name="example4.vi" Type="VI" URL="../VIs/example4.vi"/>
 		<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
 		<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 		<Item Name="Parse JSON detailed err.vi" Type="VI" URL="../VIs/Parse JSON detailed err.vi"/>
@@ -49,5 +50,4 @@
 		<Item Name="trivial_rep.vi" Type="VI" URL="../VIs/trivial_rep.vi"/>
 		<Item Name="trivial_req.vi" Type="VI" URL="../VIs/trivial_req.vi"/>
 	</Item>
-	<Item Name="example4.vi" Type="VI" URL="../VIs/example4.vi"/>
 </Library>
