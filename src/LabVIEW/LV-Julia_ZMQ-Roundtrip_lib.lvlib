@@ -11,6 +11,7 @@
 	<Item Name="typedefs" Type="Folder">
 		<Item Name="Commands v2.ctl" Type="VI" URL="../VIs/Commands v2.ctl"/>
 		<Item Name="Commands.ctl" Type="VI" URL="../VIs/Commands.ctl"/>
+		<Item Name="Julia functions enum.ctl" Type="VI" URL="../VIs/Julia functions enum.ctl"/>
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
@@ -24,6 +25,8 @@
 		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="Debug" Type="Folder">
+				<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
+				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
 				<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
 				<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
@@ -42,6 +45,6 @@
 			<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
-		<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 	</Item>
+	<Item Name="Floats32 to bytearr.vi" Type="VI" URL="../VIs/Floats32 to bytearr.vi"/>
 </Library>
