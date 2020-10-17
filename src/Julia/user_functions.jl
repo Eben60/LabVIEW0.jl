@@ -37,7 +37,7 @@ function bin2num(;bin_data=nothing,length=0, start=1, numtype="Float32")
 
    bin_data = bin_data[start:start+length-1]
    numtype=Symbol(numtype)
-   numtype=eval(numtype)
+   numtype=eval(numtype) 
 
    nums=numtype.(reinterpret(numtype, bin_data))
    return (; nums)
