@@ -22,6 +22,7 @@
 		</Item>
 		<Item Name="tests" Type="Folder">
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
+			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
 		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="Debug" Type="Folder">
@@ -37,6 +38,7 @@
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
 			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
+			<Item Name="Floats to bytearr.vim" Type="VI" URL="../VIs/Floats to bytearr.vim"/>
 			<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 			<Item Name="Parse JSON detailed err.vi" Type="VI" URL="../VIs/Parse JSON detailed err.vi"/>
@@ -46,5 +48,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="Floats32 to bytearr.vi" Type="VI" URL="../VIs/Floats32 to bytearr.vi"/>
 </Library>
