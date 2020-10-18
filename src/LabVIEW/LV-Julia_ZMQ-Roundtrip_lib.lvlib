@@ -36,6 +36,7 @@
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="args2json.vim" Type="VI" URL="../VIs/args2json.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
+			<Item Name="check ID validity.vi" Type="VI" URL="../VIs/check ID validity.vi"/>
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
 			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
