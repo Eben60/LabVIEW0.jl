@@ -24,6 +24,7 @@
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
 		</Item>
+		<Item Name="unused" Type="Folder"/>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="Debug" Type="Folder">
 				<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
@@ -33,6 +34,7 @@
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
+			<Item Name="args2json.vim" Type="VI" URL="../VIs/args2json.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
