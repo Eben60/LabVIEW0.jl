@@ -26,6 +26,29 @@ function bytar2int(b::Bytar; i_type=UInt32)
    i=reinterpret(i_type, b)[1]
 end
 
+function puttogether_untested(;
+                      bin_data::Bytar=UInt8[],
+                      y=Dict{Symbol, Any}(),
+                      err=err_dict(),
+                      opt_header::Bytar=UInt8[],
+                      shorterrcode::Int=0
+                      )
+
+
+   shorterrcode = UInt8(shorterrcode)
+   y = Dict(pairs(y)) # y can be Dict or named tuple
+   ret = merge(y, err)
+   jsonstring = Bytar(JSON3.write(ret))
+
+   o_h_lng = int2bytar(length(opt_header))
+   bin_lng = int2bytar(length(bin_data))
+   js_lng = int2bytar(length(jsonstring))
+
+   r = vcat(shorterrcode, PROTOC_V, o_h_lng, bin_lng, opt_header, bin_data, jsonstring)
+
+   return r
+end
+
 
 function puttogether(;
                       bin_data::Bytar=UInt8[],
