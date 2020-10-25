@@ -24,7 +24,9 @@
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
 			<Item Name="test check cluster field names.vi" Type="VI" URL="../VIs/test check cluster field names.vi"/>
 			<Item Name="test get cluster field names.vi" Type="VI" URL="../VIs/test get cluster field names.vi"/>
+			<Item Name="test malleable float to bytes v2.vi" Type="VI" URL="../VIs/test malleable float to bytes v2.vi"/>
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
+			<Item Name="test type string.vi" Type="VI" URL="../VIs/test type string.vi"/>
 		</Item>
 		<Item Name="unused" Type="Folder"/>
 		<Item Name="Utils" Type="Folder">
