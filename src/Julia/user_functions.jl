@@ -37,9 +37,23 @@ function bin2num(;bin_data=nothing,length=0, start=1, numtype="Float32")
 
    bin_data = bin_data[start:start+length-1]
    numtype=Symbol(numtype)
-   numtype=eval(numtype) 
+   numtype=eval(numtype)
 
    nums=numtype.(reinterpret(numtype, bin_data))
    return (; nums)
+
+end
+
+function bin2nums(;bin_data=nothing, bindata_descr=nothing)
+
+   # @show typeof(bindata_descr[1])
+   # @show bindata_descr[1]
+   # ars = [(length=bdd.length, start=bdd.start, numtype=bdd.numtype) for bdd in bindata_descr]
+   arrs = [bin2num(bin_data=bin_data, length=bdd.length, start=bdd.start, numtype=bdd.numtype).nums for bdd in bindata_descr]
+   tags = [Symbol(bdd.tag) for bdd in bindata_descr]
+   darrs = Dict(Pair.(tags,arrs))
+   @show darrs
+   return (; darrs)
+   # return (foo=1024)
 
 end

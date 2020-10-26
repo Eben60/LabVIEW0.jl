@@ -27,7 +27,7 @@ function ZMQ_server()
             response = UInt8.([2, PROTOC_V])
          elseif cmnd.command == :callfun
             pr = parse_REQ(bytesreceived)
-            # @show pr
+            @show pr
             f = eval(pr.fun2call)
             y = f(; pr.args...)
             jsonstring = JSON3.write(y)
