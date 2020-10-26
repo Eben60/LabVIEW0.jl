@@ -46,14 +46,10 @@ end
 
 function bin2nums(;bin_data=nothing, bindata_descr=nothing)
 
-   # @show typeof(bindata_descr[1])
-   # @show bindata_descr[1]
-   # ars = [(length=bdd.length, start=bdd.start, numtype=bdd.numtype) for bdd in bindata_descr]
    arrs = [bin2num(bin_data=bin_data, length=bdd.length, start=bdd.start, numtype=bdd.numtype).nums for bdd in bindata_descr]
    tags = [Symbol(bdd.tag) for bdd in bindata_descr]
    darrs = Dict(Pair.(tags,arrs))
    @show darrs
    return (; darrs)
-   # return (foo=1024)
 
 end
