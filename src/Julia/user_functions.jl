@@ -40,8 +40,14 @@ function bin2num(;bin_data=nothing,length=0, start=1, numtype="Float32")
    numtype=eval(numtype)
 
    nums=numtype.(reinterpret(numtype, bin_data))
-   return (; nums)
-
+   if eltype(nums) in (ComplexF32, ComplexF64)
+      nums .= imag.(nums) .+ real.(nums)im
+      numsre = real.(nums) # TODO later on these are not to be returned as JSON
+      numsin = imag.(nums) # then just return nums as array of complex numbers
+      return (; nums=(numsre, numsin))
+   else
+      return (; nums)
+   end
 end
 
 function bin2nums(;bin_data=nothing, bindata_descr=nothing)
