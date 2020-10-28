@@ -13,6 +13,8 @@
 		<Item Name="ZMQ_utils.jl" Type="Document" URL="../../Julia/ZMQ_utils.jl"/>
 	</Item>
 	<Item Name="typedefs" Type="Folder">
+		<Item Name="Bindata description.ctl" Type="VI" URL="../VIs/Bindata description.ctl"/>
+		<Item Name="bindata-only cluster.ctl" Type="VI" URL="../VIs/bindata-only cluster.ctl"/>
 		<Item Name="Commands v2.ctl" Type="VI" URL="../VIs/Commands v2.ctl"/>
 		<Item Name="Commands.ctl" Type="VI" URL="../VIs/Commands.ctl"/>
 		<Item Name="Julia functions enum.ctl" Type="VI" URL="../VIs/Julia functions enum.ctl"/>

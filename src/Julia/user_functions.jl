@@ -33,13 +33,27 @@ function myf3(;bin_data=nothing, arg1=10, arg2=31.4)
    (; bin_lng, a1, a2)
 end
 
-function bin2num(;bin_data=nothing,length=0, start=1, numtype="Float32")
+function arrlength(ar)
+   return length(ar)
+end
 
-   bin_data = bin_data[start:start+length-1]
+function bin2num(;bin_data=nothing, nofbytes, start, arrdims, numtype)
+
+   bin_data = bin_data[start:start+nofbytes-1]
+
    numtype=Symbol(numtype)
    numtype=eval(numtype)
 
    nums=numtype.(reinterpret(numtype, bin_data))
+
+   @show length(nums)
+
+   if length(arrdims) > 1
+      arrdims = Tuple(reverse(arrdims))
+      nums = transpose(reshape(nums, arrdims)) #2D only; see https://discourse.julialang.org/t/should-reshape-have-an-option-for-row-major-order/6929
+   end
+
+
    if eltype(nums) in (ComplexF32, ComplexF64)
       nums .= imag.(nums) .+ real.(nums)im
       numsre = real.(nums) # TODO later on these are not to be returned as JSON
@@ -52,7 +66,7 @@ end
 
 function bin2nums(;bin_data=nothing, bindata_descr=nothing)
 
-   arrs = [bin2num(bin_data=bin_data, length=bdd.length, start=bdd.start, numtype=bdd.numtype).nums for bdd in bindata_descr]
+   arrs = [bin2num(bin_data=bin_data, nofbytes=bdd.nofbytes, start=bdd.start, arrdims=bdd.arrdims, numtype=bdd.numtype).nums for bdd in bindata_descr]
    tags = [Symbol(bdd.tag) for bdd in bindata_descr]
    darrs = Dict(Pair.(tags,arrs))
    @show darrs
