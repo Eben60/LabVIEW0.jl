@@ -25,9 +25,13 @@
 			<Item Name="single REQ.vi" Type="VI" URL="../VIs/single REQ.vi"/>
 		</Item>
 		<Item Name="tests" Type="Folder">
+			<Item Name="bindata to typed num array.vim" Type="VI" URL="../VIs/bindata to typed num array.vim"/>
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
+			<Item Name="test arr, flatten and get type&amp;size.vi" Type="VI" URL="../VIs/test arr, flatten and get type&amp;size.vi"/>
+			<Item Name="test bindata to typed num array.vi" Type="VI" URL="../VIs/test bindata to typed num array.vi"/>
 			<Item Name="test check cluster field names.vi" Type="VI" URL="../VIs/test check cluster field names.vi"/>
 			<Item Name="test get cluster field names.vi" Type="VI" URL="../VIs/test get cluster field names.vi"/>
+			<Item Name="test get elem of empty array.vi" Type="VI" URL="../VIs/test get elem of empty array.vi"/>
 			<Item Name="test malleable float to bytes v2.vi" Type="VI" URL="../VIs/test malleable float to bytes v2.vi"/>
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
 			<Item Name="test type string.vi" Type="VI" URL="../VIs/test type string.vi"/>
@@ -43,11 +47,13 @@
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="args2json.vim" Type="VI" URL="../VIs/args2json.vim"/>
+			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 			<Item Name="check cluster field names.vi" Type="VI" URL="../VIs/check cluster field names.vi"/>
 			<Item Name="check ID validity.vi" Type="VI" URL="../VIs/check ID validity.vi"/>
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
+			<Item Name="Cluster with arr of clusters to JSON.vi" Type="VI" URL="../VIs/Cluster with arr of clusters to JSON.vi"/>
 			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 			<Item Name="Floats to bytearr.vim" Type="VI" URL="../VIs/Floats to bytearr.vim"/>
@@ -60,5 +66,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="Cluster with arr of clusters to JSON.vi" Type="VI" URL="../VIs/Cluster with arr of clusters to JSON.vi"/>
 </Library>
