@@ -73,3 +73,10 @@ function bin2nums(;bin_data=nothing, bindata_descr=nothing)
    return (; darrs)
 
 end
+
+function fromrowmajor(v, arrdims)
+   revdims = Tuple(reverse(arrdims))
+   neworder = length(revdims)::-1:1
+   arr = permutedims(reshape(v, revdims), neworder)
+   return arr
+end
