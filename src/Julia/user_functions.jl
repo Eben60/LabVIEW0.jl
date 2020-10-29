@@ -32,11 +32,6 @@ function myf3(;bin_data=nothing, arg1=10, arg2=31.4)
    a2 = arg2 *3 / 10.0
    (; bin_lng, a1, a2)
 end
-#
-# function arrlength(ar)
-#    return length(ar)
-# end
-#
 
 function fromrowmajor(v, arrdims)
    revdims = Tuple(reverse(arrdims))
@@ -44,8 +39,6 @@ function fromrowmajor(v, arrdims)
    arr = permutedims(reshape(v, revdims), neworder)
    return arr
 end
-
-
 
 function bin2num(;bin_data=nothing, nofbytes, start, arrdims, numtype)
 
@@ -56,14 +49,9 @@ function bin2num(;bin_data=nothing, nofbytes, start, arrdims, numtype)
 
    nums=numtype.(reinterpret(numtype, bin_data))
 
-   @show length(nums)
-
    if length(arrdims) > 1
-      # arrdims = Tuple(reverse(arrdims))
-      # nums = transpose(reshape(nums, arrdims)) #2D only; see https://discourse.julialang.org/t/should-reshape-have-an-option-for-row-major-order/6929
       nums = fromrowmajor(nums, arrdims)
    end
-
 
    if eltype(nums) in (ComplexF32, ComplexF64)
       nums .= imag.(nums) .+ real.(nums)im
