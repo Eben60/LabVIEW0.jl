@@ -48,8 +48,8 @@
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
-			<Item Name="args2json.vim" Type="VI" URL="../VIs/args2json.vim"/>
 			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
+			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 			<Item Name="check cluster field names.vi" Type="VI" URL="../VIs/check cluster field names.vi"/>
 			<Item Name="check ID validity.vi" Type="VI" URL="../VIs/check ID validity.vi"/>
@@ -68,4 +68,7 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
+	<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
+	<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
 </Library>
