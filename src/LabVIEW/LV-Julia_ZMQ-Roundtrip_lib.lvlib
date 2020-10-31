@@ -43,12 +43,15 @@
 			<Item Name="Debug" Type="Folder">
 				<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
+				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
 				<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
 				<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
+			<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
 			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
+			<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 			<Item Name="check cluster field names.vi" Type="VI" URL="../VIs/check cluster field names.vi"/>
@@ -56,6 +59,7 @@
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
 			<Item Name="Cluster with arr of clusters to JSON.vi" Type="VI" URL="../VIs/Cluster with arr of clusters to JSON.vi"/>
+			<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
 			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 			<Item Name="Floats to bytearr.vim" Type="VI" URL="../VIs/Floats to bytearr.vim"/>
@@ -68,7 +72,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
-	<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
-	<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
 </Library>
