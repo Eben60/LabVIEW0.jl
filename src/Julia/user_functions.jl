@@ -73,16 +73,15 @@ function bin2nums(;bin_data=nothing, bindata_descr=nothing)
 
 end
 
-function getsomedictelem(d)
-   k1 = collect(keys(d))[1]
-   arr = d[k1]
+function getsomedictval(d)
+   return collect(values(d))[1]
 end
 
 function test_bin2nums(;bin_data, bindata_descr, idx=nothing)
    @show idx
    darrs = bin2nums(bin_data=bin_data, bindata_descr=bindata_descr)
    arr = darrs[1]
-   a = getsomedictelem(arr)
+   a = getsomedictval(arr)
    elem = nothing
    try
       elem = a[idx...]
