@@ -94,7 +94,49 @@ function parse_cmnd(b)
    return (;command, prot_OK, prot_v)
 end
 
+# # # # # # #
 
+function fromrowmajor(v, arrdims)
+   revdims = Tuple(reverse(arrdims))
+   neworder = length(revdims):-1:1
+   arr = permutedims(reshape(v, revdims), neworder)
+   return arr
+end
+
+function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
+
+   bin_data = bin_data[start:start+nofbytes-1]
+
+   numtype=Symbol(numtype)
+   numtype=eval(numtype)
+
+   nums=numtype.(reinterpret(numtype, bin_data))
+
+   if length(arrdims) > 1
+      nums = fromrowmajor(nums, arrdims)
+   end
+
+   if eltype(nums) in (ComplexF32, ComplexF64)
+      nums .= imag.(nums) .+ real.(nums)im
+      # numsre = real.(nums) # TODO later on these are not to be returned as JSON
+      # numsin = imag.(nums) # then just return nums as array of complex numbers
+      # return (; nums=(numsre, numsin))
+   end
+   return (; nums)
+
+end
+
+function bin2nums(;bin_data, bindata_descr)
+
+   arrs = [bin2num(bin_data=bin_data, nofbytes=bdd.nofbytes, start=bdd.start, arrdims=bdd.arrdims, numtype=bdd.numtype).nums for bdd in bindata_descr]
+   tags = [Symbol(bdd.tag) for bdd in bindata_descr]
+   darrs = Dict(Pair.(tags,arrs))
+   # @show darrs
+   return darrs
+
+end
+
+# # # # # # #
 
 function parse_REQ(b)
 
@@ -119,9 +161,15 @@ function parse_REQ(b)
    json_dict = Dict(JSON3.read(json_data))
    fun2call = Symbol(pop!(json_dict, :fun2call))
    args = json_dict # the rest
-   if !isnothing(bin_data)
-      push!(json_dict, :bin_data=>bin_data)
+   if haskey(args, :bindata_descr)
+      bindata_descr = pop!(args, :bindata_descr)
+      numarrs = bin2nums(bin_data=bin_data, bindata_descr=bindata_descr)
+      args = merge(args, numarrs)
+   elseif !isnothing(bin_data)
+      push!(args, :bin_data=>bin_data)
    end
+
+   # @show ks=collect(keys(args))
 
    return (;
             opt_header,

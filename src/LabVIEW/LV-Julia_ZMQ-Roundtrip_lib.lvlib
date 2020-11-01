@@ -42,6 +42,7 @@
 		<Item Name="Utils" Type="Folder">
 			<Item Name="Debug" Type="Folder">
 				<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
+				<Item Name="send arr of some type.vi" Type="VI" URL="../VIs/send arr of some type.vi"/>
 				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
 				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
 				<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
@@ -72,4 +73,5 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="send arr of complex.vi" Type="VI" URL="../VIs/send arr of complex.vi"/>
 </Library>
