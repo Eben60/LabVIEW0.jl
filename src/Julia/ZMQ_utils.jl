@@ -129,8 +129,8 @@ end
 function bin2nums(;bin_data, bindata_descr)
 
    arrs = [bin2num(bin_data=bin_data, nofbytes=bdd.nofbytes, start=bdd.start, arrdims=bdd.arrdims, numtype=bdd.numtype).nums for bdd in bindata_descr]
-   tags = [Symbol(bdd.tag) for bdd in bindata_descr]
-   darrs = Dict(Pair.(tags,arrs))
+   kwarg_names = [Symbol(bdd.kwarg_name) for bdd in bindata_descr]
+   darrs = Dict(Pair.(kwarg_names,arrs))
    # @show darrs
    return darrs
 
