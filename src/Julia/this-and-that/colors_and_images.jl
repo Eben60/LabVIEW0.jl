@@ -1,4 +1,4 @@
-using Colors, TestImages, QuartzImageIO, ImageShow, FileIO
+using Colors, TestImages, ImageIO, ImageShow, FileIO, ImageCore
 
 # see https://juliaimages.org
 
@@ -15,3 +15,7 @@ println(typeof(p55))
 println(p55.r, p55.g, p55.b)
 
 p55_g = reinterpret(UInt8, p55.g) # 0x85 = 133
+
+cn = channelview(img)
+r=reinterpret(UInt8, cn) #
+println(r[:,5,5])
