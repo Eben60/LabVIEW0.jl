@@ -33,7 +33,7 @@ function myf3(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
    (; bin_lng, a1, a2)
 end
 
-function test_bin2nums(;idx, testarr)
+function test_bin2nums(;idx=1, testarr)
    a = testarr
    elem = nothing
    try
