@@ -30,7 +30,7 @@ function ZMQ_server()
             f = eval(pr.fun2call)
             y = f(; pr.args...)
             jsonstring = JSON3.write(y)
-            response = puttogether(; jsonstring)
+            response = puttogether(; y=y)
          else
             response = UInt8.([254, PROTOC_V])
          end

@@ -2,7 +2,7 @@ using JSON3
 
 const PROTOC_V = UInt8(1)
 
-function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr::String="")
+function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr::String="no errors")
    if err
       # # default values on error
       if errcode == 0
@@ -26,8 +26,8 @@ function bytar2int(b::Bytar; i_type=UInt32)
    i=reinterpret(i_type, b)[1]
 end
 
-function puttogether_untested(;
-                      bin_data::Bytar=UInt8[],
+function puttogether(;
+                      # bin_data::Bytar=UInt8[],
                       y=Dict{Symbol, Any}(),
                       err=err_dict(),
                       opt_header::Bytar=UInt8[],
@@ -37,6 +37,13 @@ function puttogether_untested(;
 
    shorterrcode = UInt8(shorterrcode)
    y = Dict(pairs(y)) # y can be Dict or named tuple
+
+   if haskey(y, :bin_data)
+      bin_data = y[:bin_data]
+   else
+      bin_data=UInt8[]
+   end
+
    ret = merge(y, err)
    jsonstring = Bytar(JSON3.write(ret))
 
@@ -44,13 +51,14 @@ function puttogether_untested(;
    bin_lng = int2bytar(length(bin_data))
    js_lng = int2bytar(length(jsonstring))
 
-   r = vcat(shorterrcode, PROTOC_V, o_h_lng, bin_lng, opt_header, bin_data, jsonstring)
+   r = vcat(shorterrcode, PROTOC_V, o_h_lng,          bin_lng, opt_header,      bin_data, jsonstring)
+  #r = vcat(shorterrcode, PROTOC_V, o_h_lng, err_lng, bin_lng, opt_header, err, bin_data, jsonstring)
 
    return r
 end
 
 
-function puttogether(;
+function puttogether_old(;
                       bin_data::Bytar=UInt8[],
                       jsonstring="{\"status\":false,\"source\":\"\",\"code\":0,\"longdescr\":\"this is a looong description\"}",
                       err=err_dict(),

@@ -32,7 +32,8 @@ function myf2(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
    end
    a1 = arg1 * 20
    a2 = arg2 / 5.0
-   return (; bin_lng, a1, a2)
+   bin_data = Bytar(1:8)
+   return (; bin_lng, a1, a2, bin_data)
 end
 
 function myf3(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
