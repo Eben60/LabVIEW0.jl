@@ -1,4 +1,17 @@
 using JSON3
+using Colors, TestImages, ImageIO, ImageShow, FileIO, ImageCore
+
+function show_img(lena=false)
+   if lena
+      img = testimage("lena_color_256")
+   else
+      img = FileIO.load("src/Julia/this-and-that/peppers_color_256.png")
+   end
+
+   display(img)
+   return nothing
+end
+
 
 function myf1(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
    if !isnothing(bin_data)
@@ -8,7 +21,7 @@ function myf1(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
    end
    a1 = arg1 * 10
    a2 = arg2 / 10.0
-   (; bin_lng, a1, a2)
+   return (; bin_lng, a1, a2)
 end
 
 function myf2(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
@@ -19,7 +32,7 @@ function myf2(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
    end
    a1 = arg1 * 20
    a2 = arg2 / 5.0
-   (; bin_lng, a1, a2)
+   return (; bin_lng, a1, a2)
 end
 
 function myf3(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
@@ -30,7 +43,9 @@ function myf3(;bin_data=nothing, arg1=10, arg2=31.4, int32=nothing)
    end
    a1 = arg1 * 30
    a2 = arg2 *3 / 10.0
-   (; bin_lng, a1, a2)
+   lena = (arg1>=2)
+   show_img(lena)
+   return (; bin_lng, a1, a2)
 end
 
 function test_bin2nums(;idx=1, testarr)
