@@ -68,6 +68,7 @@
 			<Item Name="Floats to bytearr.vim" Type="VI" URL="../VIs/Floats to bytearr.vim"/>
 			<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
+			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse JSON detailed err.vi" Type="VI" URL="../VIs/Parse JSON detailed err.vi"/>
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
 			<Item Name="send request, get response.vi" Type="VI" URL="../VIs/send request, get response.vi"/>
@@ -75,5 +76,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 </Library>

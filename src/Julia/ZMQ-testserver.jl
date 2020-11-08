@@ -10,7 +10,7 @@ function ZMQ_server()
    socket = Socket(context, REP)
    ZMQ.bind(socket, "tcp://*:5555")
 
-   println("starting ZMQ 1-req-server")
+   println("starting ZMQ server: Julia for LabVIEW")
 
    try
       while true

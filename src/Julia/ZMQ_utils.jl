@@ -13,7 +13,7 @@ function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr
       end
    end
 
-   return Dict("status"=>err, "code"=>errcode, "source"=>source, "longdescr"=>longdescr)
+   return Dict(:status=>err, :code=>errcode, :source=>source, :longdescr=>longdescr)
 end
 
 Bytar = Vector{UInt8} # byte array
@@ -36,7 +36,9 @@ function puttogether(;
 
 
    shorterrcode = UInt8(shorterrcode)
-   y = Dict(pairs(y)) # y can be Dict or named tuple
+   y = Dict{Symbol, Any}(pairs(y)) # y can be Dict or named tuple
+
+   @assert haskey(err, :status) & haskey(err, :code) & haskey(err, :source) & haskey(err, :longdescr)
 
    if haskey(y, :bin_data)
       bin_data = y[:bin_data]
@@ -44,15 +46,14 @@ function puttogether(;
       bin_data=UInt8[]
    end
 
-   ret = merge(y, err)
-   jsonstring = Bytar(JSON3.write(ret))
+   push!(y, :errorinfo=>err)
+   jsonstring = Bytar(JSON3.write(y))
 
    o_h_lng = int2bytar(length(opt_header))
    bin_lng = int2bytar(length(bin_data))
    js_lng = int2bytar(length(jsonstring))
 
-   r = vcat(shorterrcode, PROTOC_V, o_h_lng,          bin_lng, opt_header,      bin_data, jsonstring)
-  #r = vcat(shorterrcode, PROTOC_V, o_h_lng, err_lng, bin_lng, opt_header, err, bin_data, jsonstring)
+   r = vcat(shorterrcode, PROTOC_V, o_h_lng, bin_lng, opt_header, bin_data, jsonstring)
 
    return r
 end
