@@ -1,4 +1,4 @@
-using JSON3
+using JSON3, ImageCore
 
 const PROTOC_V = UInt8(1)
 
@@ -85,15 +85,35 @@ end
 
 function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
 
+   # img24bit = Array{UInt8,3}
    bin_data = bin_data[start:start+nofbytes-1]
 
-   numtype=Symbol(numtype)
-   numtype=eval(numtype)
+   nt=Symbol(numtype)
 
-   nums=numtype.(reinterpret(numtype, bin_data))
+   if nt == :img24bit
+      arrdims = Tuple(vcat(3, arrdims))
+      nums = bin_data
+      try
+         nums = reshape(bin_data, arrdims)
+      catch
+         println("went wrong")
+      end
+   else
+      numtype=eval(nt)
+      nums=numtype.(reinterpret(numtype, bin_data))
+      if length(arrdims) > 1
+         nums = fromrowmajor(nums, arrdims)
+      end
+   end
 
-   if length(arrdims) > 1
-      nums = fromrowmajor(nums, arrdims)
+
+
+   if nt == :img24bit
+      # nums[3:-1:1,:,:]
+      @show size(nums)
+      @show typeof(nums)
+      nums = permutedims(nums, [1,3,2])
+      nums = colorview(RGB, nums./255.0)
    end
 
    if eltype(nums) in (ComplexF32, ComplexF64)
@@ -150,10 +170,17 @@ function parse_REQ(b)
    end
 
    # @show ks=collect(keys(args))
-
    return (;
             opt_header,
             fun2call,
             args
             )
 end
+
+# numtype = "img24bit"
+# img24bit = Array{UInt8,3}
+#
+# numtype=Symbol(numtype)
+# numtype=eval(numtype)
+#
+# @show numtype == img24bit

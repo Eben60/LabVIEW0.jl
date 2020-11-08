@@ -11,3 +11,4 @@ LV code | _err?_ | description
 **5235807** | _err_ | Unknown or not supported numeric type
 **5235808** | _err_ | Not a valid Julia ID
 **5235809** | _warn_ | Short Julia server response "undefined warning"
+**5235810** | _err_ | Only 24-bit images are supported

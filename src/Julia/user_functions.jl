@@ -63,3 +63,11 @@ function test_bin2nums(;idx=1, testarr)
 
    return (;elem)
 end
+
+function test_rgbimg(;idx=1, rgbimg)
+   display(rgbimg)
+   elem = -1
+   return (;elem)
+end
+
+# rgbimg

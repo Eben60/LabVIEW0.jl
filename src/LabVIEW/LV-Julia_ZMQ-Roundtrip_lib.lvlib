@@ -37,6 +37,7 @@
 			<Item Name="test get elem of empty array.vi" Type="VI" URL="../VIs/test get elem of empty array.vi"/>
 			<Item Name="test malleable float to bytes v2.vi" Type="VI" URL="../VIs/test malleable float to bytes v2.vi"/>
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
+			<Item Name="test picture to arr.vi" Type="VI" URL="../VIs/test picture to arr.vi"/>
 			<Item Name="test type string.vi" Type="VI" URL="../VIs/test type string.vi"/>
 		</Item>
 		<Item Name="unused" Type="Folder"/>
@@ -47,6 +48,7 @@
 				<Item Name="send arr of some type.vi" Type="VI" URL="../VIs/send arr of some type.vi"/>
 				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
 				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
+				<Item Name="sendRGBimg.vi" Type="VI" URL="../VIs/sendRGBimg.vi"/>
 				<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
 				<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
