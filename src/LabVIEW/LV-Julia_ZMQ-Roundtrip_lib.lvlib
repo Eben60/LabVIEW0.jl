@@ -39,6 +39,7 @@
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
 			<Item Name="test picture to arr.vi" Type="VI" URL="../VIs/test picture to arr.vi"/>
 			<Item Name="test type string.vi" Type="VI" URL="../VIs/test type string.vi"/>
+			<Item Name="testclass.lvclass" Type="LVClass" URL="../VIs/testclass.lvclass"/>
 		</Item>
 		<Item Name="unused" Type="Folder"/>
 		<Item Name="Utils" Type="Folder">
