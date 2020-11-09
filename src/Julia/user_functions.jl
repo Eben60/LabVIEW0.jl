@@ -66,7 +66,7 @@ end
 
 function test_rgbimg(;idx=1, rgbimg)
    display(rgbimg)
-   elem = -1
+   elem = -1 
    return (;elem)
 end
 

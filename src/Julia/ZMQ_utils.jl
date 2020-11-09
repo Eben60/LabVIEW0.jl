@@ -109,11 +109,9 @@ function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
 
 
    if nt == :img24bit
-      # nums[3:-1:1,:,:]
-      @show size(nums)
-      @show typeof(nums)
       nums = permutedims(nums, [1,3,2])
-      nums = colorview(RGB, nums./255.0)
+      nums = colorview(RGB, normedview(nums))
+      # nums = colorview(RGB, nums./255.0)
    end
 
    if eltype(nums) in (ComplexF32, ComplexF64)
