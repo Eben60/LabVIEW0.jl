@@ -85,7 +85,6 @@ end
 
 function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
 
-   # img24bit = Array{UInt8,3}
    bin_data = bin_data[start:start+nofbytes-1]
 
    nt=Symbol(numtype)
