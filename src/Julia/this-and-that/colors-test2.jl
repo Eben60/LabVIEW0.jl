@@ -6,7 +6,10 @@ cv = channelview(img)
 r=collect(reinterpret(UInt8, cv))
 @show typeof(r), size(r) # this is what I have
 
-rc = Float32.(r/255.0)
-im1 = colorview(RGB{N0f8}, r)
-im2 = colorview(RGB{Float32}, rc)
-display(im1)
+# rc = r/255.0
+
+# im2 = colorview(RGB, normedview(r))
+# im2 = reinterpret(RGB{N0f8}, r)
+im2 = colorview(RGB{N0f8}, r)
+display(im2)
+nothing
