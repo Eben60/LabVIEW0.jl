@@ -38,6 +38,7 @@
 			<Item Name="test malleable float to bytes v2.vi" Type="VI" URL="../VIs/test malleable float to bytes v2.vi"/>
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
 			<Item Name="test picture to arr.vi" Type="VI" URL="../VIs/test picture to arr.vi"/>
+			<Item Name="test signal.vi" Type="VI" URL="../VIs/test signal.vi"/>
 			<Item Name="test type string.vi" Type="VI" URL="../VIs/test type string.vi"/>
 			<Item Name="testclass.lvclass" Type="LVClass" URL="../VIs/testclass.lvclass"/>
 		</Item>
@@ -68,7 +69,9 @@
 			<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
 			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
-			<Item Name="Floats to bytearr.vim" Type="VI" URL="../VIs/Floats to bytearr.vim"/>
+			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
+			<Item Name="flatten images.vim" Type="VI" URL="../VIs/flatten images.vim"/>
+			<Item Name="flatten numarrays.vim" Type="VI" URL="../VIs/flatten numarrays.vim"/>
 			<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
