@@ -83,6 +83,47 @@ function fromrowmajor(v, arrdims)
    return arr
 end
 
+function bin2img(;bin_data, nofbytes, start, arrdims, numtype)
+
+   bin_data = bin_data[start:start+nofbytes-1]
+
+   nt=Symbol(numtype)
+
+   if nt == :img24bit
+      arrdims = Tuple(vcat(3, arrdims))
+      nums = bin_data
+      try
+         nums = reshape(bin_data, arrdims)
+      catch
+         println("went wrong")
+      end
+   else
+      numtype=eval(nt)
+      nums=numtype.(reinterpret(numtype, bin_data))
+      if length(arrdims) > 1
+         nums = fromrowmajor(nums, arrdims)
+      end
+   end
+
+
+
+   if nt == :img24bit
+      nums = permutedims(nums, [1,3,2])
+      nums = colorview(RGB, normedview(nums))
+      # nums = colorview(RGB, nums./255.0)
+   end
+
+   if eltype(nums) in (ComplexF32, ComplexF64)
+      nums .= imag.(nums) .+ real.(nums)im
+      # numsre = real.(nums) # TODO later on these are not to be returned as JSON
+      # numsin = imag.(nums) # then just return nums as array of complex numbers
+      # return (; nums=(numsre, numsin))
+   end
+   return (; nums)
+
+end
+
+
 function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
 
    bin_data = bin_data[start:start+nofbytes-1]
@@ -125,7 +166,18 @@ end
 
 function bin2nums(;bin_data, bindata_descr)
 
-   arrs = [bin2num(bin_data=bin_data, nofbytes=bdd.nofbytes, start=bdd.start, arrdims=bdd.arrdims, numtype=bdd.numtype).nums for bdd in bindata_descr]
+   function fbycat(bdd)
+      if bdd.category == "images"
+         f = bin2img
+      elseif bdd.category == "numarrays"
+         f = bin2num
+      else
+         f = nothing
+      end
+      return f
+   end
+
+   arrs = [fbycat(bdd)(bin_data=bin_data, nofbytes=bdd.nofbytes, start=bdd.start, arrdims=bdd.arrdims, numtype=bdd.numtype).nums for bdd in bindata_descr]
    kwarg_names = [Symbol(bdd.kwarg_name) for bdd in bindata_descr]
    darrs = Dict(Pair.(kwarg_names,arrs))
    # @show darrs
