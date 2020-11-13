@@ -83,6 +83,27 @@ function fromrowmajor(v, arrdims)
    return arr
 end
 
+function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
+
+   bin_data = bin_data[start:start+nofbytes-1]
+
+   nt=Symbol(numtype)
+
+   numtype=eval(nt)
+   nums=numtype.(reinterpret(numtype, bin_data))
+   if length(arrdims) > 1
+      nums = fromrowmajor(nums, arrdims)
+   end
+
+
+   if eltype(nums) in (ComplexF32, ComplexF64)
+      nums .= imag.(nums) .+ real.(nums)im
+   end
+   return (; nums)
+
+end
+
+
 function bin2img(;bin_data, nofbytes, start, arrdims, numtype)
 
    bin_data = bin_data[start:start+nofbytes-1]
@@ -92,74 +113,13 @@ function bin2img(;bin_data, nofbytes, start, arrdims, numtype)
    if nt == :img24bit
       arrdims = Tuple(vcat(3, arrdims))
       nums = bin_data
-      try
-         nums = reshape(bin_data, arrdims)
-      catch
-         println("went wrong")
-      end
-   else
-      numtype=eval(nt)
-      nums=numtype.(reinterpret(numtype, bin_data))
-      if length(arrdims) > 1
-         nums = fromrowmajor(nums, arrdims)
-      end
-   end
-
-
-
-   if nt == :img24bit
+      nums = reshape(bin_data, arrdims)
       nums = permutedims(nums, [1,3,2])
       nums = colorview(RGB, normedview(nums))
-      # nums = colorview(RGB, nums./255.0)
-   end
-
-   if eltype(nums) in (ComplexF32, ComplexF64)
-      nums .= imag.(nums) .+ real.(nums)im
-      # numsre = real.(nums) # TODO later on these are not to be returned as JSON
-      # numsin = imag.(nums) # then just return nums as array of complex numbers
-      # return (; nums=(numsre, numsin))
-   end
-   return (; nums)
-
-end
-
-
-function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
-
-   bin_data = bin_data[start:start+nofbytes-1]
-
-   nt=Symbol(numtype)
-
-   if nt == :img24bit
-      arrdims = Tuple(vcat(3, arrdims))
-      nums = bin_data
-      try
-         nums = reshape(bin_data, arrdims)
-      catch
-         println("went wrong")
-      end
    else
-      numtype=eval(nt)
-      nums=numtype.(reinterpret(numtype, bin_data))
-      if length(arrdims) > 1
-         nums = fromrowmajor(nums, arrdims)
-      end
+      error("this image data type not supported")
    end
 
-
-
-   if nt == :img24bit
-      nums = permutedims(nums, [1,3,2])
-      nums = colorview(RGB, normedview(nums))
-      # nums = colorview(RGB, nums./255.0)
-   end
-
-   if eltype(nums) in (ComplexF32, ComplexF64)
-      nums .= imag.(nums) .+ real.(nums)im
-      # numsre = real.(nums) # TODO later on these are not to be returned as JSON
-      # numsin = imag.(nums) # then just return nums as array of complex numbers
-      # return (; nums=(numsre, numsin))
-   end
    return (; nums)
 
 end
