@@ -99,7 +99,7 @@ function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
    if eltype(nums) in (ComplexF32, ComplexF64)
       nums .= imag.(nums) .+ real.(nums)im
    end
-   return (; nums)
+   return nums
 
 end
 
@@ -108,9 +108,7 @@ function bin2img(;bin_data, nofbytes, start, arrdims, numtype)
 
    bin_data = bin_data[start:start+nofbytes-1]
 
-   nt=Symbol(numtype)
-
-   if nt == :img24bit
+   if numtype == "img24bit"
       arrdims = Tuple(vcat(3, arrdims))
       nums = bin_data
       nums = reshape(bin_data, arrdims)
@@ -120,24 +118,18 @@ function bin2img(;bin_data, nofbytes, start, arrdims, numtype)
       error("this image data type not supported")
    end
 
-   return (; nums)
+   return nums
 
 end
 
 function bin2nums(;bin_data, bindata_descr)
 
-   function fbycat(bdd)
-      if bdd.category == "images"
-         f = bin2img
-      elseif bdd.category == "numarrays"
-         f = bin2num
-      else
-         f = nothing
-      end
-      return f
+   function fbycat(ctg)
+      fs = Dict("images"=>bin2img, "numarrays"=>bin2num)
+      return fs[ctg]
    end
 
-   arrs = [fbycat(bdd)(bin_data=bin_data, nofbytes=bdd.nofbytes, start=bdd.start, arrdims=bdd.arrdims, numtype=bdd.numtype).nums for bdd in bindata_descr]
+   arrs = [fbycat(bdd.category)(bin_data=bin_data, nofbytes=bdd.nofbytes, start=bdd.start, arrdims=bdd.arrdims, numtype=bdd.numtype) for bdd in bindata_descr]
    kwarg_names = [Symbol(bdd.kwarg_name) for bdd in bindata_descr]
    darrs = Dict(Pair.(kwarg_names,arrs))
    # @show darrs
