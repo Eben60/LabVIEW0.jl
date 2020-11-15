@@ -35,6 +35,7 @@
 			<Item Name="test check cluster field names.vi" Type="VI" URL="../VIs/test check cluster field names.vi"/>
 			<Item Name="test get cluster field names.vi" Type="VI" URL="../VIs/test get cluster field names.vi"/>
 			<Item Name="test get elem of empty array.vi" Type="VI" URL="../VIs/test get elem of empty array.vi"/>
+			<Item Name="test malleable arr dim.vim" Type="VI" URL="../VIs/test malleable arr dim.vim"/>
 			<Item Name="test malleable float to bytes v2.vi" Type="VI" URL="../VIs/test malleable float to bytes v2.vi"/>
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
 			<Item Name="test picture to arr.vi" Type="VI" URL="../VIs/test picture to arr.vi"/>
@@ -58,6 +59,9 @@
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
 			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
+			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../VIs/bindata to flat numarray.vim"/>
+			<Item Name="bindata to shaped numarray v0.vim" Type="VI" URL="../VIs/bindata to shaped numarray v0.vim"/>
+			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
 			<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
@@ -73,6 +77,7 @@
 			<Item Name="flatten images.vim" Type="VI" URL="../VIs/flatten images.vim"/>
 			<Item Name="flatten numarrays.vim" Type="VI" URL="../VIs/flatten numarrays.vim"/>
 			<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
+			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse JSON detailed err.vi" Type="VI" URL="../VIs/Parse JSON detailed err.vi"/>
