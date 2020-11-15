@@ -33,6 +33,7 @@
 			<Item Name="test arr, flatten and get type&amp;size.vi" Type="VI" URL="../VIs/test arr, flatten and get type&amp;size.vi"/>
 			<Item Name="test bindata to typed num array.vi" Type="VI" URL="../VIs/test bindata to typed num array.vi"/>
 			<Item Name="test check cluster field names.vi" Type="VI" URL="../VIs/test check cluster field names.vi"/>
+			<Item Name="test generate sample array.vi" Type="VI" URL="../VIs/test generate sample array.vi"/>
 			<Item Name="test get cluster field names.vi" Type="VI" URL="../VIs/test get cluster field names.vi"/>
 			<Item Name="test get elem of empty array.vi" Type="VI" URL="../VIs/test get elem of empty array.vi"/>
 			<Item Name="test malleable arr dim.vim" Type="VI" URL="../VIs/test malleable arr dim.vim"/>
@@ -87,4 +88,6 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="convert to some numtype.vim" Type="VI" URL="../VIs/convert to some numtype.vim"/>
+	<Item Name="generate sample array.vim" Type="VI" URL="../VIs/generate sample array.vim"/>
 </Library>
