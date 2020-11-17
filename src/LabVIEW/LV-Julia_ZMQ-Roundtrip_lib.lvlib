@@ -31,6 +31,7 @@
 			<Item Name="bindata to typed num array.vim" Type="VI" URL="../VIs/bindata to typed num array.vim"/>
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
 			<Item Name="test arr, flatten and get type&amp;size.vi" Type="VI" URL="../VIs/test arr, flatten and get type&amp;size.vi"/>
+			<Item Name="test bindata forth and back.vi" Type="VI" URL="../VIs/test bindata forth and back.vi"/>
 			<Item Name="test bindata to typed num array.vi" Type="VI" URL="../VIs/test bindata to typed num array.vi"/>
 			<Item Name="test check cluster field names.vi" Type="VI" URL="../VIs/test check cluster field names.vi"/>
 			<Item Name="test generate sample array.vi" Type="VI" URL="../VIs/test generate sample array.vi"/>
@@ -73,10 +74,12 @@
 			<Item Name="Cluster with arr of clusters to JSON.vi" Type="VI" URL="../VIs/Cluster with arr of clusters to JSON.vi"/>
 			<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
 			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
+			<Item Name="convert to some numtype.vim" Type="VI" URL="../VIs/convert to some numtype.vim"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
 			<Item Name="flatten images.vim" Type="VI" URL="../VIs/flatten images.vim"/>
 			<Item Name="flatten numarrays.vim" Type="VI" URL="../VIs/flatten numarrays.vim"/>
+			<Item Name="generate sample array.vim" Type="VI" URL="../VIs/generate sample array.vim"/>
 			<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
 			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
@@ -88,6 +91,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="convert to some numtype.vim" Type="VI" URL="../VIs/convert to some numtype.vim"/>
-	<Item Name="generate sample array.vim" Type="VI" URL="../VIs/generate sample array.vim"/>
 </Library>
