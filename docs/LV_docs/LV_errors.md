@@ -16,3 +16,4 @@ LV code | _err?_ | description
 **5235812** | _warn_ | Arrays of dim 1..3 only supported
 **5235813** | _err_ | either use default (not connected) values of both start and size, or connect both terminals
 **5235814** | _err_ | size of binary data is not multiple of the size of element
+**5235815** | _err_ | kwarg_name not in bindata descriptions

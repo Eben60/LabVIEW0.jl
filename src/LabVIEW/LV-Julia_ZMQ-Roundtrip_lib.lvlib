@@ -31,6 +31,7 @@
 			<Item Name="bindata to typed num array.vim" Type="VI" URL="../VIs/bindata to typed num array.vim"/>
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
 			<Item Name="test arr, flatten and get type&amp;size.vi" Type="VI" URL="../VIs/test arr, flatten and get type&amp;size.vi"/>
+			<Item Name="test bindata forth and back v2.vi" Type="VI" URL="../VIs/test bindata forth and back v2.vi"/>
 			<Item Name="test bindata forth and back.vi" Type="VI" URL="../VIs/test bindata forth and back.vi"/>
 			<Item Name="test bindata to typed num array.vi" Type="VI" URL="../VIs/test bindata to typed num array.vi"/>
 			<Item Name="test check cluster field names.vi" Type="VI" URL="../VIs/test check cluster field names.vi"/>
@@ -61,6 +62,7 @@
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
 			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
+			<Item Name="bindata subset by kwarg_name.vi" Type="VI" URL="../VIs/bindata subset by kwarg_name.vi"/>
 			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../VIs/bindata to flat numarray.vim"/>
 			<Item Name="bindata to shaped numarray v0.vim" Type="VI" URL="../VIs/bindata to shaped numarray v0.vim"/>
 			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
@@ -91,4 +93,5 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="bindata by kwarg to numarray.vim" Type="VI" URL="../VIs/bindata by kwarg to numarray.vim"/>
 </Library>
