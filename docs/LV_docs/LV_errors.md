@@ -14,3 +14,5 @@ LV code | _err?_ | description
 **5235810** | _err_ | Only 24-bit images are supported
 **5235811** | _err_ | Please wire correct array (numtype+dim) to this VIM
 **5235812** | _warn_ | Arrays of dim 1..3 only supported
+**5235813** | _err_ | either use default (not connected) values of both start and size, or connect both terminals
+**5235814** | _err_ | size of binary data is not multiple of the size of element
