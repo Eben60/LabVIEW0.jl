@@ -1,6 +1,9 @@
 using JSON3, ImageCore
 
 const PROTOC_V = UInt8(1)
+Bytearr = Vector{UInt8} # byte array
+
+include("./conversions.jl")
 
 function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr::String="no errors")
    if err
@@ -14,16 +17,6 @@ function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr
    end
 
    return Dict(:status=>err, :code=>errcode, :source=>source, :longdescr=>longdescr)
-end
-
-Bytearr = Vector{UInt8} # byte array
-
-function int2bytar(i::Int; i_type=UInt32)
-   reinterpret(UInt8, [i_type(i)])
-end
-
-function bytar2int(b::Bytearr; i_type=UInt32)
-   i=reinterpret(i_type, b)[1]
 end
 
 function puttogether(;
@@ -149,6 +142,7 @@ mutable struct bindescr
 end
 
 bindescr() = bindescr(1,0,[],"", "", "numarrays")
+JSON3.StructTypes.StructType(::Type{bindescr}) = JSON3.StructTypes.Struct()
 
 function numtypestring(ar)
    t = eltype(ar)
