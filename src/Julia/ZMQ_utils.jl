@@ -16,21 +16,21 @@ function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr
    return Dict(:status=>err, :code=>errcode, :source=>source, :longdescr=>longdescr)
 end
 
-Bytar = Vector{UInt8} # byte array
+Bytearr = Vector{UInt8} # byte array
 
 function int2bytar(i::Int; i_type=UInt32)
    reinterpret(UInt8, [i_type(i)])
 end
 
-function bytar2int(b::Bytar; i_type=UInt32)
+function bytar2int(b::Bytearr; i_type=UInt32)
    i=reinterpret(i_type, b)[1]
 end
 
 function puttogether(;
-                      # bin_data::Bytar=UInt8[],
+                      # bin_data::Bytearr=UInt8[],
                       y=Dict{Symbol, Any}(),
                       err=err_dict(),
-                      opt_header::Bytar=UInt8[],
+                      opt_header::Bytearr=UInt8[],
                       shorterrcode::Int=0
                       )
 
@@ -47,7 +47,7 @@ function puttogether(;
    end
 
    push!(y, :errorinfo=>err)
-   jsonstring = Bytar(JSON3.write(y))
+   jsonstring = Bytearr(JSON3.write(y))
 
    o_h_lng = int2bytar(length(opt_header))
    bin_lng = int2bytar(length(bin_data))
@@ -136,6 +136,49 @@ function bin2nums(;bin_data, bindata_descr)
    return darrs
 
 end
+
+# # # # # # #
+
+mutable struct bindescr
+   start::Int
+   nofbytes::Int
+   arrdims::Vector{Int}
+   numtype::String
+   kwarg_name::String
+   category::String
+end
+
+bindescr() = bindescr(1,0,[],"", "", "numarrays")
+
+function numtypestring(ar)
+   t = eltype(ar)
+   realtypes = (Float32, Float64, Int8, Int16, Int32, Int64, UInt8, UInt16, UInt32, UInt64)
+   if t in realtypes
+      return string(t)
+   elseif t == ComplexF32  # special cases, as string(ComplexF32) is "Complex{Float32}"
+      return "ComplexF32"
+   elseif t == ComplexF64
+      return "ComplexF64"
+   else
+      return nothing
+   end
+end
+
+
+function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bdds::Vector{bindescr}=bindescr[], kwarg_name)
+   @assert isempty(bin_data) == isempty(bdds)
+   bdd = bindescr()
+   bdd.kwarg_name = kwarg_name
+   bdd.start = length(bin_data)+1
+   bdd.numtype = numtypestring(nums)
+   bdd.nofbytes = 32
+   bdd.arrdims = collect(size(nums))
+   push!(bdds, bdd)
+
+return bin_data, bdds
+
+end
+
 
 # # # # # # #
 
