@@ -23,13 +23,21 @@ function b2n2b(ard)
    bdd = bindescr(1, 24, ard, "UInt8", "nn", "numarrays")
    bin_data = UInt8.(1:24)
    nums = bin2nums(;bin_data=bin_data, bindata_descr=[bdd])[:nn]
+   # println(vec(Int.(nums)))
 
    bd2, bdds = nums2bin(; nums=nums, kwarg_name="nn")
-   return (;bd2, bdd=bdds[1], nums)
+   return (;bd2, bdd=bdds[1], nums=Int.(nums))
 
 end
 
 ard = [2, 3, 4]
+#ard = [4, 6]
 
 # julia> bd2, _, _ = b2n2b(ard); println(Int.(bd2))
 # [1, 13, 5, 17, 9, 21, 2, 14, 6, 18, 10, 22, 3, 15, 7, 19, 11, 23, 4, 16, 8, 20, 12, 24]
+
+# 2D case
+# p=permutedims(nums, (2,1));
+# vec(p) # OK
+# p=permutedims(nums, (3,2,1));
+# vec(p) # OK too
