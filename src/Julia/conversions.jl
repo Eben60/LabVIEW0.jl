@@ -35,6 +35,13 @@ function fromrowmajor(v, arrdims)
    return arr
 end
 
+function fromcolmajor(v, arrdims)
+   revdims = Tuple(reverse(arrdims))
+   neworder = length(revdims):-1:1
+   arr = permutedims(reshape(v, revdims), neworder)
+   return arr
+end
+
 function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
 
    bin_data = bin_data[start:start+nofbytes-1]
@@ -42,7 +49,8 @@ function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
    nt=Symbol(numtype)
 
    numtype=eval(nt)
-   nums=numtype.(reinterpret(numtype, bin_data)) #the outer numtype results in copying the data. That's what I wanted for some reason.
+   # nums=numtype.(reinterpret(numtype, bin_data)) #the outer numtype results in copying the data. That's what I wanted for some reason.
+   nums=collect(reinterpret(numtype, bin_data))
    if length(arrdims) > 1
       nums = fromrowmajor(nums, arrdims)
    end
@@ -94,9 +102,10 @@ function nums2Bytearr(nums)
 
    arrdims = size(nums)
    if length(arrdims) > 1
-      nums = vec(fromrowmajor(nums, arrdims))
+      nums = vec(nums)
+      # nums = vec(fromrowmajor(nums, arrdims))
    end
-   return UInt8.(reinterpret(UInt8, nums))
+   return collect(reinterpret(UInt8, nums))
 end
 
 
@@ -106,9 +115,9 @@ function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bdds::Vecto
    bdd.kwarg_name = kwarg_name
    bdd.start = length(bin_data)+1
    bdd.numtype = numtypestring(nums)
-   bdd.nofbytes = 32
    bdd.arrdims = collect(size(nums))
    bd = nums2Bytearr(nums)
+   bdd.nofbytes = length(bd)
    bin_data = vcat(bin_data, bd)
 
    push!(bdds, bdd)
