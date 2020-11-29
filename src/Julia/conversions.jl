@@ -77,7 +77,7 @@ function bin2img(;bin_data, nofbytes, start, arrdims, numtype)
       nums = permutedims(nums, [1,3,2])
       nums = colorview(RGB, normedview(nums))
    else
-      error("this image data type not supported")
+      throw(DomainError("image data type ($numtype) not supported"))
    end
 
    return nums
