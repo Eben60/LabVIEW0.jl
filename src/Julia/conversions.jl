@@ -42,6 +42,11 @@ function fromcolmajor(v, arrdims)
    return arr
 end
 
+function cmplxswap(c::Complex)
+   c = imag(c) + real(c)im
+   return c
+end
+
 function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
 
    bin_data = bin_data[start:start+nofbytes-1]
@@ -49,15 +54,13 @@ function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
    nt=Symbol(numtype)
 
    numtype=eval(nt)
-   # nums=numtype.(reinterpret(numtype, bin_data)) #the outer numtype results in copying the data. That's what I wanted for some reason.
    nums=collect(reinterpret(numtype, bin_data))
    if length(arrdims) > 1
       nums = fromrowmajor(nums, arrdims)
    end
 
-
    if eltype(nums) in (ComplexF32, ComplexF64)
-      nums .= imag.(nums) .+ real.(nums)im
+      nums .= cmplxswap.(nums)
    end
    return nums
 
@@ -96,18 +99,22 @@ function bin2nums(;bin_data, bindata_descr)
 
 end
 
-# # # # # # #
+# # # # # # # #
 
-function nums2Bytearr(nums)
-
-   arrdims = size(nums)
-   if length(arrdims) > 1
-      nums = vec(nums)
-      # nums = vec(fromrowmajor(nums, arrdims))
+function tocolmajor(arr)
+   arrdims = size(arr)
+   lng = length(arrdims)
+   if lng > 1
+      neworder = lng:-1:1
+      arr = permutedims(arr, neworder)
    end
-   return collect(reinterpret(UInt8, nums))
+   return vec(arr)
 end
 
+function nums2Bytearr(nums)
+   nums = tocolmajor(nums)
+   return collect(reinterpret(UInt8, nums))
+end
 
 function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bdds::Vector{bindescr}=bindescr[], kwarg_name)
    @assert isempty(bin_data) == isempty(bdds)
@@ -115,13 +122,13 @@ function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bdds::Vecto
    bdd.kwarg_name = kwarg_name
    bdd.start = length(bin_data)+1
    bdd.numtype = numtypestring(nums)
+   if eltype(nums) <: Complex
+      nums .= cmplxswap.(nums)
+   end
    bdd.arrdims = collect(size(nums))
    bd = nums2Bytearr(nums)
    bdd.nofbytes = length(bd)
    bin_data = vcat(bin_data, bd)
-
    push!(bdds, bdd)
-
-return (;bin_data, bdds)
-
+   return (;bin_data, bdds)
 end
