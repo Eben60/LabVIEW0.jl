@@ -24,7 +24,7 @@ function numtypestring(ar)
    elseif t == ComplexF64
       return "ComplexF64"
    else
-      return nothing
+      return throw(DomainError("$(string(t)) is not a supported numeric type for exchange with LabVIEW. consider converting array first."))
    end
 end
 
