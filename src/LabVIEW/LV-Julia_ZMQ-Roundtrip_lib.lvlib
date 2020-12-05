@@ -30,11 +30,13 @@
 		<Item Name="tests" Type="Folder">
 			<Item Name="bindata to typed num array.vim" Type="VI" URL="../VIs/bindata to typed num array.vim"/>
 			<Item Name="Cluster to JSON.vi" Type="VI" URL="../VIs/Cluster to JSON.vi"/>
+			<Item Name="generate sample array, also by to-string.vim" Type="VI" URL="../VIs/generate sample array, also by to-string.vim"/>
 			<Item Name="test arr, flatten and get type&amp;size.vi" Type="VI" URL="../VIs/test arr, flatten and get type&amp;size.vi"/>
 			<Item Name="test bindata forth and back v2.vi" Type="VI" URL="../VIs/test bindata forth and back v2.vi"/>
 			<Item Name="test bindata forth and back.vi" Type="VI" URL="../VIs/test bindata forth and back.vi"/>
 			<Item Name="test bindata to typed num array.vi" Type="VI" URL="../VIs/test bindata to typed num array.vi"/>
 			<Item Name="test check cluster field names.vi" Type="VI" URL="../VIs/test check cluster field names.vi"/>
+			<Item Name="test convert complex to bytestring.vi" Type="VI" URL="../VIs/test convert complex to bytestring.vi"/>
 			<Item Name="test generate sample array.vi" Type="VI" URL="../VIs/test generate sample array.vi"/>
 			<Item Name="test get cluster field names.vi" Type="VI" URL="../VIs/test get cluster field names.vi"/>
 			<Item Name="test get elem of empty array.vi" Type="VI" URL="../VIs/test get elem of empty array.vi"/>
