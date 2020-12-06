@@ -11,7 +11,6 @@ function ZMQ_server()
    ZMQ.bind(socket, "tcp://*:5555")
 
    println("starting ZMQ server: Julia for LabVIEW")
-
    try
       while true
          # Wait for next request from client
@@ -20,19 +19,25 @@ function ZMQ_server()
 
          cmnd = parse_cmnd(bytesreceived)
          # @show cmnd
-
+         response = UInt8[]
          if cmnd.command == :stop
             response = UInt8.([1, PROTOC_V])
          elseif cmnd.command == :ping
             response = UInt8.([2, PROTOC_V])
          elseif cmnd.command == :callfun
-            pr = parse_REQ(bytesreceived)
-            f = eval(pr.fun2call)
-            y = f(; pr.args...)
-            jsonstring = JSON3.write(y)
-            response = puttogether(; y=y)
+            try
+               pr = parse_REQ(bytesreceived)
+               f = eval(pr.fun2call)
+               y = f(; pr.args...)
+               jsonstring = JSON3.write(y)
+               response = puttogether(; y=y)
+            catch y
+               longdescr = "Exception: $y ; stacktrace: $(stacktrace())"
+               err = err_dict(err=true, errcode=5235805, source=@__FILE__, longdescr=longdescr)
+               response = puttogether(; err=err, returncode=3)
+            end
          else
-            response = UInt8.([254, PROTOC_V])
+            response = UInt8.([255, PROTOC_V])
          end
 
          # Send reply back to client
@@ -40,19 +45,17 @@ function ZMQ_server()
 
          cmnd.command==:stop && break
       end
-
-
-   catch y
-      println("Exception: ", y)
-      response = UInt8.([255, PROTOC_V])
-      ZMQ.send(socket, response)
-      print(stacktrace())
-
+      
    finally
       # clean up
       ZMQ.close(socket)
       ZMQ.close(context)
    end # try
+   # # clean up
+   # ZMQ.close(socket)
+   # ZMQ.close(context)
+
+
 end
 
 ZMQ_server()

@@ -17,3 +17,4 @@ LV code | _err?_ | description
 **5235813** | _err_ | either use default (not connected) values of both start and size, or connect both terminals
 **5235814** | _err_ | size of binary data is not multiple of the size of element
 **5235815** | _err_ | kwarg_name not found
+**5235816** | _err_ | Julia can't recognize REQ command

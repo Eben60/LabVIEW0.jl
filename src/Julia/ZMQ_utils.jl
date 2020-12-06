@@ -23,15 +23,14 @@ function err_dict(;err::Bool=false, errcode::Int=0, source::String="", longdescr
 end
 
 function puttogether(;
-                      # bin_data::Bytearr=UInt8[],
                       y=Dict{Symbol, Any}(),
                       err=err_dict(),
                       opt_header::Bytearr=UInt8[],
-                      shorterrcode::Int=0
+                      returncode::Int=0
                       )
 
 
-   shorterrcode = UInt8(shorterrcode)
+   returncode = UInt8(returncode)
    y = Dict{Symbol, Any}(pairs(y)) # y can be Dict or named tuple
 
    @assert haskey(err, :status) & haskey(err, :code) & haskey(err, :source) & haskey(err, :longdescr)
@@ -49,7 +48,7 @@ function puttogether(;
    bin_lng = int2bytar(length(bin_data))
    js_lng = int2bytar(length(jsonstring))
 
-   r = vcat(shorterrcode, PROTOC_V, o_h_lng, bin_lng, opt_header, bin_data, jsonstring)
+   r = vcat(returncode, PROTOC_V, o_h_lng, bin_lng, opt_header, bin_data, jsonstring)
 
    return r
 end
