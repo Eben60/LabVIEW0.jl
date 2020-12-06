@@ -1,0 +1,2 @@
+Exception: UndefKeywordError(:testarr)
+Base.StackTraces.StackFrame[ZMQ_server() at ZMQ-testserver.jl:49, top-level scope at ZMQ-testserver.jl:58, include(::Function, ::Module, ::String) at Base.jl:380, include(::Module, ::String) at Base.jl:368, exec_options(::Base.JLOptions) at client.jl:296, _start() at client.jl:506]
