@@ -64,9 +64,26 @@ function test_bin2nums(;idx=1, testarr)
    return (;elem)
 end
 
+function numarr_loopback(;idx=1, testarr)
+   a = testarr
+   elem = nothing
+   try
+      elem = a[idx...]
+      if typeof(elem) in (ComplexF32, ComplexF64)
+         elem = (re=real.(elem), im=imag.(elem))
+      end
+   catch
+      elem = -1
+   end # try
+   # return (;bin_data, bdds)
+   bin_data, bindata_descr = nums2bin(; nums=testarr, kwarg_name="testarr")
+   return (;elem, bin_data, bindata_descr)
+end
+
+
 function test_rgbimg(;idx=1, rgbimg)
    display(rgbimg)
-   elem = -1 
+   elem = -1
    return (;elem)
 end
 

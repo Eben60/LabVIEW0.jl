@@ -57,6 +57,8 @@
 				<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 				<Item Name="send arr of complex.vi" Type="VI" URL="../VIs/send arr of complex.vi"/>
 				<Item Name="send arr of some type.vi" Type="VI" URL="../VIs/send arr of some type.vi"/>
+				<Item Name="send&amp;receive_AnyArr.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr.vi"/>
+				<Item Name="sendAnyArr.vi" Type="VI" URL="../VIs/sendAnyArr.vi"/>
 				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
 				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
 				<Item Name="sendRGBimg.vi" Type="VI" URL="../VIs/sendRGBimg.vi"/>
@@ -99,5 +101,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="sendAnyArr.vi" Type="VI" URL="../VIs/sendAnyArr.vi"/>
 </Library>
