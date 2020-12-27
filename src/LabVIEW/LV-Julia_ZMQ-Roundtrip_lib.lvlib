@@ -19,6 +19,7 @@
 		<Item Name="Commands.ctl" Type="VI" URL="../VIs/Commands.ctl"/>
 		<Item Name="extended error cluster.ctl" Type="VI" URL="../VIs/extended error cluster.ctl"/>
 		<Item Name="Julia functions enum.ctl" Type="VI" URL="../VIs/Julia functions enum.ctl"/>
+		<Item Name="Numeric Types enum.ctl" Type="VI" URL="../VIs/Numeric Types enum.ctl"/>
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
@@ -45,8 +46,10 @@
 			<Item Name="test malleable float to bytes.vi" Type="VI" URL="../VIs/test malleable float to bytes.vi"/>
 			<Item Name="test picture to arr.vi" Type="VI" URL="../VIs/test picture to arr.vi"/>
 			<Item Name="test signal.vi" Type="VI" URL="../VIs/test signal.vi"/>
+			<Item Name="test start Julia &amp; execute a REPL line.vi" Type="VI" URL="../VIs/test start Julia &amp; execute a REPL line.vi"/>
 			<Item Name="test type string.vi" Type="VI" URL="../VIs/test type string.vi"/>
 			<Item Name="testclass.lvclass" Type="LVClass" URL="../VIs/testclass.lvclass"/>
+			<Item Name="testsuite arrays.vi" Type="VI" URL="../VIs/testsuite arrays.vi"/>
 		</Item>
 		<Item Name="unused" Type="Folder"/>
 		<Item Name="Utils" Type="Folder">
@@ -96,4 +99,5 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="sendAnyArr.vi" Type="VI" URL="../VIs/sendAnyArr.vi"/>
 </Library>
