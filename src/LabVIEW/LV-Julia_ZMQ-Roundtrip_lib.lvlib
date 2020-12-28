@@ -58,6 +58,7 @@
 				<Item Name="send arr of complex.vi" Type="VI" URL="../VIs/send arr of complex.vi"/>
 				<Item Name="send arr of some type.vi" Type="VI" URL="../VIs/send arr of some type.vi"/>
 				<Item Name="send&amp;receive_AnyArr.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr.vi"/>
+				<Item Name="send&amp;receive_AnyArr_v2.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr_v2.vi"/>
 				<Item Name="sendAnyArr.vi" Type="VI" URL="../VIs/sendAnyArr.vi"/>
 				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
 				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
@@ -72,8 +73,8 @@
 			<Item Name="bindata by kwarg to numarray.vim" Type="VI" URL="../VIs/bindata by kwarg to numarray.vim"/>
 			<Item Name="bindata subset by kwarg_name.vi" Type="VI" URL="../VIs/bindata subset by kwarg_name.vi"/>
 			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../VIs/bindata to flat numarray.vim"/>
+			<Item Name="bindata to shaped numarray no clustering.vim" Type="VI" URL="../VIs/bindata to shaped numarray no clustering.vim"/>
 			<Item Name="bindata to shaped numarray v0.vim" Type="VI" URL="../VIs/bindata to shaped numarray v0.vim"/>
-			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
 			<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
@@ -101,4 +102,6 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
+	<Item Name="generate sample array v0.vim" Type="VI" URL="../VIs/generate sample array v0.vim"/>
 </Library>
