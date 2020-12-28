@@ -6,8 +6,17 @@ function foo(;kwargs...)
     # else
     #     c=kwargs[:c]
     # end
-    c = get(kwargs, :c, 3)
-
+    #
+    #
+    # c = get(kwargs, :c, 3) # alternative solution
+    #
+    #
+    defaults = (;c=3)
+    kwargs = merge(defaults, kwargs)
+    newkeys = Set(keys(kwargs))
+    delete!(keys(kwargs), :b)
+    @show newkeys
+    c = kwargs.c
     @show c
     return nothing
 end
