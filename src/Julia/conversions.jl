@@ -116,8 +116,8 @@ function nums2Bytearr(nums)
    return collect(reinterpret(UInt8, nums))
 end
 
-function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bdds::Vector{bindescr}=bindescr[], kwarg_name)
-   @assert isempty(bin_data) == isempty(bdds)
+function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bindata_descr::Vector{bindescr}=bindescr[], kwarg_name)
+   @assert isempty(bin_data) == isempty(bindata_descr)
    bdd = bindescr()
    bdd.kwarg_name = kwarg_name
    bdd.start = length(bin_data)+1
@@ -129,6 +129,6 @@ function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bdds::Vecto
    bd = nums2Bytearr(nums)
    bdd.nofbytes = length(bd)
    bin_data = vcat(bin_data, bd)
-   push!(bdds, bdd)
-   return (;bin_data, bdds)
+   push!(bindata_descr, bdd)
+   return (;bin_data, bindata_descr)
 end

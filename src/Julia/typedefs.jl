@@ -5,7 +5,7 @@ mutable struct bindescr
    nofbytes::Int
    arrdims::Vector{Int}
    numtype::String
-   kwarg_name::String
+   kwarg_name::Union{String,Symbol}
    category::String
 end
 

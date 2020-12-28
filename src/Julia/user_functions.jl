@@ -84,6 +84,58 @@ function numarr_loopback(; kwargs...) # idx=1, testarr)
    return (;elem, bin_data, bindata_descr)
 end
 
+function numarrs_lpbk(; kwargs...) # idx=1, testarr)
+   version=12 ; println("version = $version")
+   defaults = (;idx=1)
+   kwargs = merge(defaults, kwargs)
+
+   arrnames = Set(keys(kwargs)) ; delete!(arrnames, :idx)
+
+   # @show arrnames
+
+   testarr = kwargs[:testarr]
+   idx = kwargs[:idx]
+   a = testarr
+   elem = nothing
+   try
+      elem = a[idx...]
+      if typeof(elem) in (ComplexF32, ComplexF64)
+         elem = (re=real.(elem), im=imag.(elem))
+      end
+   catch
+      elem = -1
+   end # try
+
+   bin_data = Bytearr()
+   bindata_descr=bindescr[]
+
+   for arrname in arrnames
+      bin_data, bindata_descr = nums2bin(; bin_data, bindata_descr, nums=kwargs[arrname], kwarg_name=arrname)
+   end
+   return (;elem, bin_data, bindata_descr)
+end
+
+
+# function numarrs_lpbk(; kwargs...) # idx=1, testarr)
+#    defaults = (;idx=1)
+#    kwargs = merge(defaults, kwargs)
+#    testarr = kwargs[:testarr]
+#    idx = kwargs[:idx]
+#    a = testarr
+#    elem = nothing
+#    try
+#       elem = a[idx...]
+#       if typeof(elem) in (ComplexF32, ComplexF64)
+#          elem = (re=real.(elem), im=imag.(elem))
+#       end
+#    catch
+#       elem = -1
+#    end # try
+#    # return (;bin_data, bdds)
+#    bin_data, bindata_descr = nums2bin(; nums=testarr, kwarg_name="testarr")
+#    return (;elem, bin_data, bindata_descr)
+# end
+
 
 function test_rgbimg(;idx=1, rgbimg)
    display(rgbimg)
