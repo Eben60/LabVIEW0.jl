@@ -64,7 +64,11 @@ function test_bin2nums(;idx=1, testarr)
    return (;elem)
 end
 
-function numarr_loopback(;idx=1, testarr)
+function numarr_loopback(; kwargs...) # idx=1, testarr)
+   @show keys(kwargs)
+
+   testarr = kwargs[:testarr]
+   idx = kwargs[:idx]
    a = testarr
    elem = nothing
    try
