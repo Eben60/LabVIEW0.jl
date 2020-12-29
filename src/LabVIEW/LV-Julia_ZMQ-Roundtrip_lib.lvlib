@@ -60,6 +60,7 @@
 				<Item Name="send&amp;receive_AnyArr.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr.vi"/>
 				<Item Name="send&amp;receive_AnyArr_v2.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr_v2.vi"/>
 				<Item Name="send&amp;receive_AnyArr_v3.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr_v3.vi"/>
+				<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 				<Item Name="sendAnyArr.vi" Type="VI" URL="../VIs/sendAnyArr.vi"/>
 				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
 				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
@@ -106,5 +107,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 </Library>
