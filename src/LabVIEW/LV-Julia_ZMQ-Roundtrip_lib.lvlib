@@ -59,6 +59,7 @@
 				<Item Name="send arr of some type.vi" Type="VI" URL="../VIs/send arr of some type.vi"/>
 				<Item Name="send&amp;receive_AnyArr.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr.vi"/>
 				<Item Name="send&amp;receive_AnyArr_v2.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr_v2.vi"/>
+				<Item Name="send&amp;receive_AnyArr_v3.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr_v3.vi"/>
 				<Item Name="sendAnyArr.vi" Type="VI" URL="../VIs/sendAnyArr.vi"/>
 				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
 				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
@@ -75,6 +76,7 @@
 			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../VIs/bindata to flat numarray.vim"/>
 			<Item Name="bindata to shaped numarray no clustering.vim" Type="VI" URL="../VIs/bindata to shaped numarray no clustering.vim"/>
 			<Item Name="bindata to shaped numarray v0.vim" Type="VI" URL="../VIs/bindata to shaped numarray v0.vim"/>
+			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
 			<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
@@ -90,6 +92,7 @@
 			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
 			<Item Name="flatten images.vim" Type="VI" URL="../VIs/flatten images.vim"/>
 			<Item Name="flatten numarrays.vim" Type="VI" URL="../VIs/flatten numarrays.vim"/>
+			<Item Name="generate sample array v0.vim" Type="VI" URL="../VIs/generate sample array v0.vim"/>
 			<Item Name="generate sample array.vim" Type="VI" URL="../VIs/generate sample array.vim"/>
 			<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
 			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
@@ -97,11 +100,10 @@
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse JSON detailed err.vi" Type="VI" URL="../VIs/Parse JSON detailed err.vi"/>
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
+			<Item Name="read numarray, compare with original one.vi" Type="VI" URL="../VIs/read numarray, compare with original one.vi"/>
 			<Item Name="send request, get response.vi" Type="VI" URL="../VIs/send request, get response.vi"/>
 			<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
-	<Item Name="generate sample array v0.vim" Type="VI" URL="../VIs/generate sample array v0.vim"/>
 </Library>
