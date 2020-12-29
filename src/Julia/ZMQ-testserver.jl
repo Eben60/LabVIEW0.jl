@@ -36,7 +36,7 @@ function ZMQ_server()
                err_stack_trace = stacktrace(catch_backtrace())
                # # https://docs.julialang.org/en/v1/manual/stacktraces/#Error-handling-1
                # stack_trace = "Exception: $y ; stacktrace: $(stacktrace())"
-               err = err_dict(;err=true, errcode=5235805, source=@__FILE__, stacktrace=err_stack_trace)
+               err = err_dict(;err=true, errcode=5235805, source=@__FILE__, stack_trace=err_stack_trace)
                response = puttogether(; err=err, returncode=3)
             end
          else

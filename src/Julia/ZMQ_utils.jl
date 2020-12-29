@@ -8,15 +8,46 @@ end
 
 include("./conversions.jl")
 
+function StackFrame_to_NamedTuple(fm)
+   # func::Symbol
+   #    The name of the function containing the execution context.
+   # linfo::Union{Core.MethodInstance, CodeInfo, Nothing}
+   #    The MethodInstance containing the execution context (if it could be found).
+   # file::Symbol
+   #    The path to the file containing the execution context.
+   # line::Int
+   #    The line number in the file containing the execution context.
+   # from_c::Bool
+   #    True if the code is from C.
+   # inlined::Bool
+   #    True if the code is from an inlined frame.
+   # pointer::UInt64
+   return (func=fm.func,
+          linfo=string(fm.linfo),
+          file=fm.file,
+          line=fm.line,
+          from_c=fm.from_c,
+          inlined=fm.inlined,
+          pointer=fm.pointer)
+end
+
 function err_dict(;err::Bool=false, errcode::Int=0, source::String="", stack_trace=[])
    if err
       # # default values on error
       if errcode == 0
          errcode = 5235805
       end
+
+
+
       # if stack_trace == ""
       #    stack_trace = "Julia script error"
       # end
+   end
+
+   if ! isempty(stack_trace)
+      stack_trace = [StackFrame_to_NamedTuple(e) for e in stack_trace]
+      # stack_trace = ["$e" for e in stack_trace]
    end
 
    return Dict(:status=>err, :code=>errcode, :source=>source, :stack_trace=>stack_trace)

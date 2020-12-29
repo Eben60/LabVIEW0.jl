@@ -17,10 +17,12 @@
 		<Item Name="bindata-only cluster.ctl" Type="VI" URL="../VIs/bindata-only cluster.ctl"/>
 		<Item Name="Commands v2.ctl" Type="VI" URL="../VIs/Commands v2.ctl"/>
 		<Item Name="Commands.ctl" Type="VI" URL="../VIs/Commands.ctl"/>
+		<Item Name="detailed error info.ctl" Type="VI" URL="../VIs/detailed error info.ctl"/>
 		<Item Name="extended error cluster.ctl" Type="VI" URL="../VIs/extended error cluster.ctl"/>
 		<Item Name="Julia functions enum.ctl" Type="VI" URL="../VIs/Julia functions enum.ctl"/>
 		<Item Name="Numeric Types enum.ctl" Type="VI" URL="../VIs/Numeric Types enum.ctl"/>
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
+		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
 		<Item Name="Examples" Type="Folder">
