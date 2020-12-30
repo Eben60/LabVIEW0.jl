@@ -24,7 +24,7 @@ end
 
 function numtypestring(ar)
    t = eltype(ar)
-   realtypes = (Float32, Float64, Int8, Int16, Int32, Int64, UInt8, UInt16, UInt32, UInt64)
+   realtypes = (Float32, Float64, Int8, Int16, Int32, Int64, UInt8, UInt16, UInt32, UInt64, Bool)
    if t in realtypes
       return string(t)
    elseif t == ComplexF32  # special cases, as string(ComplexF32) is "Complex{Float32}"
