@@ -22,7 +22,8 @@ function StackFrame_to_NamedTuple(fm)
    # inlined::Bool
    #    True if the code is from an inlined frame.
    # pointer::UInt64
-   return (func=fm.func,
+   return (frame_summary = string(fm),
+          func=fm.func,
           linfo=string(fm.linfo),
           file=fm.file,
           line=fm.line,
