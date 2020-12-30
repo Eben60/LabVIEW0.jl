@@ -7,11 +7,19 @@ end
 # # # # # # # #
 
 function int2bytar(i::Int; i_type=UInt32)
-   reinterpret(UInt8, [i_type(i)])
+   if i_type==Bool
+      return UInt8(Bool)
+   else
+      return reinterpret(UInt8, [i_type(i)])
+   end
 end
 
 function bytar2int(b::Bytearr; i_type=UInt32)
-   i=reinterpret(i_type, b)[1]
+   if i_type != Bool
+      return reinterpret(i_type, b)[1]
+   else
+      return Bool(b[1])
+   end
 end
 
 function numtypestring(ar)
@@ -51,10 +59,15 @@ function bin2num(;bin_data, nofbytes, start, arrdims, numtype)
 
    bin_data = bin_data[start:start+nofbytes-1]
 
-   nt=Symbol(numtype)
+   nt = Symbol(numtype)
+   numtype = eval(nt)
 
-   numtype=eval(nt)
-   nums=collect(reinterpret(numtype, bin_data))
+   if numtype != Bool
+      nums = collect(reinterpret(numtype, bin_data))
+   else
+      nums = Bool.(bin_data)
+   end
+
    if length(arrdims) > 1
       nums = fromrowmajor(nums, arrdims)
    end
@@ -113,7 +126,11 @@ end
 
 function nums2Bytearr(nums)
    nums = tocolmajor(nums)
-   return collect(reinterpret(UInt8, nums))
+   if eltype(nums) == Bool
+      return UInt8.(nums)
+   else
+      return collect(reinterpret(UInt8, nums))
+   end
 end
 
 function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bindata_descr::Vector{bindescr}=bindescr[], kwarg_name)
