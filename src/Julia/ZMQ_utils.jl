@@ -32,7 +32,7 @@ function StackFrame_to_NamedTuple(fm)
           pointer=fm.pointer)
 end
 
-function err_dict(;err::Bool=false, errcode::Int=0, source::String="", stack_trace=[])
+function err_dict(;err::Bool=false, errcode::Int=0, source::String="", stack_trace=[], excep="")
    if err
       # # default values on error
       if errcode == 0
@@ -51,7 +51,9 @@ function err_dict(;err::Bool=false, errcode::Int=0, source::String="", stack_tra
       # stack_trace = ["$e" for e in stack_trace]
    end
 
-   return Dict(:status=>err, :code=>errcode, :source=>source, :stack_trace=>stack_trace)
+
+
+   return Dict(:status=>err, :code=>errcode, :source=>source, :detailed_info=>(excep=string(excep), trace=stack_trace))
 end
 
 function puttogether(;
@@ -65,7 +67,7 @@ function puttogether(;
    returncode = UInt8(returncode)
    y = Dict{Symbol, Any}(pairs(y)) # y can be Dict or named tuple
 
-   @assert haskey(err, :status) & haskey(err, :code) & haskey(err, :source) & haskey(err, :stack_trace)
+   @assert haskey(err, :status) & haskey(err, :code) & haskey(err, :source) & haskey(err, :detailed_info)
 
    if haskey(y, :bin_data)
       bin_data = y[:bin_data]
