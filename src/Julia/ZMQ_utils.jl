@@ -83,7 +83,7 @@ function err_dict(;err::Bool=false, errcode::Int=0, source::String="", stack_tra
 
 
 
-   return (;status=err, code=errcode, source=source, detailed_info=(excep=string(excep), trace=stack_trace))
+   return (;status=err, code=errcode, source=source, detailed_info=(exception_or_info=string(excep), trace=stack_trace))
 end
 
 function puttogether(;
