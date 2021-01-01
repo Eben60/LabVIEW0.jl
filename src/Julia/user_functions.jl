@@ -7,8 +7,10 @@ function show_img(lena=false)
    else
       img = FileIO.load("src/Julia/this-and-that/peppers_color_256.png")
    end
-
-   display(img)
+   try
+      display("image/png", img)
+   catch
+   end
    return nothing
 end
 
@@ -85,13 +87,12 @@ function numarr_loopback(; kwargs...) # idx=1, testarr)
 end
 
 function numarrs_lpbk(; kwargs...) # idx=1, testarr)
-   version=16 ; println("version = $version")
+   version=17 ; println("version = $version")
    defaults = (;idx=1)
-   # @show kwargs
    kwargs = merge(defaults, kwargs)
 
    arrnames = Set(keys(kwargs)) ; delete!(arrnames, :idx)
-
+   # @show arrnames
    testarr = kwargs[:testarr]
    idx = kwargs[:idx]
    a = testarr

@@ -29,14 +29,11 @@ function ZMQ_server()
                pr = parse_REQ(bytesreceived)
                f = eval(pr.fun2call)
                y = f(; pr.args...)
-               jsonstring = JSON3.write(y)
                response = puttogether(; y=y)
-            catch y
-               # println(string(y))
+            catch excep
                err_stack_trace = stacktrace(catch_backtrace())
                # # https://docs.julialang.org/en/v1/manual/stacktraces/#Error-handling-1
-               # stack_trace = "Exception: $y ; stacktrace: $(stacktrace())"
-               err = err_dict(;err=true, errcode=5235805, source=@__FILE__ , stack_trace=err_stack_trace, excep=y)
+               err = err_dict(;err=true, errcode=5235805, source=@__FILE__ , stack_trace=err_stack_trace, excep=excep)
                response = puttogether(; err=err, returncode=3)
             end
          else
@@ -54,9 +51,7 @@ function ZMQ_server()
       ZMQ.close(socket)
       ZMQ.close(context)
    end # try
-   # # clean up
-   # ZMQ.close(socket)
-   # ZMQ.close(context)
+
 
 
 end
