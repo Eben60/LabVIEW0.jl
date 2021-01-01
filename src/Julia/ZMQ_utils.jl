@@ -8,9 +8,34 @@ end
 
 include("./conversions.jl")
 
-function get_LV_ZMQ_JL_path()
-   return dirname(@__FILE__)
+
+function get_script_path(p)
+   scriptexists = true # global var to be declared on the module level
+   srcdir = @__DIR__
+   dummy = joinpath(srcdir, "dummy.jl")
+   _, suffix = splitext(p)
+   if suffix != ".jl"
+      scriptexists = false
+      return dummy
+   elseif isfile(p)
+      return realpath(p)
+   end
+
+   p1 = joinpath(srcdir,p)
+
+   if isfile(p1)
+      return p1
+   else
+      scriptexists = false
+      return dummy
+   end
 end
+
+
+
+
+
+
 
 function StackFrame_to_NamedTuple(fm)
    # func::Symbol
