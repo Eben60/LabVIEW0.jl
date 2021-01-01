@@ -36,7 +36,6 @@ end
 function get_LVlib_path()
    srcdir = @__DIR__
    return joinpath(dirname(srcdir), "LabVIEW")
-
 end
 
 function StackFrame_to_NamedTuple(fm)
@@ -84,7 +83,7 @@ function err_dict(;err::Bool=false, errcode::Int=0, source::String="", stack_tra
 
 
 
-   return Dict(:status=>err, :code=>errcode, :source=>source, :detailed_info=>(excep=string(excep), trace=stack_trace))
+   return (;status=err, code=errcode, source=source, detailed_info=(excep=string(excep), trace=stack_trace))
 end
 
 function puttogether(;
