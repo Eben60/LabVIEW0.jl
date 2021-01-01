@@ -1,5 +1,5 @@
 using JSON3
-using Colors, TestImages, ImageIO, ImageShow, FileIO, ImageCore
+using Colors, TestImages, ImageIO, ImageShow, FileIO
 
 function show_img(lena=false)
    if lena
