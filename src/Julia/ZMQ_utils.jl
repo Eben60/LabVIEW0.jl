@@ -33,11 +33,11 @@ function get_script_path(p)
    end
 end
 
+function get_LVlib_path()
+   srcdir = @__DIR__
+   return joinpath(dirname(srcdir), "LabVIEW")
 
-
-
-
-
+end
 
 function StackFrame_to_NamedTuple(fm)
    # func::Symbol
