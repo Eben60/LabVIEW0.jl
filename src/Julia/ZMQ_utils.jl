@@ -8,6 +8,10 @@ end
 
 include("./conversions.jl")
 
+function get_LV_ZMQ_JL_path()
+   return dirname(@__FILE__)
+end
+
 function StackFrame_to_NamedTuple(fm)
    # func::Symbol
    #    The name of the function containing the execution context.
