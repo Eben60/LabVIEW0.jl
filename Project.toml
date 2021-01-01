@@ -3,6 +3,10 @@ uuid = "5183b3a5-06a0-41b4-b5e5-84b1becd192f"
 authors = ["Eben60 <8xe8n-cm@online.de>"]
 version = "0.1.0"
 
+[deps]
+ImageCore = "a09fc81d-aa75-5fe9-8630-4744c3626534"
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+ZMQ = "c2297ded-f4af-51ae-bb23-16f91089e4e1"
 
 [compat]
 julia = "^1.5"

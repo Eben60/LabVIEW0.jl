@@ -10,7 +10,7 @@ include("./conversions.jl")
 
 
 function get_script_path(p)
-   scriptexists = true # global var to be declared on the module level
+   global scriptexists
    srcdir = @__DIR__
    dummy = joinpath(srcdir, "dummy.jl")
    _, suffix = splitext(p)
@@ -18,12 +18,14 @@ function get_script_path(p)
       scriptexists = false
       return dummy
    elseif isfile(p)
+      scriptexists = true
       return realpath(p)
    end
 
-   p1 = joinpath(srcdir,p)
+   p1 = joinpath(srcdir,p) # used for example scripts residing in the package
 
    if isfile(p1)
+      scriptexists = true
       return p1
    else
       scriptexists = false
