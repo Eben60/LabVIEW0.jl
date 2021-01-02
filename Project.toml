@@ -1,7 +1,7 @@
 name = "LV_ZMQ_Jl"
 uuid = "5183b3a5-06a0-41b4-b5e5-84b1becd192f"
 authors = ["Eben60 <8xe8n-cm@online.de>"]
-version = "0.1.9"
+version = "0.1.10"
 
 [deps]
 ImageCore = "a09fc81d-aa75-5fe9-8630-4744c3626534"
@@ -10,6 +10,6 @@ PkgVersion = "eebad327-c553-4316-9ea0-9fa01ccd7688"
 ZMQ = "c2297ded-f4af-51ae-bb23-16f91089e4e1"
 
 [compat]
+julia = "1.5"
 ImageCore = "0.8"
 JSON3 = "1.5"
-julia = "^1.5"
