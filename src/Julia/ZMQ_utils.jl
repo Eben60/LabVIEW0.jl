@@ -8,6 +8,12 @@ end
 
 include("./conversions.jl")
 
+function setglobals(;isOK, excpn=nothing)
+   global scriptOK = isOK
+   global scriptexcep = excpn
+   return nothing
+end
+
 
 function get_script_path(p)
    global scriptexists

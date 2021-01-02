@@ -3,31 +3,39 @@ include("./user_functions.jl")
 
 using ZMQ
 
-
 function ZMQ_server()
 
    context = Context()
    socket = Socket(context, REP)
    ZMQ.bind(socket, "tcp://*:5555")
    initOK = false
+   version = ""
+   global scriptexists
+   global scriptOK
    try
       # in case the server started with a user script
       # from command line via LabVIEW
       # otherwise if "using LV_ZMQ_Jl" manually
       # init these two global variables manually, too
       initOK = scriptexists && scriptOK
+      version = string(PkgVersion.Version(LV_ZMQ_Jl))
+      # println(initOK, " try OK")
    catch err
       if isa(err, UndefVarError)
          # this file was probably executed as standalone for developement purposes
          # you know what you do, so OK
          initOK = true
+         version = "unknown"
+         # println(initOK, "try bad")
       end
    end
    if ! initOK
       println("server initialisation failed")
+   # else
+   #    @show scriptexists, scriptOK, initOK
    end
 
-   println("starting ZMQ server: Julia for LabVIEW")
+   println("starting ZMQ server: Julia for LabVIEW, v=$version")
    try
       while true
          # Wait for next request from client
@@ -41,7 +49,7 @@ function ZMQ_server()
             response = UInt8.([1, PROTOC_V])
          elseif ! initOK
             if ! isnothing(scriptexcep)
-               stack_trace, excep = scriptexcep
+               excep, stack_trace = scriptexcep
             else
                stack_trace=[]
                excep="Julia error on initialisation script"
