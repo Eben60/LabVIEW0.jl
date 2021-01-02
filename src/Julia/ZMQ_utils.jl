@@ -95,11 +95,15 @@ function puttogether(;
 
 
    returncode = UInt8(returncode)
-   y = Dict{Symbol, Any}(pairs(y)) # y can be Dict or named tuple
+   y = Dict{Symbol, Any}(pairs(y)) # y could be Dict or named tuple
 
    @assert haskey(err, :status) & haskey(err, :code) & haskey(err, :source) & haskey(err, :detailed_info)
 
-   if haskey(y, :bin_data)
+   if haskey(y, :bigarrs)
+      arrs = pop!(y, :bigarrs)
+      bin_data, bindata_descr = nums2bin(arrs)
+      push!(y, :bindata_descr=>bindata_descr)
+   elseif haskey(y, :bin_data)
       bin_data = y[:bin_data]
    else
       bin_data=UInt8[]

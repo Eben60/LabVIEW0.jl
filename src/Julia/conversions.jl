@@ -133,7 +133,7 @@ function nums2Bytearr(nums)
    end
 end
 
-function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bindata_descr::Vector{bindescr}=bindescr[], kwarg_name)
+function nums2bin!(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bindata_descr::Vector{bindescr}=bindescr[], kwarg_name)
    @assert isempty(bin_data) == isempty(bindata_descr)
    bdd = bindescr()
    bdd.kwarg_name = kwarg_name
@@ -147,5 +147,15 @@ function nums2bin(; nums=Array{Number}, bin_data::Bytearr=Bytearr(), bindata_des
    bdd.nofbytes = length(bd)
    bin_data = vcat(bin_data, bd)
    push!(bindata_descr, bdd)
+   return (;bin_data, bindata_descr)
+end
+
+function nums2bin(arrs)
+   bin_data = Bytearr()
+   bindata_descr=bindescr[]
+
+   for arrname in keys(arrs)
+      bin_data, bindata_descr = nums2bin!(; bin_data, bindata_descr, nums=arrs[arrname], kwarg_name=arrname)
+   end
    return (;bin_data, bindata_descr)
 end

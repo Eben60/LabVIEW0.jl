@@ -82,11 +82,11 @@ function numarr_loopback(; kwargs...) # idx=1, testarr)
       elem = -1
    end # try
    # return (;bin_data, bdds)
-   bin_data, bindata_descr = nums2bin(; nums=testarr, kwarg_name="testarr")
+   bin_data, bindata_descr = nums2bin!(; nums=testarr, kwarg_name="testarr")
    return (;elem, bin_data, bindata_descr)
 end
 
-function numarrs_lpbk(; kwargs...) # idx=1, testarr)
+function numarrs_lpbk(; kwargs...)
    version=17 ; println("version = $version")
    defaults = (;idx=1)
    kwargs = merge(defaults, kwargs)
@@ -110,15 +110,8 @@ function numarrs_lpbk(; kwargs...) # idx=1, testarr)
    end # try
    # println("p3")
 
-   bin_data = Bytearr()
-   bindata_descr=bindescr[]
-
-   for arrname in arrnames
-      bin_data, bindata_descr = nums2bin(; bin_data, bindata_descr, nums=kwargs[arrname], kwarg_name=arrname)
-   end
-   return (;elem, bin_data, bindata_descr)
+   return (;elem, bigarrs=kwargs)
 end
-
 
 
 function test_rgbimg(;idx=1, rgbimg)
