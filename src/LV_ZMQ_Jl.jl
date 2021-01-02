@@ -5,8 +5,10 @@ using JSON3, ImageCore, ZMQ
 include("./Julia/ZMQ-server.jl")
 
 scriptexists = false
-scriptOK = false
+scriptOK = true
+scriptexcep = nothing
 
-export ZMQ_server, get_script_path, scriptexists, scriptOK
+export ZMQ_server, get_script_path # functions
+export scriptexists, scriptOK, scriptexcep # global variables
 
 end
