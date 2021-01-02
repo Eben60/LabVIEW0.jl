@@ -22,7 +22,7 @@ function ZMQ_server()
       # println(initOK, " try OK")
    catch err
       if isa(err, UndefVarError)
-         # this file was probably executed as standalone for developement purposes
+         # this file was probably executed as standalone for development purposes
          # you know what you do, so OK
          initOK = true
          version = "unknown"

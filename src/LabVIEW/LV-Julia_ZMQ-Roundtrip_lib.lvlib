@@ -110,4 +110,5 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="start Julia ZMQ server v0.vi" Type="VI" URL="../VIs/start Julia ZMQ server v0.vi"/>
 </Library>
