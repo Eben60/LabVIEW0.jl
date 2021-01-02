@@ -18,3 +18,4 @@ LV code | _err?_ | description
 **5235814** | _err_ | size of binary data is not multiple of the size of element
 **5235815** | _err_ | kwarg_name not found
 **5235816** | _err_ | Julia can't recognize REQ command
+**5235817** | _err_ | Julia error on initialisation script

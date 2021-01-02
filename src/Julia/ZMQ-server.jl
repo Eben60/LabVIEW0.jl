@@ -9,6 +9,23 @@ function ZMQ_server()
    context = Context()
    socket = Socket(context, REP)
    ZMQ.bind(socket, "tcp://*:5555")
+   initOK = false
+   try
+      # in case the server started with a user script
+      # from command line via LabVIEW
+      # otherwise if "using LV_ZMQ_Jl" manually
+      # init these two global variables manually, too
+      initOK = scriptexists && scriptOK
+   catch err
+      if isa(err, UndefVarError)
+         # this file was probably executed as standalone for developement purposes
+         # you know what you do, so OK
+         initOK = true
+      end
+   end
+   if ! initOK
+      println("server initialisation failed")
+   end
 
    println("starting ZMQ server: Julia for LabVIEW")
    try
@@ -22,6 +39,20 @@ function ZMQ_server()
          response = UInt8[]
          if cmnd.command == :stop
             response = UInt8.([1, PROTOC_V])
+         elseif ! initOK
+            if ! isnothing(scriptexcep)
+               stack_trace, excep = scriptexcep
+            else
+               stack_trace=[]
+               excep="Julia error on initialisation script"
+            end
+            err = nothing
+            try
+               err = err_dict(;err=true, errcode=5235817, source=@__FILE__ , stack_trace=err_stack_trace, excep=excep)
+            catch
+               err = err_dict(;err=true, errcode=5235817, source=@__FILE__, excep="Julia error on initialisation script")
+            end
+            response = puttogether(; err=err, returncode=3)
          elseif cmnd.command == :ping
             response = UInt8.([2, PROTOC_V])
          elseif cmnd.command == :callfun
