@@ -91,10 +91,10 @@ uuid = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
 version = "1.5.1"
 
 [[LV_ZMQ_Jl]]
-deps = ["ImageCore", "JSON3", "ZMQ"]
+deps = ["ImageCore", "JSON3", "PkgVersion", "ZMQ"]
 path = ".."
 uuid = "5183b3a5-06a0-41b4-b5e5-84b1becd192f"
-version = "0.1.0"
+version = "0.1.10"
 
 [[LibGit2]]
 uuid = "76f85450-5226-5b5a-8eaa-529ad045b433"
@@ -154,6 +154,12 @@ version = "1.0.15"
 [[Pkg]]
 deps = ["Dates", "LibGit2", "Markdown", "Printf", "REPL", "Random", "SHA", "UUIDs"]
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+
+[[PkgVersion]]
+deps = ["Pkg"]
+git-tree-sha1 = "a7a7e1a88853564e551e4eba8650f8c38df79b37"
+uuid = "eebad327-c553-4316-9ea0-9fa01ccd7688"
+version = "0.1.1"
 
 [[Printf]]
 deps = ["Unicode"]
