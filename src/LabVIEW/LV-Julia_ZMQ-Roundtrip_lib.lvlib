@@ -53,7 +53,9 @@
 			<Item Name="testclass.lvclass" Type="LVClass" URL="../VIs/testclass.lvclass"/>
 			<Item Name="testsuite arrays.vi" Type="VI" URL="../VIs/testsuite arrays.vi"/>
 		</Item>
-		<Item Name="unused" Type="Folder"/>
+		<Item Name="unused" Type="Folder">
+			<Item Name="start Julia ZMQ server v0.vi" Type="VI" URL="../VIs/start Julia ZMQ server v0.vi"/>
+		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="Debug" Type="Folder">
 				<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
@@ -110,5 +112,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="start Julia ZMQ server v0.vi" Type="VI" URL="../VIs/start Julia ZMQ server v0.vi"/>
 </Library>

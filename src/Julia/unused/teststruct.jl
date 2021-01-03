@@ -2,21 +2,21 @@ using JSON3
 
 b1 = b2 = nothing
 let
-   mutable struct Bindescr
+   mutable struct BinDescr
       start::Int
       nofbytes::Int
       arrdims::Vector{Int}
       numtype::String
       kwarg_name::String
       category::String
-      # Bindescr() = new()
+      # BinDescr() = new()
    end
 
-   Bindescr() = Bindescr(1,0,[],"", "", "numarrays")
+   BinDescr() = BinDescr(1,0,[],"", "", "numarrays")
 
-   global b1 = Bindescr(3,3,[],"Int16", "testarg", "numarrays")
-   global b2 = Bindescr()
+   global b1 = BinDescr(3,3,[],"Int16", "testarg", "numarrays")
+   global b2 = BinDescr()
 
 
-   JSON3.StructTypes.StructType(::Type{Bindescr}) = JSON3.StructTypes.Struct()
+   JSON3.StructTypes.StructType(::Type{BinDescr}) = JSON3.StructTypes.Struct()
 end

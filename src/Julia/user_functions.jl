@@ -34,7 +34,7 @@ function myf2(; bin_data = nothing, arg1 = 10, arg2 = 31.4, int32 = nothing)
     end
     a1 = arg1 * 20
     a2 = arg2 / 5.0
-    bin_data = Bytearr(1:8)
+    bin_data = ByteArr(1:8)
     return (; bin_lng, a1, a2, bin_data)
 end
 
@@ -82,7 +82,7 @@ function numarr_loopback(; kwargs...) # idx=1, testarr)
         elem = -1
     end # try
     # return (;bin_data, bdds)
-    bin_data, bindata_descr = nums2bin!(; nums = testarr, kwarg_name = "testarr")
+    bin_data, bindata_descr = data2bin!(; nums = testarr, kwarg_name = "testarr")
     return (; elem, bin_data, bindata_descr)
 end
 

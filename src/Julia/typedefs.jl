@@ -1,12 +1,12 @@
-Bytearr = Vector{UInt8} # byte array
+ByteArr = Vector{UInt8} # byte array
 
 """
-    Bindescr
+    BinDescr
 
 Describe (a chunk) of binary data, e.g. numeric array or image in the LV_ZMQ_Jl format used
 for exchange between Julia and LabVIEW. Gets converted from/to JSON for transport.
 """
-mutable struct Bindescr
+mutable struct BinDescr
     start::Int
     nofbytes::Int
     arrdims::Vector{Int}
@@ -15,5 +15,5 @@ mutable struct Bindescr
     category::String
 end
 
-Bindescr() = Bindescr(1, 0, [], "", "", "numarrays")
-JSON3.StructTypes.StructType(::Type{Bindescr}) = JSON3.StructTypes.Struct()
+BinDescr() = BinDescr(1, 0, [], "", "", "numarrays")
+JSON3.StructTypes.StructType(::Type{BinDescr}) = JSON3.StructTypes.Struct()

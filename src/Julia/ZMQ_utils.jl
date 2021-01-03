@@ -2,14 +2,21 @@ using JSON3, ImageCore
 
 const PROTOC_V = UInt8(1)
 
-if !@isdefined Bindescr
+if !@isdefined BinDescr
     include("./typedefs.jl")
 end
 
 include("./conversions.jl")
 
-function setglobals(; isOK, excpn = nothing)
+"""
+    setglobals(;isOK, extant=scriptexists, excpn = nothing)
+
+Set the globals of the LV_ZMQ_Jl module. By default do not change the value of `scriptexists`.
+Use this function from the top-level scripts, e.g. as executing from LabVIEW.
+"""
+function setglobals(; isOK, extant=scriptexists, excpn = nothing)
     global scriptOK = isOK
+    global scriptexists = extant
     global scriptexcep = excpn
     return nothing
 end
@@ -120,7 +127,7 @@ end
 function puttogether(;
     y = Dict{Symbol,Any}(),
     err = err_dict(),
-    opt_header::Bytearr = UInt8[],
+    opt_header::ByteArr = UInt8[],
     returncode::Int = 0,
 )
 
@@ -144,7 +151,7 @@ function puttogether(;
     end
 
     push!(y, :errorinfo => err)
-    jsonstring = Bytearr(JSON3.write(y))
+    jsonstring = ByteArr(JSON3.write(y))
 
     o_h_lng = int2bytar(length(opt_header))
     bin_lng = int2bytar(length(bin_data))

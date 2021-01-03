@@ -1,6 +1,6 @@
 using JSON3, ImageCore
 
-if !@isdefined Bindescr
+if !@isdefined BinDescr
     include("./typedefs.jl")
 end
 
@@ -14,7 +14,7 @@ function int2bytar(i::Int; i_type = UInt32)
     end
 end
 
-function bytar2int(b::Bytearr; i_type = UInt32)
+function bytar2int(b::ByteArr; i_type = UInt32)
     if i_type != Bool
         return reinterpret(i_type, b)[1]
     else
@@ -95,18 +95,16 @@ function bin2img(; bin_data, nofbytes, start, arrdims, numtype)
     end
 
     return nums
+end
 
+function fn_by_category(ctg)
+    fs = Dict("images" => bin2img, "numarrays" => bin2num)
+    return fs[ctg]
 end
 
 function bin2nums(; bin_data, bindata_descr)
-
-    function fbycat(ctg)
-        fs = Dict("images" => bin2img, "numarrays" => bin2num)
-        return fs[ctg]
-    end
-
     arrs = [
-        fbycat(bdd.category)(
+        fn_by_category(bdd.category)(
             bin_data = bin_data,
             nofbytes = bdd.nofbytes,
             start = bdd.start,
@@ -133,7 +131,7 @@ function tocolmajor(arr)
     return vec(arr)
 end
 
-function nums2Bytearr(nums)
+function nums2ByteArr(nums)
     nums = tocolmajor(nums)
     if eltype(nums) == Bool
         return UInt8.(nums)
@@ -142,22 +140,30 @@ function nums2Bytearr(nums)
     end
 end
 
-function nums2bin!(;
-    nums = Array{Number},
-    bin_data::Bytearr = Bytearr(),
-    bindata_descr::Vector{Bindescr} = Bindescr[],
+
+"""
+   data2bin!(;arrdata, bin_data::ByteArr, bindata_descr::Vector{BinDescr}, kwarg_name,)
+
+Compute binary representation and description of data (currently supported types are
+numeric arrays and images). Append it's binary representation to `bin_data`, and description
+to `bindata_descr` array.
+"""
+function data2bin!(;
+    arrdata,
+    bin_data::ByteArr = ByteArr(),
+    bindata_descr::Vector{BinDescr} = BinDescr[],
     kwarg_name,
 )
     @assert isempty(bin_data) == isempty(bindata_descr)
-    bdd = Bindescr()
+    bdd = BinDescr()
     bdd.kwarg_name = kwarg_name
     bdd.start = length(bin_data) + 1
-    bdd.numtype = numtypestring(nums)
-    if eltype(nums) <: Complex
-        nums .= cmplxswap.(nums)
+    bdd.numtype = numtypestring(arrdata)
+    if eltype(arrdata) <: Complex
+        arrdata .= cmplxswap.(arrdata)
     end
-    bdd.arrdims = collect(size(nums))
-    bd = nums2Bytearr(nums)
+    bdd.arrdims = collect(size(arrdata))
+    bd = nums2ByteArr(arrdata)
     bdd.nofbytes = length(bd)
     bin_data = vcat(bin_data, bd)
     push!(bindata_descr, bdd)
@@ -165,12 +171,12 @@ function nums2bin!(;
 end
 
 function nums2bin(arrs)
-    bin_data = Bytearr()
-    bindata_descr = Bindescr[]
+    bin_data = ByteArr()
+    bindata_descr = BinDescr[]
 
     for arrname in keys(arrs)
         bin_data, bindata_descr =
-            nums2bin!(; bin_data, bindata_descr, nums = arrs[arrname], kwarg_name = arrname)
+            data2bin!(; bin_data, bindata_descr, arrdata = arrs[arrname], kwarg_name = arrname)
     end
     return (; bin_data, bindata_descr)
 end
