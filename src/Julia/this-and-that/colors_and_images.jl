@@ -40,3 +40,14 @@ end
 function isim(img)
     false
 end
+r = [1 2 3 4; 3 4 5 6]
+g=r.*2
+b=r.*3
+rgb = zeros(3,2,4)
+rgb[1,:,:] .= r
+rgb[2,:,:] .= g
+rgb[3,:,:] .= b
+rgb = UInt8.(rgb)
+nrgb=normedview(rgb)
+cl=colorview(RGB, nrgb)
+@show isim(cl)
