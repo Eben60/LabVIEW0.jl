@@ -16,15 +16,15 @@ img = peppers
 # display(img)
 
 p55=img[5,5]
-println(p55)
-println(typeof(p55))
-println(p55.r, p55.g, p55.b)
+@show p55
+@show typeof(p55)
+@show p55.r p55.g p55.b
 
 p55_g = reinterpret(UInt8, p55.g) # 0x85 = 133
 
 cn = channelview(img)
 r=reinterpret(UInt8, cn) #
-println(r[:,5,5])
+@show r[:,5,5]
 
 rc = collect(r)./255.0;
 @show typeof(rc)
@@ -33,3 +33,10 @@ rc = collect(r)./255.0;
 
 
 i2 = colorview(RGB, rc)
+
+function isim(img::I) where I <: AbstractArray{C,2} where C <: RGB
+    true
+end
+function isim(img)
+    false
+end
