@@ -1,6 +1,6 @@
 module LV_ZMQ_Jl
 
-using JSON3, ImageCore, ZMQ, PkgVersion
+using ZMQ, JSON3, ImageCore, Colors, PkgVersion
 
 include("./Julia/ZMQ-server.jl")
 

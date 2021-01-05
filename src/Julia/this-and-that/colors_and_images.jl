@@ -23,28 +23,37 @@ p55=img[5,5]
 p55_g = reinterpret(UInt8, p55.g) # 0x85 = 133
 
 cn = channelview(img)
-r=reinterpret(UInt8, cn) #
+r = reinterpret(UInt8, cn) #
+r2 = rawview(cn)
+@show r == r2
+r3 = normedview(r)
+i3 = colorview(RGB, r3) # image again
+
+
 @show r[:,5,5]
 
 rc = collect(r)./255.0;
 @show typeof(rc)
 @show size(rc)
 
+# normedview
+# rawview
 
 
 i2 = colorview(RGB, rc)
 
-function isim(img::I) where I <: AbstractArray{C,2} where C <: RGB
-    true
+function isim(img::I) where I <: AbstractArray{C,2} where C <: Color # RGB
+    isN0f8 = (eltype(img) <: RGB{N0f8})
+    return (;isN0f8)
 end
 function isim(img)
     false
 end
-r = [1 2 3 4; 3 4 5 6]
-g=r.*2
-b=r.*3
+r1 = [1 2 3 4; 3 4 5 6]
+g=r1.*2
+b=r1.*3
 rgb = zeros(3,2,4)
-rgb[1,:,:] .= r
+rgb[1,:,:] .= r1
 rgb[2,:,:] .= g
 rgb[3,:,:] .= b
 rgb = UInt8.(rgb)
