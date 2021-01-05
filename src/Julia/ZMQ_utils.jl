@@ -25,17 +25,19 @@ end
     get_script_path(p)
 
 Accepts a Julia script (with user defined functions) as full path for user functions of just
-file name for examples delivered with the LV-ZMQ-Jl package. If the file not found, returns
-the path to the empty file "dummy.jl". If `p` is empty string, returns path to
-"Examples-UserFn.jl", which in turn includes some example scripts.
+file name for examples delivered with this package. If the file not found, returns the path
+to the empty file "dummy.jl". If `p` is empty string, returns path to "Examples-UserFn.jl",
+which in turn includes some example scripts.
 
 
 # Examples
 ```julia-repl
-julia> include(get_script_path("C:\\Users\\eben\\Desktop\\Julia\\my_functions.jl"))
+
+julia> include(get_script_path("C:\\\\\\\\Users\\\\\\\\eben\\\\\\\\Desktop\\\\\\\\Julia\\\\\\\\my_functions.jl"))
+
 julia> ZMQ_server()
 """
-function get_script_path(p)
+function get_script_path(p="")
     global scriptexists
     srcdir = @__DIR__
     dummy = joinpath(srcdir, "dummy.jl")
