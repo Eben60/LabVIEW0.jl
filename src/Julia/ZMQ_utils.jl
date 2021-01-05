@@ -26,7 +26,8 @@ end
 
 Accepts a Julia script (with user defined functions) as full path for user functions of just
 file name for examples delivered with the LV-ZMQ-Jl package. If the file not found, returns
-the path to the empty file "dummy.jl".
+the path to the empty file "dummy.jl". If `p` is empty string, returns path to
+"Examples-UserFn.jl", which in turn includes some example scripts.
 
 
 # Examples
@@ -39,7 +40,10 @@ function get_script_path(p)
     srcdir = @__DIR__
     dummy = joinpath(srcdir, "dummy.jl")
     _, suffix = splitext(p)
-    if suffix != ".jl"
+    if p == ""
+        scriptexists = true
+        return joinpath(srcdir, "Examples-UserFn.jl")
+    elseif suffix != ".jl"
         scriptexists = false
         return dummy
     elseif isfile(p)
