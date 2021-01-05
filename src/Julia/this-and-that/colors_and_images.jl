@@ -29,6 +29,8 @@ r2 = rawview(cn)
 r3 = normedview(r)
 i3 = colorview(RGB, r3) # image again
 
+ihsl = convert.(HSL, img) # hsl image
+i_same = convert.(RGB{N0f8}, img)
 
 @show r[:,5,5]
 
