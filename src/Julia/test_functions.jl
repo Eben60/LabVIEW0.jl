@@ -7,14 +7,14 @@ function loopback(; kwargs...)
     end
 
     scalarargs = [:idx, :showversion]
-    arrnames = Set(keys(kwargs))
+    bigarrs = Dict(pairs(kwargs))
     for arg in scalarargs
-        delete!(arrnames, arg)
+        delete!(bigarrs, arg)
     end
     # delete!(arrnames, :idx)
     # delete!(arrnames, :showversion)
     # @show arrnames
-    
+
     testarr = kwargs[:testarr]
     idx = kwargs[:idx]
     a = testarr
@@ -32,5 +32,5 @@ function loopback(; kwargs...)
     end # try
     # println("p3")
 
-    return (; elem, bigarrs = kwargs)
+    return (; elem, bigarrs)
 end
