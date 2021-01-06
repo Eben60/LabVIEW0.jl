@@ -5,7 +5,7 @@ function show_img(lena = false)
     if lena
         img = testimage("lena_color_256")
     else
-        img = FileIO.load("src/Julia/this-and-that/peppers_color_256.png")
+        img = FileIO.load(joinpath(@__DIR__, "this-and-that/peppers_color_256.png"))
     end
     try
         display("image/png", img)
