@@ -1,4 +1,5 @@
 include("./ZMQ_utils.jl")
+include("./test_functions.jl")
 # include("./user_functions.jl")
 
 using ZMQ
