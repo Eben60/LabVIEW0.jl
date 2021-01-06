@@ -18,6 +18,11 @@ function ZMQ_server()
     version = ""
     global scriptexists
     global scriptOK
+
+    global myf1
+    global myf2
+    global myf3
+
     try
         # in case the server started with a user script
         # from command line via LabVIEW
