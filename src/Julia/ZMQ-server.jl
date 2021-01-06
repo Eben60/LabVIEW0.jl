@@ -93,7 +93,7 @@ function ZMQ_server(fns=(;))
                 try
                     pr = parse_REQ(bytesreceived)
                     fn = pr.fun2call
-                    if fn in keys(fns)
+                    if haskey(fns, fn)
                         f = fns[fn]
                     else
                         f = eval(fn)
