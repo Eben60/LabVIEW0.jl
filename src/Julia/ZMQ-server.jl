@@ -42,6 +42,7 @@ function ZMQ_server()
     end
 
     println("starting ZMQ server: Julia for LabVIEW, v=$version")
+    using .UserFns
     try
         while true
             # Wait for next request from client
