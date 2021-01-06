@@ -45,9 +45,8 @@ function get_script_path(p="")
     _, suffix = splitext(p)
     if p == ""
         scriptexists = true
-        jp = joinpath(srcdir, "Examples-UserFn.jl")
-        @show jp
-        return jp
+        p1 = joinpath(srcdir, "Examples-UserFn.jl")
+        return p1
     elseif suffix != ".jl"
         scriptexists = false
         return dummy
