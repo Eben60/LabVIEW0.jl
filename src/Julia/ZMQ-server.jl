@@ -37,7 +37,7 @@ function ZMQ_server(fns=(;))
             # init these two global variables manually, too
             initOK = scriptexists && scriptOK
             version = string(PkgVersion.Version(LV_ZMQ_Jl))
-            # println(initOK, " try OK")
+            println(initOK, " try OK")
         catch err
             if isa(err, UndefVarError)
                 # this file was probably executed as standalone for development purposes

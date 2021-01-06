@@ -1,14 +1,20 @@
 function loopback(; kwargs...)
     defaults = (; idx = 1, showversion=true)
-    if showversion
+    kwargs = merge(defaults, kwargs)
+    if kwargs.showversion
         version = 18
         println("version = $version")
     end
-    kwargs = merge(defaults, kwargs)
 
+    scalarargs = [:idx, :showversion]
     arrnames = Set(keys(kwargs))
-    delete!(arrnames, :idx)
+    for arg in scalarargs
+        delete!(arrnames, arg)
+    end
+    # delete!(arrnames, :idx)
+    # delete!(arrnames, :showversion)
     # @show arrnames
+    
     testarr = kwargs[:testarr]
     idx = kwargs[:idx]
     a = testarr
