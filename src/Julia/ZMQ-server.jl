@@ -26,24 +26,28 @@ function ZMQ_server(fns=(;))
     global scriptexists
     global scriptOK
 
-    try
-        # in case the server started with a user script
-        # from command line via LabVIEW
-        # otherwise if "using LV_ZMQ_Jl" manually
-        # init these two global variables manually, too
-        initOK = scriptexists && scriptOK
-        version = string(PkgVersion.Version(LV_ZMQ_Jl))
-        # println(initOK, " try OK")
-    catch err
-        if isa(err, UndefVarError)
-            # this file was probably executed as standalone for development purposes
-            # you know what you do, so OK
-            initOK = true
-            version = "unknown"
+    if isempty(fns)
+        initOK = true # package-internal functions only
+    else
+        try
+            # in case the server started with a user script
+            # from command line via LabVIEW
+            # otherwise if "using LV_ZMQ_Jl" manually
+            # init these two global variables manually, too
+            initOK = scriptexists && scriptOK
+            version = string(PkgVersion.Version(LV_ZMQ_Jl))
+            # println(initOK, " try OK")
+        catch err
+            if isa(err, UndefVarError)
+                # this file was probably executed as standalone for development purposes
+                # you know what you do, so OK
+                initOK = true
+                version = "unknown"
+            end
         end
-    end
-    if !initOK
-        println("server initialisation failed")
+        if !initOK
+            println("server initialisation failed")
+        end
     end
 
     println("starting ZMQ server: Julia for LabVIEW, v=$version")
