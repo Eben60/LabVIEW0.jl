@@ -47,7 +47,6 @@ function ZMQ_server(fns=(;))
             bytesreceived = ZMQ.recv(socket)
 
             cmnd = parse_cmnd(bytesreceived)
-            # @show cmnd
             response = UInt8[]
             if cmnd.command == :stop
                 response = UInt8.([1, PROTOC_V])
