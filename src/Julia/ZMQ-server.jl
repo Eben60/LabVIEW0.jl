@@ -9,7 +9,7 @@ using ZMQ
 The top-level function of the package. Start ZMQ socket, listen to requests, parse them,
 execute the requested user function, send response. Repeat.
 """
-function ZMQ_server()
+function ZMQ_server(fns=(;))
 
     context = Context()
     socket = Socket(context, REP)
@@ -18,13 +18,6 @@ function ZMQ_server()
     version = ""
     global scriptexists
     global scriptOK
-
-    global myf1
-    global myf2
-    global myf3
-    global numarrs_lpbk
-
-    @show myf1
 
     try
         # in case the server started with a user script
@@ -40,13 +33,10 @@ function ZMQ_server()
             # you know what you do, so OK
             initOK = true
             version = "unknown"
-            # println(initOK, "try bad")
         end
     end
     if !initOK
         println("server initialisation failed")
-        # else
-        #    @show scriptexists, scriptOK, initOK
     end
 
     println("starting ZMQ server: Julia for LabVIEW, v=$version")
@@ -91,7 +81,12 @@ function ZMQ_server()
             elseif cmnd.command == :callfun
                 try
                     pr = parse_REQ(bytesreceived)
-                    f = eval(pr.fun2call)
+                    fn = pr.fun2call
+                    if fn in keys(fns)
+                        f = fns[fn]
+                    else
+                        f = eval(fn)
+                    end
                     y = f(; pr.args...)
                     response = puttogether(; y = y)
                 catch excep
