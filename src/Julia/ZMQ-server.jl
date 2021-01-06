@@ -22,6 +22,9 @@ function ZMQ_server()
     global myf1
     global myf2
     global myf3
+    global numarrs_lpbk
+
+    @show myf1
 
     try
         # in case the server started with a user script
