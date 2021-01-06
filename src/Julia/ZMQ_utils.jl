@@ -1,11 +1,12 @@
 using JSON3, ImageCore
 
-const PROTOC_V = UInt8(1)
+const PROTOC_V = 0x01 # UInt8(1)
 
-if !@isdefined BinDescr
-    include("./typedefs.jl")
-end
+# if !@isdefined BinDescr
+#     include("./typedefs.jl")
+# end
 
+include("./typedefs.jl")
 include("./conversions.jl")
 
 """
