@@ -140,24 +140,16 @@ function nums2ByteArr(nums)
     end
 end
 
+function data2bin(arrdata::I, kwarg_name) where I <: AbstractArray{C,2} where C <: Color
+    error("images not implemented yet")
+    return nothing
+end
 
-"""
-   data2bin!(;arrdata, bin_data::ByteArr, bindata_descr::Vector{BinDescr}, kwarg_name,)
 
-Compute binary representation and description of data (currently supported types are
-numeric arrays and images). Append it's binary representation to `bin_data`, and description
-to `bindata_descr` array.
-"""
-function data2bin!(;
-    arrdata,
-    bin_data::ByteArr = ByteArr(),
-    bindata_descr::Vector{BinDescr} = BinDescr[],
-    kwarg_name,
-)
-    @assert isempty(bin_data) == isempty(bindata_descr)
+
+function data2bin(arrdata, kwarg_name)
     bdd = BinDescr()
     bdd.kwarg_name = kwarg_name
-    bdd.start = length(bin_data) + 1
     bdd.numtype = numtypestring(arrdata)
     if eltype(arrdata) <: Complex
         arrdata .= cmplxswap.(arrdata)
@@ -165,6 +157,25 @@ function data2bin!(;
     bdd.arrdims = collect(size(arrdata))
     bd = nums2ByteArr(arrdata)
     bdd.nofbytes = length(bd)
+    return (bd, bdd)
+end
+
+"""
+   data2bin!(;bin_data::ByteArr, bindata_descr::Vector{BinDescr}, arrdata, kwarg_name,)
+
+Compute binary representation and description of data (currently supported types are
+numeric arrays and images). Append it's binary representation to `bin_data`, and description
+to `bindata_descr` array.
+"""
+function data2bin!(;
+    bin_data::ByteArr = ByteArr(),
+    bindata_descr::Vector{BinDescr} = BinDescr[],
+    arrdata,
+    kwarg_name,
+)
+    @assert isempty(bin_data) == isempty(bindata_descr)
+    bd, bdd = data2bin(arrdata, kwarg_name)
+    bdd.start = length(bin_data) + 1
     bin_data = vcat(bin_data, bd)
     push!(bindata_descr, bdd)
     return (; bin_data, bindata_descr)

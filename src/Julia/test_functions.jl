@@ -34,3 +34,5 @@ function loopback(; kwargs...)
 
     return (; elem, bigarrs)
 end
+
+# f()=π
