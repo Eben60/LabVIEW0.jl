@@ -4,10 +4,17 @@ include("./ZMQ_utils.jl")
 using ZMQ
 
 """
-    ZMQ_server()
+    ZMQ_server(fns=(;))
 
-The top-level function of the package. Start ZMQ socket, listen to requests, parse them,
-execute the requested user function, send response. Repeat.
+The top-level function of the package. User functions must be supplied as a NamedTuple
+or Dict. Start ZMQ socket, listen to requests, parse them, execute the requested user
+function, send response. Repeat.
+
+# Examples
+```julia-repl
+
+julia> ZMQ_server((;foo=foo, bar, baz))
+
 """
 function ZMQ_server(fns=(;))
 
