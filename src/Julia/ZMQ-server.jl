@@ -2,6 +2,7 @@ include("./ZMQ_utils.jl")
 # include("./user_functions.jl")
 
 using ZMQ
+using .UserFns
 
 """
     ZMQ_server()
@@ -42,7 +43,6 @@ function ZMQ_server()
     end
 
     println("starting ZMQ server: Julia for LabVIEW, v=$version")
-    using .UserFns
     try
         while true
             # Wait for next request from client
