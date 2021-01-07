@@ -32,7 +32,7 @@ function b2n2b(sz = [24], tp = UInt8; kwn = "nn")
     bdin, bddin = buildbin(sz, tp; kwn = kwn)
     @show bddin
     nums = bin2nums(; bin_data = bdin, bindata_descr = [bddin])[Symbol(kwn)]
-    bdout, bdds = data2bin!(; nums = nums, kwarg_name = kwn)
+    bdout, bdds = data2bin!(; arrdata = nums, kwarg_name = kwn)
     ok = bdin == bdout
     @show ok
     return (; ok, bdin, bdout, bddin, bddout = bdds[1], nums, numsint = Int.(abs.(nums)))
