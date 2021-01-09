@@ -1,4 +1,5 @@
 using JSON3, ImageCore
+using Serialization
 
 if !@isdefined BinDescr
     include("./typedefs.jl")
@@ -104,17 +105,29 @@ end
 
 function bin2nums(; bin_data, bindata_descr)
 
-# # # testing image data serialization
-    bdd = bindata_descr[1]
-    if bdd.category == "images"
-        sers = (; bin_data, bdd)
-        pth = raw"C:\_LabView_projects\ZMQ\LV_ZMQ_Jl.jl\src\Julia\this-and-that\sers.jsr"
-              # joinpath(@__DIR__, "sers.jsr")
-        open(pth, "w") do io
-            serialize(io, sers)
-        end;
-    end
-# # # end testing image data serialization
+# # # # testing image data serialization
+#     bdd = bindata_descr[1]
+#     @show bdd.category
+#     if bdd.category == "images"
+#         global gbdd
+#         global gbd
+#         gbdd = bdd
+#         gbd = bin_data
+#         @show typeof(gbd)
+#         sers = (; bin_data, bdd)
+#         @show typeof(sers)
+#         pth = raw"C:\_LabView_projects\ZMQ\LV_ZMQ_Jl.jl\src\Julia\this-and-that\sers.jsr"
+#               # joinpath(@__DIR__, "sers.jsr")
+#         tmps = "ldfsfsdhsdfkjfsdkjhhsdfkih"
+#         open(pth, "w") do io
+#             println("there we are")
+#             @show typeof(sers)
+#             serialize(io, sers)
+#             serialize(io, tmps)
+#
+#         end;
+#     end
+# # # # end testing image data serialization
 
     arrs = [
         fn_by_category(bdd.category)(
@@ -203,4 +216,17 @@ function nums2bin(arrs)
             data2bin!(; bin_data, bindata_descr, arrdata = arrs[arrname], kwarg_name = arrname)
     end
     return (; bin_data, bindata_descr)
+end
+
+function get_saved_img_bin()
+    pth = raw"C:\_LabView_projects\ZMQ\LV_ZMQ_Jl.jl\src\Julia\this-and-that\sers.jsr"
+          # joinpath(@__DIR__, "sers.jsr")
+    nbd = nbdd = nothing
+    open(pth, "r") do io
+        nbd=deserialize(io)
+        nbdd=deserialize(io)
+    end;
+    @show typeof(nbd)
+    @show typeof(nbdd)
+    return (; bin_data=nbd, bindata_descr=[nbdd])
 end
