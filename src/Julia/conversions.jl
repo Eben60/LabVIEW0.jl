@@ -1,5 +1,4 @@
 using JSON3, ImageCore
-using Serialization
 
 if !@isdefined BinDescr
     include("./typedefs.jl")
@@ -166,12 +165,20 @@ function nums2ByteArr(nums)
     end
 end
 
-function data2bin(arrdata::I, kwarg_name) where I <: AbstractArray{C,2} where C <: Color
-    error("images not implemented yet")
-    return nothing
+function data2bin(img::I, kwarg_name) where I <: AbstractArray{C,2} where C <: Color
+    img = convert.(RGB{N0f8}, img)
+    cnv = channelview(img)
+    rwv = collect(rawview(cnv))
+    prw = collect(permutedims(rwv, [1,3,2]))
+    bd = vec(prw)
+
+    bdd = BinDescr()
+    bdd.kwarg_name = kwarg_name
+    bdd.numtype = "img24bit"
+    bdd.arrdims = collect(size(img))
+    bdd.nofbytes = length(bd)
+    return (bd, bdd)
 end
-
-
 
 function data2bin(arrdata, kwarg_name)
     bdd = BinDescr()
@@ -216,17 +223,4 @@ function nums2bin(arrs)
             data2bin!(; bin_data, bindata_descr, arrdata = arrs[arrname], kwarg_name = arrname)
     end
     return (; bin_data, bindata_descr)
-end
-
-function get_saved_img_bin()
-    pth = raw"C:\_LabView_projects\ZMQ\LV_ZMQ_Jl.jl\src\Julia\this-and-that\sers.jsr"
-          # joinpath(@__DIR__, "sers.jsr")
-    nbd = nbdd = nothing
-    open(pth, "r") do io
-        nbd=deserialize(io)
-        nbdd=deserialize(io)
-    end;
-    @show typeof(nbd)
-    @show typeof(nbdd)
-    return (; bin_data=nbd, bindata_descr=[nbdd])
 end
