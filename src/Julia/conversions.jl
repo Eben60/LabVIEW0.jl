@@ -103,6 +103,19 @@ function fn_by_category(ctg)
 end
 
 function bin2nums(; bin_data, bindata_descr)
+
+# # # testing image data serialization
+    bdd = bindata_descr[1]
+    if bdd.category == "images"
+        sers = (; bin_data, bdd)
+        pth = raw"C:\_LabView_projects\ZMQ\LV_ZMQ_Jl.jl\src\Julia\this-and-that\sers.jsr"
+              # joinpath(@__DIR__, "sers.jsr")
+        open(pth, "w") do io
+            serialize(io, sers)
+        end;
+    end
+# # # end testing image data serialization
+
     arrs = [
         fn_by_category(bdd.category)(
             bin_data = bin_data,
