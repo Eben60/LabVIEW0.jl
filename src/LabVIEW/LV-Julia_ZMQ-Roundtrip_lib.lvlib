@@ -78,6 +78,7 @@
 			<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
 			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
 			<Item Name="bindata by kwarg to numarray.vim" Type="VI" URL="../VIs/bindata by kwarg to numarray.vim"/>
+			<Item Name="bindata descr by kwarg_name.vi" Type="VI" URL="../VIs/bindata descr by kwarg_name.vi"/>
 			<Item Name="bindata subset by kwarg_name.vi" Type="VI" URL="../VIs/bindata subset by kwarg_name.vi"/>
 			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../VIs/bindata to flat numarray.vim"/>
 			<Item Name="bindata to shaped numarray no clustering.vim" Type="VI" URL="../VIs/bindata to shaped numarray no clustering.vim"/>
@@ -112,4 +113,6 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="Bindata&amp;descr to img.vi" Type="VI" URL="../VIs/Bindata&amp;descr to img.vi"/>
+	<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 </Library>

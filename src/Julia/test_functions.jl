@@ -15,10 +15,17 @@ function loopback(; kwargs...)
     # delete!(arrnames, :showversion)
     # @show arrnames
 
-    testarr = kwargs[:testarr]
-    idx = kwargs[:idx]
-    a = testarr
     elem = nothing
+    # try
+
+    if :testarr in keys(bigarrs)
+        a=kwargs[:testarr]
+    else
+        first_arrkey = [(keys(bigarrs))...][1]
+        a=kwargs[first_arrkey]
+    end
+
+    idx = kwargs[:idx]
     # println("p2")
     try
         elem = a[idx...]
@@ -29,8 +36,14 @@ function loopback(; kwargs...)
         end
     catch
         elem = -1
-    end # try
-    # println("p3")
+    end
+
+    if (typeof(a) <: AbstractArray{C,2} where C <: Color) && kwargs.showversion
+        try
+            display(a)
+        catch
+        end
+    end
 
     return (; elem, bigarrs)
 end

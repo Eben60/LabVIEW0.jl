@@ -19,3 +19,4 @@ LV code | _err?_ | description
 **5235815** | _err_ | kwarg_name not found
 **5235816** | _err_ | Julia can't recognize REQ command
 **5235817** | _err_ | Julia error on initialisation script
+**5235818** | _err_ | Wrong data category
