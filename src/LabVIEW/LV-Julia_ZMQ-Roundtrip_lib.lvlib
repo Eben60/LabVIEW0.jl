@@ -115,5 +115,6 @@
 	</Item>
 	<Item Name="Bindata&amp;descr to img.vi" Type="VI" URL="../VIs/Bindata&amp;descr to img.vi"/>
 	<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
+	<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
 	<Item Name="send&amp;receive_img.vi" Type="VI" URL="../VIs/send&amp;receive_img.vi"/>
 </Library>

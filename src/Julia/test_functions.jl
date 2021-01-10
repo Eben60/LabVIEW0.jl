@@ -51,4 +51,18 @@ function loopback(; kwargs...)
     return (; elem, bigarrs)
 end
 
-# f()=π
+function foo(;arg1, arg2_string, arg3_arr_Cx32, arg4_arr_i16)
+
+    # doing some stuff, e.g. check if we got the right data type
+    @assert typeof(arg3_arr_Cx32) == Array{Complex{Float32},2}
+    @assert typeof(arg4_arr_i16) == Vector{Int16}
+    # some more stuff
+
+    # get data to return, e.g.
+    resp1 = rand()
+    resp_arr_I32 = Int32.(vcat(arg4_arr_i16, [1,2,3]))
+    resp_arr_F64 = arg1.*abs.(vec(arg3_arr_Cx32)) .+ sqrt(2)
+
+
+    return (;resp1, bigarrs=(;resp_arr_I32, resp_arr_F64))
+end
