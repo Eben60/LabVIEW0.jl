@@ -1,3 +1,6 @@
+using Colors, TestImages, ImageIO, ImageShow, FileIO
+
+
 function loopback(; kwargs...)
     defaults = (; idx = 1, showversion=true)
     kwargs = merge(defaults, kwargs)

@@ -157,7 +157,6 @@ function puttogether(;
     else
         bin_data = UInt8[]
     end
-
     push!(y, :errorinfo => err)
     jsonstring = ByteArr(JSON3.write(y))
 

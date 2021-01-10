@@ -85,7 +85,7 @@ function bin2img(; bin_data, nofbytes, start, arrdims, numtype)
     bin_data = bin_data[start:start+nofbytes-1]
 
     if numtype == "img24bit"
-        arrdims = Tuple(vcat(3, arrdims))
+        arrdims = (3, arrdims[2], arrdims[1])
         nums = bin_data
         nums = reshape(bin_data, arrdims)
         nums = permutedims(nums, [1, 3, 2])
