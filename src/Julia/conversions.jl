@@ -6,9 +6,9 @@ SUPPORTED_REALS = (
     )
 SUPPORTED_COMPLEX = (ComplexF32, ComplexF64)
 
-if !@isdefined BinDescr
-    include("./typedefs.jl")
-end
+# if !@isdefined BinDescr
+#     include("./typedefs.jl")
+# end
 
 # # # # # # # #
 
@@ -108,32 +108,14 @@ function fn_by_category(ctg)
     return fs[ctg]
 end
 
+"""
+   bin2nums(; bin_data, bindata_descr)
+
+Get data as received from LabVIEW (binary + array of decriptions) and return a
+dictionary of de-serialized arrays (or other supported data types, e.g. images).
+The dictionary items meant to be supplied as kwargs to user functions.
+"""
 function bin2nums(; bin_data, bindata_descr)
-
-# # # # testing image data serialization
-#     bdd = bindata_descr[1]
-#     @show bdd.category
-#     if bdd.category == "images"
-#         global gbdd
-#         global gbd
-#         gbdd = bdd
-#         gbd = bin_data
-#         @show typeof(gbd)
-#         sers = (; bin_data, bdd)
-#         @show typeof(sers)
-#         pth = raw"C:\_LabView_projects\ZMQ\LV_ZMQ_Jl.jl\src\Julia\this-and-that\sers.jsr"
-#               # joinpath(@__DIR__, "sers.jsr")
-#         tmps = "ldfsfsdhsdfkjfsdkjhhsdfkih"
-#         open(pth, "w") do io
-#             println("there we are")
-#             @show typeof(sers)
-#             serialize(io, sers)
-#             serialize(io, tmps)
-#
-#         end;
-#     end
-# # # # end testing image data serialization
-
     arrs = [
         fn_by_category(bdd.category)(
             bin_data = bin_data,
@@ -145,9 +127,7 @@ function bin2nums(; bin_data, bindata_descr)
     ]
     kwarg_names = [Symbol(bdd.kwarg_name) for bdd in bindata_descr]
     darrs = Dict(Pair.(kwarg_names, arrs))
-    # @show darrs
     return darrs
-
 end
 
 # # # # # # # #
@@ -200,15 +180,17 @@ function data2bin(arrdata, kwarg_name)
 end
 
 """
-   data2bin!(;bin_data::ByteArr, bindata_descr::Vector{BinDescr}, arrdata, kwarg_name,)
+   data2bin!!(bin_data::ByteArr, bindata_descr::Vector{BinDescr}; arrdata, kwarg_name)
 
-Compute binary representation and description of data (currently supported types are
-numeric arrays and images). Append it's binary representation to `bin_data`, and description
-to `bindata_descr` array.
+Serialize for exchange with LabVIEW: Compute binary representation and
+description of data (currently supported types are numeric arrays and images).
+Append the binary representation to `bin_data`, and description to
+`bindata_descr` array (if the first two arguments are provided, mutate them,
+otherwise create).
 """
-function data2bin!(;
+function data2bin!!(
     bin_data::ByteArr = ByteArr(),
-    bindata_descr::Vector{BinDescr} = BinDescr[],
+    bindata_descr::Vector{BinDescr} = BinDescr[];
     arrdata,
     kwarg_name,
 )
@@ -220,13 +202,20 @@ function data2bin!(;
     return (; bin_data, bindata_descr)
 end
 
+"""
+   nums2bin(arrs)
+
+Accept an iterable of array-like data (numeric arrays, images, anything to come...). Compute
+binary representation and description for them and return binary data and array of
+descriptions, ready to be sent to LabVIEW.
+"""
 function nums2bin(arrs)
     bin_data = ByteArr()
     bindata_descr = BinDescr[]
 
     for arrname in keys(arrs)
         bin_data, bindata_descr =
-            data2bin!(; bin_data, bindata_descr, arrdata = arrs[arrname], kwarg_name = arrname)
+            data2bin!!(bin_data, bindata_descr; arrdata = arrs[arrname], kwarg_name = arrname)
     end
     return (; bin_data, bindata_descr)
 end

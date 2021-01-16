@@ -12,8 +12,16 @@ include("./conversions.jl")
 """
     setglobals(;isOK, extant=scriptexists, excpn = nothing)
 
-Set the globals of the LV_ZMQ_Jl module. By default do not change the value of `scriptexists`.
+Set the globals of the `LV_ZMQ_Jl` module. By default do not change the value of `scriptexists`.
 Use this function from the top-level scripts, e.g. as executing from LabVIEW.
+
+# Examples
+```julia-repl
+
+julia> setglobals(;isOK=true, extant=true);
+
+```
+
 """
 function setglobals(; isOK, extant=scriptexists, excpn = nothing)
     global scriptOK = isOK
@@ -25,18 +33,17 @@ end
 """
     get_script_path(p)
 
-Accepts a Julia script (with user defined functions) as full path for user functions of just
-file name for examples delivered with this package. If the file not found, returns the path
-to the empty file "dummy.jl". If `p` is empty string, returns path to "Examples-UserFn.jl",
+Accept a Julia script (with user defined functions) as full path for user functions of just
+file name for examples delivered with this package. If the file not found, return the path
+to the empty file "dummy.jl". If `p` is empty string, return path to "Examples-UserFn.jl",
 which in turn includes some example scripts.
-
 
 # Examples
 ```julia-repl
 
-julia> include(get_script_path("C:\\\\\\\\Users\\\\\\\\eben\\\\\\\\Desktop\\\\\\\\Julia\\\\\\\\my_functions.jl"))
-
-julia> server_0mq4lv()
+julia> include(get_script_path(raw"C:\\Users\\eben\\Desktop\\Julia\\my_functions.jl"))
+julia> server_0mq4lv((;foo=foo, bar, baz))
+```
 """
 function get_script_path(p="")
     global scriptexists
@@ -66,6 +73,19 @@ function get_script_path(p="")
     end
 end
 
+"""
+    get_LVlib_path()
+
+A helper function: return path to the LabVIEW library `LV-Julia_ZMQ-Roundtrip_lib.lvlib`
+
+# Examples
+```julia-repl
+
+julia> using LV_ZMQ_Jl
+julia> get_LVlib_path()
+C:/_LabView_projects/ZMQ/LV_ZMQ_Jl.jl/src/LabVIEW
+```
+"""
 function get_LVlib_path()
     srcdir = @__DIR__
     return joinpath(dirname(srcdir), "LabVIEW")

@@ -82,7 +82,7 @@ function numarr_loopback(; kwargs...) # idx=1, testarr)
         elem = -1
     end # try
     # return (;bin_data, bdds)
-    bin_data, bindata_descr = data2bin!(; nums = testarr, kwarg_name = "testarr")
+    bin_data, bindata_descr = data2bin!!(; nums = testarr, kwarg_name = "testarr")
     return (; elem, bin_data, bindata_descr)
 end
 

@@ -1,7 +1,7 @@
 include("../ZMQ_utils.jl")
 
 function n2b2n(ar)
-    bin_data, bdds = data2bin!(; nums = ar, kwarg_name = "nn")
+    bin_data, bdds = data2bin!!(; nums = ar, kwarg_name = "nn")
     @show bdds[1]
     # bin2nums(;bin_data=bin_data, bindata_descr=bdds)
     bin2nums(; bin_data = UInt8.(collect(1:24)), bindata_descr = bdds)
@@ -32,7 +32,7 @@ function b2n2b(sz = [24], tp = UInt8; kwn = "nn")
     bdin, bddin = buildbin(sz, tp; kwn = kwn)
     @show bddin
     nums = bin2nums(; bin_data = bdin, bindata_descr = [bddin])[Symbol(kwn)]
-    bdout, bdds = data2bin!(; arrdata = nums, kwarg_name = kwn)
+    bdout, bdds = data2bin!!(; arrdata = nums, kwarg_name = kwn)
     ok = bdin == bdout
     @show ok
     return (; ok, bdin, bdout, bddin, bddout = bdds[1], nums, numsint = Int.(abs.(nums)))

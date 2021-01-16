@@ -15,7 +15,7 @@ function, send response. Repeat.
 ```julia-repl
 
 julia> server_0mq4lv((;foo=foo, bar, baz))
-
+```
 """
 function server_0mq4lv(fns=(;))
 
