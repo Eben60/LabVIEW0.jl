@@ -75,7 +75,7 @@ function bin2num(; bin_data, nofbytes, start, arrdims, numtype)
     end
 
     bin_data = bin_data[start:start+nofbytes-1]
-    
+
     if numtype != Bool
         nums = collect(reinterpret(numtype, bin_data))
     else
@@ -92,7 +92,13 @@ function bin2num(; bin_data, nofbytes, start, arrdims, numtype)
     return nums
 end
 
+
 function bin2img(; bin_data, nofbytes, start, arrdims, numtype)
+
+    if nofbytes == 0 || any(arrdims.==0)
+        T = typeof(RGB(0,0,0)) # type by example
+        return emptyarr(arrdims, T)
+    end
 
     bin_data = bin_data[start:start+nofbytes-1]
 
