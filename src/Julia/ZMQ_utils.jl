@@ -1,11 +1,3 @@
-using JSON3, ImageCore
-
-const PROTOC_V = 0x01 # UInt8(1)
-
-# if !@isdefined BinDescr
-#     include("./typedefs.jl")
-# end
-
 include("./typedefs.jl")
 include("./conversions.jl")
 
@@ -36,7 +28,8 @@ end
 Accept a Julia script (with user defined functions) as full path for user functions of just
 file name for examples delivered with this package. If the file not found, return the path
 to the empty file "dummy.jl". If `p` is empty string, return path to "Examples-UserFn.jl",
-which in turn includes some example scripts.
+which in turn includes some example scripts. Set the global `scriptexists` to `true`
+if everything OK.
 
 # Examples
 ```julia-repl
@@ -92,19 +85,23 @@ function get_LVlib_path()
 end
 
 function StackFrame_to_NamedTuple(fm)
-    # func::Symbol
-    #    The name of the function containing the execution context.
-    # linfo::Union{Core.MethodInstance, CodeInfo, Nothing}
-    #    The MethodInstance containing the execution context (if it could be found).
-    # file::Symbol
-    #    The path to the file containing the execution context.
-    # line::Int
-    #    The line number in the file containing the execution context.
-    # from_c::Bool
-    #    True if the code is from C.
-    # inlined::Bool
-    #    True if the code is from an inlined frame.
-    # pointer::UInt64
+    #= StackFrame, see:
+    https://docs.julialang.org/en/v1/base/stacktraces/
+
+    func::Symbol
+       The name of the function containing the execution context.
+    linfo::Union{Core.MethodInstance, CodeInfo, Nothing}
+       The MethodInstance containing the execution context (if it could be found).
+    file::Symbol
+       The path to the file containing the execution context.
+    line::Int
+       The line number in the file containing the execution context.
+    from_c::Bool
+       True if the code is from C.
+    inlined::Bool
+       True if the code is from an inlined frame.
+    pointer::UInt64
+    =#
     return (
         frame_summary = string(fm),
         func = fm.func,
@@ -117,7 +114,13 @@ function StackFrame_to_NamedTuple(fm)
     )
 end
 
-function err_dict(;
+"""
+    build_err_info(;err, errcode, source, stack_trace, excep)
+
+Combine data for LV-style error cluster (the first three arguments), and detailed
+exception information.
+"""
+function build_err_info(;
     err::Bool = false,
     errcode::Int = 0,
     source::String = "",
@@ -125,24 +128,15 @@ function err_dict(;
     excep = "",
 )
     if err
-        # # default values on error
+        # default values on error
         if errcode == 0
             errcode = 5235805
         end
-
-
-
-        # if stack_trace == ""
-        #    stack_trace = "Julia script error"
-        # end
     end
 
     if !isempty(stack_trace)
         stack_trace = [StackFrame_to_NamedTuple(e) for e in stack_trace]
-        # stack_trace = ["$e" for e in stack_trace]
     end
-
-
 
     return (;
         status = err,
@@ -152,13 +146,21 @@ function err_dict(;
     )
 end
 
+"""
+    puttogether(;y, err, opt_header, returncode)
+
+Combine data to be sent to LabVIEW into a byte vector.
+# Arguments
+- `y`: data returned by the user function. Can be Dict, NamedTuple or other data type
+    convertible to pairs with  `key::T where T<: Union{Symbol, AbstractString}`
+- other arguments are self-explaining
+"""
 function puttogether(;
     y = Dict{Symbol,Any}(),
-    err = err_dict(),
+    err = build_err_info(),
     opt_header::ByteArr = UInt8[],
     returncode::Int = 0,
 )
-
 
     returncode = UInt8(returncode)
     y = Dict{Symbol,Any}(pairs(y)) # y could be Dict or named tuple
@@ -185,7 +187,6 @@ function puttogether(;
     js_lng = int2bytar(length(jsonstring))
 
     r = vcat(returncode, PROTOC_V, o_h_lng, bin_lng, opt_header, bin_data, jsonstring)
-
     return r
 end
 
@@ -209,7 +210,14 @@ end
 
 
 # # # # # # #
+"""
+    parse_REQ(b)
 
+Parse data received from LabVIEW, first pass. If there are any binary data, these will be
+further parsed downstream.
+# Arguments
+- `b::UInt8[]`: data received
+"""
 function parse_REQ(b)
 
     opt_header = fun2call = json_data = json_dict = args = bin_data = bytearr_lng = nothing
@@ -240,15 +248,5 @@ function parse_REQ(b)
     elseif !isnothing(bin_data)
         push!(args, :bin_data => bin_data)
     end
-
-    # @show ks=collect(keys(args))
     return (; opt_header, fun2call, args)
 end
-
-# numtype = "img24bit"
-# img24bit = Array{UInt8,3}
-#
-# numtype=Symbol(numtype)
-# numtype=eval(numtype)
-#
-# @show numtype == img24bit

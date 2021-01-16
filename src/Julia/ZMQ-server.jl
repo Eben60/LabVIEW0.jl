@@ -7,9 +7,9 @@ using ZMQ
 """
     server_0mq4lv(fns=(;))
 
-The top-level function of the package. User functions must be supplied as a NamedTuple
-or Dict. Start ZMQ socket, listen to requests, parse them, execute the requested user
-function, send response. Repeat.
+`server_0mq4lv` (meaning zero MQ for LabView) is the he top-level function of the package.
+User functions must be supplied as a NamedTuple or Dict. Start ZMQ socket, listen to
+requests, parse them, execute the requested user function, send response. Repeat.
 
 # Examples
 ```julia-repl
@@ -71,7 +71,7 @@ function server_0mq4lv(fns=(;))
                 end
                 err = nothing
                 try
-                    err = err_dict(;
+                    err = build_err_info(;
                         err = true,
                         errcode = 5235817,
                         source = @__FILE__,
@@ -79,7 +79,7 @@ function server_0mq4lv(fns=(;))
                         excep = excep,
                     )
                 catch
-                    err = err_dict(;
+                    err = build_err_info(;
                         err = true,
                         errcode = 5235817,
                         source = @__FILE__,
@@ -103,7 +103,7 @@ function server_0mq4lv(fns=(;))
                 catch excep
                     err_stack_trace = stacktrace(catch_backtrace())
                     # # https://docs.julialang.org/en/v1/manual/stacktraces/#Error-handling-1
-                    err = err_dict(;
+                    err = build_err_info(;
                         err = true,
                         errcode = 5235805,
                         source = @__FILE__,
