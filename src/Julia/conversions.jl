@@ -1,4 +1,10 @@
-using JSON3, ImageCore
+SUPPORTED_REALS = (
+    Float32, Float64,
+    Int8, Int16, Int32, Int64,
+    UInt8, UInt16, UInt32, UInt64,
+    Bool,
+    )
+SUPPORTED_COMPLEX = (ComplexF32, ComplexF64)
 
 if !@isdefined BinDescr
     include("./typedefs.jl")
@@ -33,7 +39,7 @@ function numtypestring(ar)
     elseif t == ComplexF64
         return "ComplexF64"
     else
-        return throw(DomainError("$(string(t)) is not a supported numeric type for exchange with LabVIEW. consider converting array first."))
+        return throw(DomainError("$(string(t)) is not a supported numeric type for exchange with LabVIEW: consider converting array first."))
     end
 end
 

@@ -36,7 +36,7 @@ which in turn includes some example scripts.
 
 julia> include(get_script_path("C:\\\\\\\\Users\\\\\\\\eben\\\\\\\\Desktop\\\\\\\\Julia\\\\\\\\my_functions.jl"))
 
-julia> ZMQ_server()
+julia> server_0mq4lv()
 """
 function get_script_path(p="")
     global scriptexists

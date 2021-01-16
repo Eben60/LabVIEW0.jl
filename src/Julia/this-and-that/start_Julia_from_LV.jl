@@ -15,4 +15,4 @@ catch excep
 end
 
 # @show LV_ZMQ_Jl.scriptOK, scriptexists #, scriptexcep
-ZMQ_server(fns)
+server_0mq4lv(fns)

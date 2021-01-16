@@ -5,7 +5,7 @@ include("./test_functions.jl")
 using ZMQ
 
 """
-    ZMQ_server(fns=(;))
+    server_0mq4lv(fns=(;))
 
 The top-level function of the package. User functions must be supplied as a NamedTuple
 or Dict. Start ZMQ socket, listen to requests, parse them, execute the requested user
@@ -14,10 +14,10 @@ function, send response. Repeat.
 # Examples
 ```julia-repl
 
-julia> ZMQ_server((;foo=foo, bar, baz))
+julia> server_0mq4lv((;foo=foo, bar, baz))
 
 """
-function ZMQ_server(fns=(;))
+function server_0mq4lv(fns=(;))
 
     context = Context()
     socket = Socket(context, REP)
@@ -132,4 +132,4 @@ function ZMQ_server(fns=(;))
 
 end
 
-# ZMQ_server()
+# server_0mq4lv()
