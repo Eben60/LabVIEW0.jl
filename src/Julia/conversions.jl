@@ -62,13 +62,20 @@ function cmplxswap(c::Complex)
     return c
 end
 
+function emptyarr(arrdims, numtype)
+    Array{numtype}(undef, zeros(Int, length(arrdims))...)
+end
+
 function bin2num(; bin_data, nofbytes, start, arrdims, numtype)
-
-    bin_data = bin_data[start:start+nofbytes-1]
-
     nt = Symbol(numtype)
     numtype = eval(nt)
 
+    if nofbytes == 0 || any(arrdims.==0)
+        return emptyarr(arrdims, numtype)
+    end
+
+    bin_data = bin_data[start:start+nofbytes-1]
+    
     if numtype != Bool
         nums = collect(reinterpret(numtype, bin_data))
     else
@@ -83,7 +90,6 @@ function bin2num(; bin_data, nofbytes, start, arrdims, numtype)
         nums .= cmplxswap.(nums)
     end
     return nums
-
 end
 
 function bin2img(; bin_data, nofbytes, start, arrdims, numtype)
