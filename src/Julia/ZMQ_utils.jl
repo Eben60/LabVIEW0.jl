@@ -206,9 +206,6 @@ function parse_cmnd(b)
     return (; command, prot_OK, prot_v)
 end
 
-
-
-
 # # # # # # #
 """
     parse_REQ(b)
@@ -219,7 +216,6 @@ further parsed downstream.
 - `b::UInt8[]`: data received
 """
 function parse_REQ(b)
-
     opt_header = fun2call = json_data = json_dict = args = bin_data = bytearr_lng = nothing
     o_h_lng_start = 3
     bin_lng_start = o_h_lng_start + 4
