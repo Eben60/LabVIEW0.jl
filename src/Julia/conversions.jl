@@ -164,7 +164,10 @@ function nums2ByteArr(nums)
 end
 
 function data2bin(img::I, kwarg_name) where I <: AbstractArray{C,2} where C <: Color
+
+    # in most cases, image is already RGB{N0f8} anyway, but who knows:
     img = convert.(RGB{N0f8}, img)
+
     cnv = channelview(img)
     rwv = collect(rawview(cnv))
     prw = collect(permutedims(rwv, [1,3,2]))

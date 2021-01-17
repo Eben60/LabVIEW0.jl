@@ -1,5 +1,8 @@
 # using Colors, TestImages, ImageIO, ImageShow, FileIO
 
+function isimage(a)
+    return (typeof(a) <: AbstractArray{C,2} where C <: Color)
+end
 
 function loopback(; kwargs...)
     defaults = (; idx = 1, showversion=true)
@@ -30,18 +33,20 @@ function loopback(; kwargs...)
 
     idx = kwargs[:idx]
     # println("p2")
-    try
-        elem = a[idx...]
-        if typeof(elem) in (ComplexF32, ComplexF64)
-            elem = (re = real.(elem), im = imag.(elem))
-        elseif elem isa Bool
-            elem = UInt8(elem)
+    elem = -1
+    if ! isimage(a)
+        try
+            elem = a[idx...]
+            if typeof(elem) in (ComplexF32, ComplexF64)
+                elem = (re = real.(elem), im = imag.(elem))
+            elseif elem isa Bool
+                elem = UInt8(elem)
+            end
+        catch
         end
-    catch
-        elem = -1
     end
 
-    if (typeof(a) <: AbstractArray{C,2} where C <: Color) && kwargs.showversion
+    if isimage(a) && kwargs.showversion
         try
             display(a)
         catch
