@@ -1,5 +1,3 @@
-# using Colors, TestImages, ImageIO, ImageShow, FileIO
-
 function isimage(a)
     return (typeof(a) <: AbstractArray{C,2} where C <: Color)
 end
@@ -17,22 +15,16 @@ function loopback(; kwargs...)
     for arg in scalarargs
         delete!(bigarrs, arg)
     end
-    # delete!(arrnames, :idx)
-    # delete!(arrnames, :showversion)
-    # @show arrnames
-
-    elem = nothing
-    # try
 
     if :testarr in keys(bigarrs)
         a=kwargs[:testarr]
     else
-        first_arrkey = [(keys(bigarrs))...][1]
+        first_arrkey = sort([(keys(bigarrs))...])[1] # first by alphabet
         a=kwargs[first_arrkey]
     end
 
     idx = kwargs[:idx]
-    # println("p2")
+
     elem = -1
     if ! isimage(a)
         try
