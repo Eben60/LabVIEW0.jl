@@ -1,2 +1,2 @@
-# LV_ZMQ_Jl.jl
+# LabView0mqJl
 Calling Julia functions from LabVIEW (TM) using ZMQ
