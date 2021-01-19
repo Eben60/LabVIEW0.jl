@@ -12,6 +12,7 @@ PkgVersion = "eebad327-c553-4316-9ea0-9fa01ccd7688"
 ZMQ = "c2297ded-f4af-51ae-bb23-16f91089e4e1"
 
 [compat]
+ColorTypes = "0.10"
 Colors = "0.12"
 ImageCore = "0.8"
 JSON3 = "1.5"
