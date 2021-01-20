@@ -31,10 +31,10 @@ function server_0mq4lv(fns=(;))
         try
             # in case the server started with a user script
             # from command line via LabVIEW
-            # otherwise if "using LV_ZMQ_Jl" manually
+            # otherwise if "using LabView0mqJl" manually
             # init these two global variables manually, too
             initOK = scriptexists && scriptOK
-            version = string(PkgVersion.Version(LV_ZMQ_Jl))
+            version = string(PkgVersion.Version(LabView0mqJl))
             println(initOK, " try OK")
         catch err
             if isa(err, UndefVarError)

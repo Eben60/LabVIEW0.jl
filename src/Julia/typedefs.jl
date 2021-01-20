@@ -3,7 +3,7 @@ ByteArr = Vector{UInt8} # byte array
 """
     BinDescr
 
-Describe (a chunk) of binary data, e.g. numeric array or image in the LV_ZMQ_Jl format used
+Describe (a chunk) of binary data, e.g. numeric array or image in the LabView0mqJl format used
 for exchange between Julia and LabVIEW. Gets converted from/to JSON for transport.
 """
 mutable struct BinDescr

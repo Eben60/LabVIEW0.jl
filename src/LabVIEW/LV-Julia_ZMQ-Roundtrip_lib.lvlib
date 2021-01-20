@@ -8,9 +8,9 @@
 
 </Property>
 	<Item Name="Julia" Type="Folder">
-		<Item Name="user_functions.jl" Type="Document" URL="../../../../LV_ZMQ_Jl.jl/src/Julia/user_functions.jl"/>
-		<Item Name="ZMQ-testserver.jl" Type="Document" URL="../../../../LV_ZMQ_Jl.jl/src/Julia/ZMQ-testserver.jl"/>
-		<Item Name="ZMQ_utils.jl" Type="Document" URL="../../../../LV_ZMQ_Jl.jl/src/Julia/ZMQ_utils.jl"/>
+		<Item Name="user_functions.jl" Type="Document" URL="../../../../LabView0mqJl.jl/src/Julia/user_functions.jl"/>
+		<Item Name="ZMQ-testserver.jl" Type="Document" URL="../../../../LabView0mqJl.jl/src/Julia/ZMQ-testserver.jl"/>
+		<Item Name="ZMQ_utils.jl" Type="Document" URL="../../../../LabView0mqJl.jl/src/Julia/ZMQ_utils.jl"/>
 	</Item>
 	<Item Name="typedefs" Type="Folder">
 		<Item Name="Bindata description.ctl" Type="VI" URL="../VIs/Bindata description.ctl"/>
