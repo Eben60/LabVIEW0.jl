@@ -8,9 +8,9 @@
 
 </Property>
 	<Item Name="Julia" Type="Folder">
-		<Item Name="user_functions.jl" Type="Document" URL="../../Julia/user_functions.jl"/>
-		<Item Name="ZMQ-testserver.jl" Type="Document" URL="../../Julia/ZMQ-testserver.jl"/>
-		<Item Name="ZMQ_utils.jl" Type="Document" URL="../../Julia/ZMQ_utils.jl"/>
+		<Item Name="user_functions.jl" Type="Document" URL="../../../../LV_ZMQ_Jl.jl/src/Julia/user_functions.jl"/>
+		<Item Name="ZMQ-testserver.jl" Type="Document" URL="../../../../LV_ZMQ_Jl.jl/src/Julia/ZMQ-testserver.jl"/>
+		<Item Name="ZMQ_utils.jl" Type="Document" URL="../../../../LV_ZMQ_Jl.jl/src/Julia/ZMQ_utils.jl"/>
 	</Item>
 	<Item Name="typedefs" Type="Folder">
 		<Item Name="Bindata description.ctl" Type="VI" URL="../VIs/Bindata description.ctl"/>
@@ -50,7 +50,6 @@
 			<Item Name="test signal.vi" Type="VI" URL="../VIs/test signal.vi"/>
 			<Item Name="test start Julia &amp; execute a REPL line.vi" Type="VI" URL="../VIs/test start Julia &amp; execute a REPL line.vi"/>
 			<Item Name="test type string.vi" Type="VI" URL="../VIs/test type string.vi"/>
-			<Item Name="testclass.lvclass" Type="LVClass" URL="../VIs/testclass.lvclass"/>
 			<Item Name="testsuite arrays.vi" Type="VI" URL="../VIs/testsuite arrays.vi"/>
 		</Item>
 		<Item Name="unused" Type="Folder">
@@ -97,8 +96,10 @@
 			<Item Name="convert to some numtype.vim" Type="VI" URL="../VIs/convert to some numtype.vim"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
+			<Item Name="elapsed time with FGV.vi" Type="VI" URL="../VIs/elapsed time with FGV.vi"/>
 			<Item Name="flatten images.vim" Type="VI" URL="../VIs/flatten images.vim"/>
 			<Item Name="flatten numarrays.vim" Type="VI" URL="../VIs/flatten numarrays.vim"/>
+			<Item Name="generate big random array.vi" Type="VI" URL="../VIs/generate big random array.vi"/>
 			<Item Name="generate sample array v0.vim" Type="VI" URL="../VIs/generate sample array v0.vim"/>
 			<Item Name="generate sample array.vim" Type="VI" URL="../VIs/generate sample array.vim"/>
 			<Item Name="get Julia ZMQ server path.vi" Type="VI" URL="../VIs/get Julia ZMQ server path.vi"/>
@@ -116,5 +117,6 @@
 	<Item Name="Bindata&amp;descr to img.vi" Type="VI" URL="../VIs/Bindata&amp;descr to img.vi"/>
 	<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 	<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
+	<Item Name="send&amp;receive_BigRndArr.vi" Type="VI" URL="../VIs/send&amp;receive_BigRndArr.vi"/>
 	<Item Name="send&amp;receive_img.vi" Type="VI" URL="../VIs/send&amp;receive_img.vi"/>
 </Library>

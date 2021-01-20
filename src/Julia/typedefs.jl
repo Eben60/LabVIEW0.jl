@@ -7,13 +7,13 @@ Describe (a chunk) of binary data, e.g. numeric array or image in the LV_ZMQ_Jl 
 for exchange between Julia and LabVIEW. Gets converted from/to JSON for transport.
 """
 mutable struct BinDescr
-    start::Int
     nofbytes::Int
-    arrdims::Vector{Int}
     numtype::String
+    start::Int
+    arrdims::Vector{Int}
     kwarg_name::Union{String,Symbol}
     category::String
 end
 
-BinDescr() = BinDescr(1, 0, [], "", "", "numarrays")
+BinDescr() = BinDescr(0, "", 1, [], "", "numarrays")
 JSON3.StructTypes.StructType(::Type{BinDescr}) = JSON3.StructTypes.Struct()
