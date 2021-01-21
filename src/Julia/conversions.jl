@@ -173,6 +173,7 @@ function data2bin(img::I, kwarg_name) where I <: AbstractArray{C,2} where C <: C
     bdd = BinDescr()
     bdd.kwarg_name = kwarg_name
     bdd.numtype = "img24bit"
+    bdd.category = "images"
     bdd.arrdims = collect(size(img))
     bdd.nofbytes = length(bd)
     return (bd, bdd)
