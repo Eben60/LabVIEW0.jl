@@ -6,12 +6,6 @@ SUPPORTED_REALS = (
     )
 SUPPORTED_COMPLEX = (ComplexF32, ComplexF64)
 
-# if !@isdefined BinDescr
-#     include("./typedefs.jl")
-# end
-
-# # # # # # # #
-
 function int2bytar(i::Int; i_type = UInt32)
     if i_type == Bool
         return UInt8(Bool)
@@ -92,6 +86,9 @@ function bin2num(; bin_data, nofbytes, start, arrdims, numtype)
     return nums
 end
 
+function isimage(a)
+    return (typeof(a) <: AbstractArray{C,2} where C <: Color)
+end
 
 function bin2img(; bin_data, nofbytes, start, arrdims, numtype)
 

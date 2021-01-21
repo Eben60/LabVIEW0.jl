@@ -1,7 +1,3 @@
-function isimage(a)
-    return (typeof(a) <: AbstractArray{C,2} where C <: Color)
-end
-
 function loopback(; kwargs...)
     defaults = (; idx = 1, showversion=true)
     kwargs = merge(defaults, kwargs)
