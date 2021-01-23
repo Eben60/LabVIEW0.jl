@@ -35,14 +35,7 @@ function server_0mq4lv(fns=(;); initOK=false)
         if isempty(fns)
             initOK = true # package-internal functions only
         else
-            try
-                # in case the server started with a user script
-                # from command line via LabVIEW
-                # otherwise if "using LabView0mqJl" manually
-                # init these two global variables manually, too
-                initOK = scriptexists && scriptOK
-            catch err
-            end
+            initOK = scriptexists && scriptOK
         end
     end
 
