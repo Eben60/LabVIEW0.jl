@@ -34,12 +34,12 @@ function loopback(; kwargs...)
         end
     end
 
-    if isimage(a) && kwargs.showversion
-        try
-            display(a)
-        catch
-        end
-    end
+    # if isimage(a) && kwargs.showversion
+    #     try
+    #         display(a)
+    #     catch
+    #     end
+    # end
 
     return (; elem, bigarrs)
 end
