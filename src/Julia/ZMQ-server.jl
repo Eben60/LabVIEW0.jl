@@ -5,7 +5,7 @@ include("./test_functions.jl")
 """
     server_0mq4lv(fns=(;))
 
-`server_0mq4lv` (meaning zero MQ for LabView) is the he top-level function of the package.
+`server_0mq4lv` (meaning zero MQ for LabView) is the top-level function of the package.
 User functions must be supplied as a NamedTuple or Dict. Start ZMQ socket, listen to
 requests, parse them, execute the requested user function, send response. Repeat.
 
@@ -21,7 +21,13 @@ function server_0mq4lv(fns=(;))
     socket = Socket(context, REP)
     ZMQ.bind(socket, "tcp://*:5555")
     initOK = false
-    version = ""
+    version = string(PkgVersion.Version(LabView0mqJl))
+    if isempty(fns)
+        fnlist = "built-in test functions only"
+    else
+        fnlist = join(["built-in test functions", keys(fns)...], ", ")
+    end
+
     global scriptexists
     global scriptOK
 
@@ -34,22 +40,24 @@ function server_0mq4lv(fns=(;))
             # otherwise if "using LabView0mqJl" manually
             # init these two global variables manually, too
             initOK = scriptexists && scriptOK
-            version = string(PkgVersion.Version(LabView0mqJl))
-            println(initOK, " try OK")
         catch err
             if isa(err, UndefVarError)
                 # this file was probably executed as standalone for development purposes
                 # you know what you do, so OK
                 initOK = true
-                version = "unknown"
             end
-        end
-        if !initOK
-            println("server initialisation failed")
         end
     end
 
-    println("starting ZMQ server: Julia for LabVIEW, v=$version")
+
+    if initOK
+        println("starting ZMQ server, Julia for LabVIEW: LabView0mqJl v=$version")
+        println("available functions:")
+        println(fnlist)
+    else
+        println("server initialisation failed")
+    end
+
     try
         while true
             # Wait for next request from client
