@@ -9,6 +9,7 @@
 </Property>
 	<Item Name="other files" Type="Folder">
 		<Item Name="peppers_color_256.png" Type="Document" URL="../other_files/peppers_color_256.png"/>
+		<Item Name="simple_examples.jl" Type="Document" URL="../other_files/simple_examples.jl"/>
 	</Item>
 	<Item Name="typedefs" Type="Folder">
 		<Item Name="Bindata description.ctl" Type="VI" URL="../VIs/Bindata description.ctl"/>
@@ -51,6 +52,9 @@
 				<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
 				<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
+			</Item>
+			<Item Name="using_LabView0mqJlExamples" Type="Folder">
+				<Item Name="test_simple_examples.jl" Type="VI" URL="../VIs/test_simple_examples.jl"/>
 			</Item>
 			<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
 			<Item Name="send&amp;receive_BigRndArr.vi" Type="VI" URL="../VIs/send&amp;receive_BigRndArr.vi"/>
