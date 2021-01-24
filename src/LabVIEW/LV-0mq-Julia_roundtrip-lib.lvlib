@@ -26,6 +26,7 @@
 		<Item Name="Numeric Types enum.ctl" Type="VI" URL="../VIs/Numeric Types enum.ctl"/>
 		<Item Name="placeholder arguments cluster.ctl" Type="VI" URL="../VIs/placeholder arguments cluster.ctl"/>
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
+		<Item Name="simple examples functions.ctl" Type="VI" URL="../VIs/simple examples functions.ctl"/>
 		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
@@ -54,7 +55,7 @@
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
 			<Item Name="using_LabView0mqJlExamples" Type="Folder">
-				<Item Name="test_simple_examples.jl" Type="VI" URL="../VIs/test_simple_examples.jl"/>
+				<Item Name="test_simple_examples.vi" Type="VI" URL="../VIs/test_simple_examples.vi"/>
 			</Item>
 			<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
 			<Item Name="send&amp;receive_BigRndArr.vi" Type="VI" URL="../VIs/send&amp;receive_BigRndArr.vi"/>
