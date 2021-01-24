@@ -160,7 +160,7 @@ function nums2ByteArr(nums)
     end
 end
 
-function data2bin(img::I, kwarg_name) where I <: AbstractArray{C,2} where C <: Color
+function data2bin(img::I, kwarg_name) where I <: AbstractArray{C,2} where C <: Colorant
 
     # in most cases, image is already RGB{N0f8} anyway, but who knows:
     img = convert.(RGB{N0f8}, img)

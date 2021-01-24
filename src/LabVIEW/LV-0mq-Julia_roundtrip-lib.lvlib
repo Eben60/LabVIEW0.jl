@@ -55,6 +55,7 @@
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
 			<Item Name="using_LabView0mqJlExamples" Type="Folder">
+				<Item Name="test_get_testimages.jl" Type="VI" URL="../VIs/test_get_testimages.jl"/>
 				<Item Name="test_simple_examples.vi" Type="VI" URL="../VIs/test_simple_examples.vi"/>
 			</Item>
 			<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
