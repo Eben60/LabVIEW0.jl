@@ -59,3 +59,7 @@ function foo(;arg1, arg2_string, arg3_arr_Cx32, arg4_arr_i16)
 
     return (;resp1, bigarrs=(;resp_arr_I32, resp_arr_F64))
 end
+
+function tmp_test(x)
+    return x
+end

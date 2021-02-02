@@ -30,6 +30,10 @@
 		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
+		<Item Name="exercises" Type="Folder">
+			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
+			<Item Name="test random.vi" Type="VI" URL="../VIs/test random.vi"/>
+		</Item>
 		<Item Name="tests (LV only)" Type="Folder">
 			<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 		</Item>
@@ -87,9 +91,11 @@
 			<Item Name="elapsed time with FGV.vi" Type="VI" URL="../VIs/elapsed time with FGV.vi"/>
 			<Item Name="flatten images.vim" Type="VI" URL="../VIs/flatten images.vim"/>
 			<Item Name="flatten numarrays.vim" Type="VI" URL="../VIs/flatten numarrays.vim"/>
+			<Item Name="generate a random arr.vim" Type="VI" URL="../VIs/generate a random arr.vim"/>
 			<Item Name="generate big random array.vi" Type="VI" URL="../VIs/generate big random array.vi"/>
 			<Item Name="generate sample array.vim" Type="VI" URL="../VIs/generate sample array.vim"/>
 			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
+			<Item Name="Global Constants.vi" Type="VI" URL="../VIs/Global Constants.vi"/>
 			<Item Name="img2ByteArr.vi" Type="VI" URL="../VIs/img2ByteArr.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
