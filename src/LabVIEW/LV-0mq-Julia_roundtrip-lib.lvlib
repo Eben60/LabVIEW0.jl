@@ -59,7 +59,7 @@
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
 			<Item Name="using_LabView0mqJlExamples" Type="Folder">
-				<Item Name="test_get_testimages.jl" Type="VI" URL="../VIs/test_get_testimages.jl"/>
+				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
 				<Item Name="test_simple_examples.vi" Type="VI" URL="../VIs/test_simple_examples.vi"/>
 			</Item>
 			<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
@@ -68,6 +68,9 @@
 			<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 		</Item>
 		<Item Name="Utils" Type="Folder">
+			<Item Name="globals" Type="Folder">
+				<Item Name="protocoll version.vi" Type="VI" URL="../VIs/protocoll version.vi"/>
+			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
 			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
@@ -95,7 +98,6 @@
 			<Item Name="generate big random array.vi" Type="VI" URL="../VIs/generate big random array.vi"/>
 			<Item Name="generate sample array.vim" Type="VI" URL="../VIs/generate sample array.vim"/>
 			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
-			<Item Name="Global Constants.vi" Type="VI" URL="../VIs/Global Constants.vi"/>
 			<Item Name="img2ByteArr.vi" Type="VI" URL="../VIs/img2ByteArr.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
