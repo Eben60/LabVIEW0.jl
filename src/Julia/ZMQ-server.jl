@@ -30,8 +30,9 @@ function server_0mq4lv(fns=(;); initOK=false)
 
     external_fns() = (;ext_fns=keys(fns))
 
-    print(external_fns())
-    print(eval(:external_fns))
+    # println(external_fns())
+    # println(external_fns)
+    # println(eval(:external_fns))
 
     global scriptexists
     global scriptOK
@@ -94,7 +95,10 @@ function server_0mq4lv(fns=(;); initOK=false)
                 try
                     pr = parse_REQ(bytesreceived)
                     fn = pr.fun2call
-                    if haskey(fns, fn)
+                    if fn == :external_fns
+                        f = external_fns
+                    elseif
+                        haskey(fns, fn)
                         f = fns[fn]
                     else
                         f = eval(fn)
