@@ -30,6 +30,9 @@ function server_0mq4lv(fns=(;); initOK=false)
 
     external_fns() = (;ext_fns=keys(fns))
 
+    print(external_fns())
+    print(eval(:external_fns))
+
     global scriptexists
     global scriptOK
 
