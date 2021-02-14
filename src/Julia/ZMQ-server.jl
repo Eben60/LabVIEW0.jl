@@ -97,8 +97,7 @@ function server_0mq4lv(fns=(;); initOK=false)
                     fn = pr.fun2call
                     if fn == :external_fns
                         f = external_fns
-                    elseif
-                        haskey(fns, fn)
+                    elseif haskey(fns, fn)
                         f = fns[fn]
                     else
                         f = eval(fn)
