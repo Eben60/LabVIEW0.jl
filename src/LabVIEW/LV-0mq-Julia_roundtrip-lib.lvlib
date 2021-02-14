@@ -31,6 +31,13 @@
 		<Item Name="ZMQ timeouts.ctl" Type="VI" URL="../VIs/ZMQ timeouts.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
+		<Item Name="API" Type="Folder">
+			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
+			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
+			<Item Name="call Jl server fn.vi" Type="VI" URL="../VIs/call Jl server fn.vi"/>
+			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
+			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
+		</Item>
 		<Item Name="exercises" Type="Folder">
 			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
 			<Item Name="test random.vi" Type="VI" URL="../VIs/test random.vi"/>
@@ -43,6 +50,7 @@
 				<Item Name="example3.vi" Type="VI" URL="../VIs/example3.vi"/>
 				<Item Name="example4.vi" Type="VI" URL="../VIs/example4.vi"/>
 				<Item Name="single REQ.vi" Type="VI" URL="../VIs/single REQ.vi"/>
+				<Item Name="test_simple_examples v0.vi" Type="VI" URL="../VIs/test_simple_examples v0.vi"/>
 			</Item>
 			<Item Name="more?" Type="Folder">
 				<Item Name="send arr of complex.vi" Type="VI" URL="../VIs/send arr of complex.vi"/>
@@ -60,8 +68,8 @@
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
 			<Item Name="using_LabView0mqJlExamples" Type="Folder">
+				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
 				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
-				<Item Name="test_simple_examples.vi" Type="VI" URL="../VIs/test_simple_examples.vi"/>
 			</Item>
 			<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
 			<Item Name="send&amp;receive_BigRndArr.vi" Type="VI" URL="../VIs/send&amp;receive_BigRndArr.vi"/>
@@ -79,12 +87,11 @@
 			<Item Name="bindata descr by kwarg_name.vi" Type="VI" URL="../VIs/bindata descr by kwarg_name.vi"/>
 			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../VIs/bindata to flat numarray.vim"/>
 			<Item Name="bindata to shaped numarray no clustering.vim" Type="VI" URL="../VIs/bindata to shaped numarray no clustering.vim"/>
-			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
 			<Item Name="Bindata&amp;descr to img.vi" Type="VI" URL="../VIs/Bindata&amp;descr to img.vi"/>
 			<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
-			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 			<Item Name="check cluster field names.vi" Type="VI" URL="../VIs/check cluster field names.vi"/>
+			<Item Name="check fns availability.vi" Type="VI" URL="../VIs/check fns availability.vi"/>
 			<Item Name="check ID validity.vi" Type="VI" URL="../VIs/check ID validity.vi"/>
 			<Item Name="check if special command.vi" Type="VI" URL="../VIs/check if special command.vi"/>
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
@@ -93,7 +100,6 @@
 			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 			<Item Name="convert to some numtype.vim" Type="VI" URL="../VIs/convert to some numtype.vim"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
-			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
 			<Item Name="elapsed time with FGV.vi" Type="VI" URL="../VIs/elapsed time with FGV.vi"/>
 			<Item Name="flatten images.vim" Type="VI" URL="../VIs/flatten images.vim"/>
 			<Item Name="flatten numarrays.vim" Type="VI" URL="../VIs/flatten numarrays.vim"/>
@@ -108,12 +114,10 @@
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
 			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="read numarray, compare with original one.vi" Type="VI" URL="../VIs/read numarray, compare with original one.vi"/>
-			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 			<Item Name="send request, get response.vi" Type="VI" URL="../VIs/send request, get response.vi"/>
 			<Item Name="set ZMQ timeouts - low level.vi" Type="VI" URL="../VIs/set ZMQ timeouts - low level.vi"/>
 			<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="test_simple_examples with timeout.vi" Type="VI" URL="../VIs/test_simple_examples with timeout.vi"/>
 </Library>
