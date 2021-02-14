@@ -22,3 +22,5 @@ LV code | _err?_ | description
 **5235818** | _err_ | Wrong data category
 **5235819** | _err_ | protocoll version higher than supported by LabVIEW
 **5235820** | _err_ | Not the expected server response type
+**5235821** | _err_ | Not all functions are available at Julia server
+**5235822** | _err_ | ZMQ timeout
