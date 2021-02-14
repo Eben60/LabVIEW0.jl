@@ -86,6 +86,7 @@
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
 			<Item Name="check cluster field names.vi" Type="VI" URL="../VIs/check cluster field names.vi"/>
 			<Item Name="check ID validity.vi" Type="VI" URL="../VIs/check ID validity.vi"/>
+			<Item Name="check if special command.vi" Type="VI" URL="../VIs/check if special command.vi"/>
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
 			<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
@@ -110,11 +111,9 @@
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 			<Item Name="send request, get response.vi" Type="VI" URL="../VIs/send request, get response.vi"/>
 			<Item Name="set ZMQ timeouts - low level.vi" Type="VI" URL="../VIs/set ZMQ timeouts - low level.vi"/>
-			<Item Name="set ZMQ timeouts.vi" Type="VI" URL="../VIs/set ZMQ timeouts.vi"/>
 			<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="check if special command.vi" Type="VI" URL="../VIs/check if special command.vi"/>
 	<Item Name="test_simple_examples with timeout.vi" Type="VI" URL="../VIs/test_simple_examples with timeout.vi"/>
 </Library>
