@@ -28,6 +28,8 @@ function server_0mq4lv(fns=(;); initOK=false)
         fnlist = join(["built-in test functions", keys(fns)...], ", ")
     end
 
+    external_fns() = (;ext_fns=keys(fns))
+
     global scriptexists
     global scriptOK
 
