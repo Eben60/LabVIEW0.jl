@@ -28,7 +28,7 @@ function server_0mq4lv(fns=(;); initOK=false)
         fnlist = join(["built-in test functions", keys(fns)...], ", ")
     end
 
-    external_fns() = (;ext_fns=keys(fns))
+    external_fns(;kwargs...) = (;ext_fns=keys(fns))
 
     # println(external_fns())
     # println(external_fns)
