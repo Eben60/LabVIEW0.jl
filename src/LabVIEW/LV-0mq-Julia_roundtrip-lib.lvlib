@@ -28,6 +28,7 @@
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
 		<Item Name="simple examples functions.ctl" Type="VI" URL="../VIs/simple examples functions.ctl"/>
 		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
+		<Item Name="ZMQ timeouts.ctl" Type="VI" URL="../VIs/ZMQ timeouts.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
 		<Item Name="exercises" Type="Folder">
@@ -70,6 +71,7 @@
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
 				<Item Name="protocoll version.vi" Type="VI" URL="../VIs/protocoll version.vi"/>
+				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
@@ -103,11 +105,16 @@
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
+			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="read numarray, compare with original one.vi" Type="VI" URL="../VIs/read numarray, compare with original one.vi"/>
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 			<Item Name="send request, get response.vi" Type="VI" URL="../VIs/send request, get response.vi"/>
+			<Item Name="set ZMQ timeouts - low level.vi" Type="VI" URL="../VIs/set ZMQ timeouts - low level.vi"/>
+			<Item Name="set ZMQ timeouts.vi" Type="VI" URL="../VIs/set ZMQ timeouts.vi"/>
 			<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="check if special command.vi" Type="VI" URL="../VIs/check if special command.vi"/>
+	<Item Name="test_simple_examples with timeout.vi" Type="VI" URL="../VIs/test_simple_examples with timeout.vi"/>
 </Library>
