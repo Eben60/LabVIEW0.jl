@@ -24,3 +24,4 @@ LV code | _err?_ | description
 **5235820** | _err_ | Not the expected server response type
 **5235821** | _err_ | Not all functions are available at Julia server
 **5235822** | _err_ | ZMQ timeout
+**5235823** | _err_ | Julia script file not found

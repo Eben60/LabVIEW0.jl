@@ -78,6 +78,7 @@
 		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
+				<Item Name="jl-scripts path.vi" Type="VI" URL="../VIs/jl-scripts path.vi"/>
 				<Item Name="protocoll version.vi" Type="VI" URL="../VIs/protocoll version.vi"/>
 				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
 			</Item>
@@ -120,4 +121,5 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="show file in explorer.vi" Type="VI" URL="../VIs/show file in explorer.vi"/>
 </Library>
