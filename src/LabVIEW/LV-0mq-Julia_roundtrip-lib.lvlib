@@ -81,6 +81,7 @@
 		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
+				<Item Name="jl stack traces global.vi" Type="VI" URL="../VIs/jl stack traces global.vi"/>
 				<Item Name="jl-scripts path.vi" Type="VI" URL="../VIs/jl-scripts path.vi"/>
 				<Item Name="protocoll version.vi" Type="VI" URL="../VIs/protocoll version.vi"/>
 				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
@@ -115,6 +116,7 @@
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
+			<Item Name="log jl exceptions.vi" Type="VI" URL="../VIs/log jl exceptions.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
 			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
