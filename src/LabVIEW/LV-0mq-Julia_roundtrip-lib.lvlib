@@ -28,6 +28,7 @@
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
 		<Item Name="simple examples functions.ctl" Type="VI" URL="../VIs/simple examples functions.ctl"/>
 		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
+		<Item Name="timestamped jl err info.ctl" Type="VI" URL="../VIs/timestamped jl err info.ctl"/>
 		<Item Name="ZMQ timeouts.ctl" Type="VI" URL="../VIs/ZMQ timeouts.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
