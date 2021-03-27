@@ -76,6 +76,9 @@
 			<Item Name="send&amp;receive_img.vi" Type="VI" URL="../VIs/send&amp;receive_img.vi"/>
 			<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 		</Item>
+		<Item Name="unused" Type="Folder">
+			<Item Name="show file in explorer.vi" Type="VI" URL="../VIs/show file in explorer.vi"/>
+		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
 				<Item Name="jl-scripts path.vi" Type="VI" URL="../VIs/jl-scripts path.vi"/>
@@ -110,6 +113,7 @@
 			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
 			<Item Name="img2ByteArr.vi" Type="VI" URL="../VIs/img2ByteArr.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
+			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
@@ -121,5 +125,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="show file in explorer.vi" Type="VI" URL="../VIs/show file in explorer.vi"/>
 </Library>
