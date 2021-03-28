@@ -8,8 +8,9 @@
 
 </Property>
 	<Item Name="other files" Type="Folder">
+		<Item Name="image_examples.jl" Type="Document" URL="../jl-scripts/image_examples.jl"/>
 		<Item Name="peppers_color_256.png" Type="Document" URL="../other_files/peppers_color_256.png"/>
-		<Item Name="simple_examples.jl" Type="Document" URL="../other_files/simple_examples.jl"/>
+		<Item Name="simple_examples.jl" Type="Document" URL="../jl-scripts/simple_examples.jl"/>
 	</Item>
 	<Item Name="typedefs" Type="Folder">
 		<Item Name="Bindata description.ctl" Type="VI" URL="../VIs/Bindata description.ctl"/>
