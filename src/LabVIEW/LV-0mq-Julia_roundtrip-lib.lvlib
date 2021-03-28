@@ -75,6 +75,8 @@
 				<Item Name="01a-add_two_numbers.vi" Type="VI" URL="../VIs/01a-add_two_numbers.vi"/>
 				<Item Name="01b-add_two_numbers.vi" Type="VI" URL="../VIs/01b-add_two_numbers.vi"/>
 				<Item Name="02-sqrt_with_error_processing.vi" Type="VI" URL="../VIs/02-sqrt_with_error_processing.vi"/>
+				<Item Name="03-without_args_and_returned_val.vi" Type="VI" URL="../VIs/03-without_args_and_returned_val.vi"/>
+				<Item Name="04-nested_data_structures.vi" Type="VI" URL="../VIs/04-nested_data_structures.vi"/>
 				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
 				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
 			</Item>
