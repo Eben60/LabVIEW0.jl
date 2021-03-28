@@ -239,10 +239,28 @@ function parse_REQ(b)
     args = json_dict # the rest
     if haskey(args, :bindata_descr)
         bindata_descr = pop!(args, :bindata_descr)
-        numarrs = bin2nums(bin_data = bin_data, bindata_descr = bindata_descr)
+        numarrs = bin2nums(bin_data = bin_data, bindata_descr = bindata_descr) #TODO add semicolon before kwargs?
         args = merge(args, numarrs)
     elseif !isnothing(bin_data)
         push!(args, :bin_data => bin_data)
     end
     return (; opt_header, fun2call, args)
+end
+
+function isinstalled(pk::AbstractString)
+    return pk in [v.name for v in values(Pkg.dependencies())]
+end
+
+function install_ifnotyet(pk::AbstractString)
+    if ! isinstalled(pk)
+        Pkg.add(pk)
+    end
+    return nothing
+end
+
+function install_ifnotyet(pks...)
+    for pk in pks
+        install_ifnotyet(pk)
+    end
+    return nothing
 end
