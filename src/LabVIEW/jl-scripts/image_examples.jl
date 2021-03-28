@@ -1,6 +1,6 @@
-using LabView0mqJl
-
-LabView0mqJl.install_ifnotyet("TestImages", "ImageMagick")
+# using LabView0mqJl
+# #
+# LabView0mqJl.install_ifnotyet("TestImages", "ImageMagick") # not working this way
 
 using TestImages
 
