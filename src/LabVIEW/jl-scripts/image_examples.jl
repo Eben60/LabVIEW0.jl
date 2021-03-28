@@ -1,3 +1,7 @@
+using LabView0mqJl
+
+LabView0mqJl.install_ifnotyet("TestImages", "ImageMagick")
+
 using TestImages
 
 is2d_img(s) = ! any(occursin.(["_3d_", "series","stack"], lowercase(s)))
