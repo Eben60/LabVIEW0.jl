@@ -77,6 +77,8 @@
 				<Item Name="02-sqrt_with_error_processing.vi" Type="VI" URL="../VIs/02-sqrt_with_error_processing.vi"/>
 				<Item Name="03-without_args_and_returned_val.vi" Type="VI" URL="../VIs/03-without_args_and_returned_val.vi"/>
 				<Item Name="04-nested_data_structures.vi" Type="VI" URL="../VIs/04-nested_data_structures.vi"/>
+				<Item Name="05a-multiple_functions.vi" Type="VI" URL="../VIs/05a-multiple_functions.vi"/>
+				<Item Name="05b-multiple_functions.vi" Type="VI" URL="../VIs/05b-multiple_functions.vi"/>
 				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
 				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
 			</Item>
@@ -125,6 +127,7 @@
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
 			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
+			<Item Name="list available jl functions.vi" Type="VI" URL="../VIs/list available jl functions.vi"/>
 			<Item Name="log jl exceptions.vi" Type="VI" URL="../VIs/log jl exceptions.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
