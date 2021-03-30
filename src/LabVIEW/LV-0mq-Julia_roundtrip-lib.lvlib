@@ -44,6 +44,7 @@
 		</Item>
 		<Item Name="exercises" Type="Folder">
 			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
+			<Item Name="LinEq-test.vi" Type="VI" URL="../VIs/LinEq-test.vi"/>
 			<Item Name="test random.vi" Type="VI" URL="../VIs/test random.vi"/>
 		</Item>
 		<Item Name="tests (LV only)" Type="Folder">
@@ -79,6 +80,8 @@
 				<Item Name="04-nested_data_structures.vi" Type="VI" URL="../VIs/04-nested_data_structures.vi"/>
 				<Item Name="05a-multiple_functions.vi" Type="VI" URL="../VIs/05a-multiple_functions.vi"/>
 				<Item Name="05b-multiple_functions.vi" Type="VI" URL="../VIs/05b-multiple_functions.vi"/>
+				<Item Name="06a-arrays.vi" Type="VI" URL="../VIs/06a-arrays.vi"/>
+				<Item Name="06b-arrays.vi" Type="VI" URL="../VIs/06b-arrays.vi"/>
 				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
 				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
 			</Item>
