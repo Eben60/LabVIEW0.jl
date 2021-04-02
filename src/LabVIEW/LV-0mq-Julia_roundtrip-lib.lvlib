@@ -40,6 +40,9 @@
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="call Jl server fn.vi" Type="VI" URL="../VIs/call Jl server fn.vi"/>
 			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
+			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
+			<Item Name="list available jl functions.vi" Type="VI" URL="../VIs/list available jl functions.vi"/>
+			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 		</Item>
 		<Item Name="exercises" Type="Folder">
@@ -128,13 +131,10 @@
 			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
 			<Item Name="img2ByteArr.vi" Type="VI" URL="../VIs/img2ByteArr.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
-			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
-			<Item Name="list available jl functions.vi" Type="VI" URL="../VIs/list available jl functions.vi"/>
 			<Item Name="log jl exceptions.vi" Type="VI" URL="../VIs/log jl exceptions.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
 			<Item Name="Parse server response.vi" Type="VI" URL="../VIs/Parse server response.vi"/>
-			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="read numarray, compare with original one.vi" Type="VI" URL="../VIs/read numarray, compare with original one.vi"/>
 			<Item Name="send request, get response.vi" Type="VI" URL="../VIs/send request, get response.vi"/>
 			<Item Name="set ZMQ timeouts - low level.vi" Type="VI" URL="../VIs/set ZMQ timeouts - low level.vi"/>
@@ -142,4 +142,5 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="call Jl server fn with prepared data.vim" Type="VI" URL="../VIs/call Jl server fn with prepared data.vim"/>
 </Library>
