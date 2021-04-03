@@ -8,8 +8,17 @@
 
 </Property>
 	<Item Name="jl-scripts" Type="Folder">
-		<Item Name="image_examples.jl" Type="Document" URL="../jl-scripts/image_examples.jl"/>
+		<Item Name="01-add_two_numbers.jl" Type="Document" URL="../jl-scripts/01-add_two_numbers.jl"/>
+		<Item Name="02-sqrt_with_error_processing.jl" Type="Document" URL="../jl-scripts/02-sqrt_with_error_processing.jl"/>
+		<Item Name="03-without_args_and_returned_val.jl" Type="Document" URL="../jl-scripts/03-without_args_and_returned_val.jl"/>
+		<Item Name="04-nested_data_structures.jl" Type="Document" URL="../jl-scripts/04-nested_data_structures.jl"/>
+		<Item Name="05-multiple_functions.jl" Type="Document" URL="../jl-scripts/05-multiple_functions.jl"/>
+		<Item Name="06-arrays.jl" Type="Document" URL="../jl-scripts/06-arrays.jl"/>
+		<Item Name="07-get-and_display_image.jl" Type="Document" URL="../jl-scripts/07-get-and_display_image.jl"/>
+		<Item Name="09_combined_example.jl" Type="Document" URL="../jl-scripts/09_combined_example.jl"/>
+		<Item Name="lvtemporary_740858.jl" Type="Document" URL="../jl-scripts/lvtemporary_740858.jl"/>
 		<Item Name="simple_examples.jl" Type="Document" URL="../jl-scripts/simple_examples.jl"/>
+		<Item Name="start-from-mac.jl" Type="Document" URL="../jl-scripts/start-from-mac.jl"/>
 	</Item>
 	<Item Name="other files" Type="Folder">
 		<Item Name="peppers_color_256.png" Type="Document" URL="../other_files/peppers_color_256.png"/>
@@ -36,10 +45,12 @@
 	</Item>
 	<Item Name="VIs" Type="Folder">
 		<Item Name="API" Type="Folder">
+			<Item Name="bindata to image.vi" Type="VI" URL="../VIs/bindata to image.vi"/>
 			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
-			<Item Name="call Jl server fn.vi" Type="VI" URL="../VIs/call Jl server fn.vi"/>
+			<Item Name="call Jl server fn.vim" Type="VI" URL="../VIs/call Jl server fn.vim"/>
 			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
+			<Item Name="Display stack trace log global.vi" Type="VI" URL="../VIs/Display stack trace log global.vi"/>
 			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="list available jl functions.vi" Type="VI" URL="../VIs/list available jl functions.vi"/>
 			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
@@ -85,6 +96,7 @@
 				<Item Name="05b-multiple_functions.vi" Type="VI" URL="../VIs/05b-multiple_functions.vi"/>
 				<Item Name="06a-arrays.vi" Type="VI" URL="../VIs/06a-arrays.vi"/>
 				<Item Name="06b-arrays.vi" Type="VI" URL="../VIs/06b-arrays.vi"/>
+				<Item Name="07-get-and_display_image.vi" Type="VI" URL="../VIs/07-get-and_display_image.vi"/>
 				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
 				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
 			</Item>
@@ -112,6 +124,7 @@
 			<Item Name="Bindata&amp;descr to img.vi" Type="VI" URL="../VIs/Bindata&amp;descr to img.vi"/>
 			<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../VIs/bindata_descr to JSON.vi"/>
 			<Item Name="build request.vi" Type="VI" URL="../VIs/build request.vi"/>
+			<Item Name="bundle JSON&amp; bindata to Bindata&amp;descr cluster.vi" Type="VI" URL="../VIs/bundle JSON&amp; bindata to Bindata&amp;descr cluster.vi"/>
 			<Item Name="check cluster field names.vi" Type="VI" URL="../VIs/check cluster field names.vi"/>
 			<Item Name="check fns availability.vi" Type="VI" URL="../VIs/check fns availability.vi"/>
 			<Item Name="check ID validity.vi" Type="VI" URL="../VIs/check ID validity.vi"/>
@@ -142,5 +155,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="call Jl server fn with prepared data.vim" Type="VI" URL="../VIs/call Jl server fn with prepared data.vim"/>
 </Library>
