@@ -158,4 +158,6 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
+	<Item Name="send&amp;receive_img-tmp.vi" Type="VI" URL="../VIs/send&amp;receive_img-tmp.vi"/>
 </Library>
