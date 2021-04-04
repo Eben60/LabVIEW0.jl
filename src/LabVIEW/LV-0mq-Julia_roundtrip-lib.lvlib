@@ -96,6 +96,7 @@
 				<Item Name="05b-multiple_functions.vi" Type="VI" URL="../VIs/05b-multiple_functions.vi"/>
 				<Item Name="06a-arrays.vi" Type="VI" URL="../VIs/06a-arrays.vi"/>
 				<Item Name="06b-arrays.vi" Type="VI" URL="../VIs/06b-arrays.vi"/>
+				<Item Name="06c-arrays.vi" Type="VI" URL="../VIs/06c-arrays.vi"/>
 				<Item Name="07-get-and_display_image.vi" Type="VI" URL="../VIs/07-get-and_display_image.vi"/>
 				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
 				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
@@ -116,8 +117,10 @@
 				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
+			<Item Name="add element to sample.vi" Type="VI" URL="../VIs/add element to sample.vi"/>
 			<Item Name="args to json.vim" Type="VI" URL="../VIs/args to json.vim"/>
 			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../VIs/arr, flatten and get type&amp;size.vim"/>
+			<Item Name="array statistics.vi" Type="VI" URL="../VIs/array statistics.vi"/>
 			<Item Name="bindata descr by kwarg_name.vi" Type="VI" URL="../VIs/bindata descr by kwarg_name.vi"/>
 			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../VIs/bindata to flat numarray.vim"/>
 			<Item Name="bindata to shaped numarray no clustering.vim" Type="VI" URL="../VIs/bindata to shaped numarray no clustering.vim"/>

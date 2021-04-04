@@ -11,4 +11,10 @@ function lineq(;m, v, invert=false)
     end
 end
 
-fns = (; lineq, )
+function eigval(;m)
+    s = ComplexF64.(eigen(m).values) # result is otherwise type unstable (float or complex), and LabVIEW can't handle it
+    return (; bigarrs=(; s, ))
+end
+
+
+fns = (; lineq, eigval,)
