@@ -98,6 +98,7 @@
 				<Item Name="06b-arrays.vi" Type="VI" URL="../VIs/06b-arrays.vi"/>
 				<Item Name="06c-arrays.vi" Type="VI" URL="../VIs/06c-arrays.vi"/>
 				<Item Name="07-get-and_display_image.vi" Type="VI" URL="../VIs/07-get-and_display_image.vi"/>
+				<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
 				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
 				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
 			</Item>
@@ -158,6 +159,4 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
-	<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
-	<Item Name="send&amp;receive_img-tmp.vi" Type="VI" URL="../VIs/send&amp;receive_img-tmp.vi"/>
 </Library>
