@@ -1,6 +1,0 @@
-[deps]
-Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
-LV_ZMQ_Jl = "5183b3a5-06a0-41b4-b5e5-84b1becd192f"
-
-[compat]
-Documenter = "~0.24"
