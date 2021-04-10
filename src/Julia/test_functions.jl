@@ -1,16 +1,20 @@
-function loopback(; kwargs...)
-    defaults = (; idx = 1, showversion=true)
-    kwargs = merge(defaults, kwargs)
-    if kwargs.showversion
-        version = 18
-        println("version = $version")
+"""
+    loopback(; showversion=false, idx=-1, kwargs...)
+
+Return all "binary-encoded" arrays without change. For a positive `idx` also return
+a (JSON-encoded) element of one of these arrays. Used for testing.
+"""
+function loopback(; showversion=false, idx=-1, kwargs...)
+    # showversion kwarg included for compatibility, but ignored
+    # TODO remove it later
+
+    bigarrs = Dict(pairs(kwargs))
+
+    if idx < 0
+        return (; bigarrs)
     end
 
-    scalarargs = [:idx, :showversion]
-    bigarrs = Dict(pairs(kwargs))
-    for arg in scalarargs
-        delete!(bigarrs, arg)
-    end
+    # otherwise return an element
 
     if :testarr in keys(bigarrs)
         a=kwargs[:testarr]
@@ -18,8 +22,6 @@ function loopback(; kwargs...)
         first_arrkey = sort([(keys(bigarrs))...])[1] # first by alphabet
         a=kwargs[first_arrkey]
     end
-
-    idx = kwargs[:idx]
 
     elem = -1
     if ! isimage(a)
@@ -34,15 +36,10 @@ function loopback(; kwargs...)
         end
     end
 
-    # if isimage(a) && kwargs.showversion
-    #     try
-    #         display(a)
-    #     catch
-    #     end
-    # end
-
     return (; elem, bigarrs)
 end
+
+# TODO probably these not used any more
 
 function foo(;arg1, arg2_string, arg3_arr_Cx32, arg4_arr_i16)
 
