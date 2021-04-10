@@ -6,7 +6,6 @@ using ZMQ, JSON3, ImageCore, Colors, PkgVersion, Pkg
 const PROTOC_V = 0x01
 
 include("./Julia/ZMQ-server.jl")
-include("./JUlia/precompiles.jl") # apparently useless
 
 # see setglobals() and get_script_path() using these globals
 scriptexists = false
