@@ -247,6 +247,8 @@ function parse_REQ(b)
     return (; opt_header, fun2call, args)
 end
 
+# # # # # # #
+# TODO probably delete following *install* fns
 function isinstalled(pk::AbstractString)
     return pk in [v.name for v in values(Pkg.dependencies())]
 end
@@ -263,4 +265,29 @@ function install_ifnotyet(pks...)
         install_ifnotyet(pk)
     end
     return nothing
+end
+
+# # # # # # # #
+
+function ver_pt(s1, s2)
+    num = parse(Int, s1)
+    return (;num, ext=s2)
+end
+
+function parse_version(s)
+    v = string(VersionNumber(string(s)))
+    r = r"^(\d+)([.]*?)\.(\d+)(.*?)\.(\d+)(.*)"
+    m = match(r, v)
+    pts = m.captures
+    @assert length(pts) == 6
+    major = ver_pt(pts[1], pts[2])
+    minor = ver_pt(pts[3], pts[4])
+    patch = ver_pt(pts[5], pts[6])
+    return (; major, minor, patch)
+end
+
+function version_this_pkg()
+    version = string(PkgVersion.Version(LabView0mqJl))
+    v = parse_version(version)
+    return (; major=v.major.num, minor=v.minor.num, patch=v.patch.num)
 end
