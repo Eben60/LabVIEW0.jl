@@ -269,25 +269,8 @@ end
 
 # # # # # # # #
 
-function ver_pt(s1, s2)
-    num = parse(Int, s1)
-    return (;num, ext=s2)
-end
-
-function parse_version(s)
-    v = string(VersionNumber(string(s)))
-    r = r"^(\d+)([.]*?)\.(\d+)(.*?)\.(\d+)(.*)"
-    m = match(r, v)
-    pts = m.captures
-    @assert length(pts) == 6
-    major = ver_pt(pts[1], pts[2])
-    minor = ver_pt(pts[3], pts[4])
-    patch = ver_pt(pts[5], pts[6])
-    return (; major, minor, patch)
-end
 
 function version_this_pkg()
-    version = string(PkgVersion.Version(LabView0mqJl))
-    v = parse_version(version)
-    return (; major=v.major.num, minor=v.minor.num, patch=v.patch.num)
+    v = PkgVersion.Version(LabView0mqJl)
+    return (; major=v.major, minor=v.minor, patch=v.patch)
 end
