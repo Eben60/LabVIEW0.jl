@@ -41,6 +41,7 @@
 		<Item Name="simple examples functions.ctl" Type="VI" URL="../VIs/simple examples functions.ctl"/>
 		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
 		<Item Name="timestamped jl err info.ctl" Type="VI" URL="../VIs/timestamped jl err info.ctl"/>
+		<Item Name="VersionNumber.ctl" Type="VI" URL="../VIs/VersionNumber.ctl"/>
 		<Item Name="ZMQ timeouts.ctl" Type="VI" URL="../VIs/ZMQ timeouts.ctl"/>
 	</Item>
 	<Item Name="VIs" Type="Folder">
@@ -49,14 +50,15 @@
 			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="call Jl server fn.vim" Type="VI" URL="../VIs/call Jl server fn.vim"/>
+			<Item Name="check server.vi" Type="VI" URL="../VIs/check server.vi"/>
 			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
 			<Item Name="Display stack trace log global.vi" Type="VI" URL="../VIs/Display stack trace log global.vi"/>
 			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="list available jl functions.vi" Type="VI" URL="../VIs/list available jl functions.vi"/>
-			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 		</Item>
 		<Item Name="exercises" Type="Folder">
+			<Item Name="compare versions.vi" Type="VI" URL="../VIs/compare versions.vi"/>
 			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
 			<Item Name="LinEq-test.vi" Type="VI" URL="../VIs/LinEq-test.vi"/>
 			<Item Name="test random.vi" Type="VI" URL="../VIs/test random.vi"/>
@@ -114,7 +116,6 @@
 			<Item Name="globals" Type="Folder">
 				<Item Name="jl stack traces global.vi" Type="VI" URL="../VIs/jl stack traces global.vi"/>
 				<Item Name="jl-scripts path.vi" Type="VI" URL="../VIs/jl-scripts path.vi"/>
-				<Item Name="protocoll version.vi" Type="VI" URL="../VIs/protocoll version.vi"/>
 				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
@@ -157,7 +158,11 @@
 			<Item Name="set ZMQ timeouts - low level.vi" Type="VI" URL="../VIs/set ZMQ timeouts - low level.vi"/>
 			<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
+			<Item Name="version nos.vi" Type="VI" URL="../VIs/version nos.vi"/>
 		</Item>
 	</Item>
 	<Item Name="03x check package version.vi" Type="VI" URL="../VIs/03x check package version.vi"/>
+	<Item Name="compare pkg versions server vs client.vi" Type="VI" URL="../VIs/compare pkg versions server vs client.vi"/>
+	<Item Name="init Jl server &amp; LV client.vi" Type="VI" URL="../VIs/init Jl server &amp; LV client.vi"/>
+	<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 </Library>

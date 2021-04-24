@@ -26,3 +26,5 @@ LV code | _err?_ | description
 **5235822** | _err_ | ZMQ timeout
 **5235823** | _err_ | Julia script file not found
 **5235824** | _err_ | Graphics file format not supported by LabVIEW
+**5235825** | _warn_ | Julia server version higher that LV client
+**5235826** | _warn_ | Julia server version lower that LV client
