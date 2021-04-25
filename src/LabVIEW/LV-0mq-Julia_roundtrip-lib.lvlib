@@ -51,10 +51,13 @@
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
 			<Item Name="call Jl server fn.vim" Type="VI" URL="../VIs/call Jl server fn.vim"/>
 			<Item Name="check server.vi" Type="VI" URL="../VIs/check server.vi"/>
+			<Item Name="compare pkg versions server vs client.vi" Type="VI" URL="../VIs/compare pkg versions server vs client.vi"/>
 			<Item Name="data to bytearr.vim" Type="VI" URL="../VIs/data to bytearr.vim"/>
 			<Item Name="Display stack trace log global.vi" Type="VI" URL="../VIs/Display stack trace log global.vi"/>
+			<Item Name="init Jl server &amp; LV client.vi" Type="VI" URL="../VIs/init Jl server &amp; LV client.vi"/>
 			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="list available jl functions.vi" Type="VI" URL="../VIs/list available jl functions.vi"/>
+			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 		</Item>
 		<Item Name="exercises" Type="Folder">
@@ -162,7 +165,4 @@
 		</Item>
 	</Item>
 	<Item Name="03x check package version.vi" Type="VI" URL="../VIs/03x check package version.vi"/>
-	<Item Name="compare pkg versions server vs client.vi" Type="VI" URL="../VIs/compare pkg versions server vs client.vi"/>
-	<Item Name="init Jl server &amp; LV client.vi" Type="VI" URL="../VIs/init Jl server &amp; LV client.vi"/>
-	<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 </Library>
