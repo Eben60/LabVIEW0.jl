@@ -15,6 +15,7 @@
 		<Item Name="05-multiple_functions.jl" Type="Document" URL="../jl-scripts/05-multiple_functions.jl"/>
 		<Item Name="06-arrays.jl" Type="Document" URL="../jl-scripts/06-arrays.jl"/>
 		<Item Name="07-get-and_display_image.jl" Type="Document" URL="../jl-scripts/07-get-and_display_image.jl"/>
+		<Item Name="08-transform_img.jl" Type="Document" URL="../jl-scripts/08-transform_img.jl"/>
 		<Item Name="09_combined_example.jl" Type="Document" URL="../jl-scripts/09_combined_example.jl"/>
 		<Item Name="lvtemporary_740858.jl" Type="Document" URL="../jl-scripts/lvtemporary_740858.jl"/>
 		<Item Name="simple_examples.jl" Type="Document" URL="../jl-scripts/simple_examples.jl"/>

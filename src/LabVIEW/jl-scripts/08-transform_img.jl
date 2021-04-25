@@ -1,5 +1,3 @@
-using Images # TODO do we need it?
-
 function transform_img(; img, flip_lr=false, flip_ud=false, negative=false)
     if flip_lr
         img = reverse(img, dims=2)

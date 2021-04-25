@@ -1,7 +1,7 @@
 name = "LabView0mqJl"
 uuid = "5183b3a5-06a0-41b4-b5e5-84b1becd192f"
 authors = ["Eben60"]
-version = "0.1.1-alpha+002"
+version = "0.1.1-alpha+3"
 
 [deps]
 ColorTypes = "3da002f7-5984-5a60-b8a6-cbb66c0b333f"
@@ -17,7 +17,7 @@ ZMQ = "c2297ded-f4af-51ae-bb23-16f91089e4e1"
 [compat]
 ColorTypes = "0.10"
 Colors = "0.12"
-ImageCore = "0.8, 0.9"
+ImageCore = "0.9"
 JSON3 = "1.5"
 PkgVersion = "0.1"
 TestImages = "1.4"
