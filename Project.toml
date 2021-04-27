@@ -15,7 +15,7 @@ TestImages = "5e47fb64-e119-507b-a336-dd2b206d9990"
 ZMQ = "c2297ded-f4af-51ae-bb23-16f91089e4e1"
 
 [compat]
-ColorTypes = "0.11"
+ColorTypes = "0.10, 0.11" # remove 0.10 as soon as TestImages got updated
 Colors = "0.12"
 ImageCore = "0.9"
 JSON3 = "1.5"
