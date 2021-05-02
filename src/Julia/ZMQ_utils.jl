@@ -247,29 +247,6 @@ function parse_REQ(b)
     return (; opt_header, fun2call, args)
 end
 
-# # # # # # #
-# TODO probably delete following *install* fns
-function isinstalled(pk::AbstractString)
-    return pk in [v.name for v in values(Pkg.dependencies())]
-end
-
-function install_ifnotyet(pk::AbstractString)
-    if ! isinstalled(pk)
-        Pkg.add(pk)
-    end
-    return nothing
-end
-
-function install_ifnotyet(pks...)
-    for pk in pks
-        install_ifnotyet(pk)
-    end
-    return nothing
-end
-
-# # # # # # # #
-
-
 function version_this_pkg()
     v = PkgVersion.Version(LabView0mqJl)
     return (; major=v.major, minor=v.minor, patch=v.patch)
