@@ -35,7 +35,6 @@
 		<Item Name="example Fun&amp;args cluster.ctl" Type="VI" URL="../VIs/example Fun&amp;args cluster.ctl"/>
 		<Item Name="example server response cluster.ctl" Type="VI" URL="../VIs/example server response cluster.ctl"/>
 		<Item Name="extended error cluster.ctl" Type="VI" URL="../VIs/extended error cluster.ctl"/>
-		<Item Name="Julia functions enum.ctl" Type="VI" URL="../VIs/Julia functions enum.ctl"/>
 		<Item Name="Numeric Types enum.ctl" Type="VI" URL="../VIs/Numeric Types enum.ctl"/>
 		<Item Name="placeholder arguments cluster.ctl" Type="VI" URL="../VIs/placeholder arguments cluster.ctl"/>
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
@@ -65,6 +64,22 @@
 			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 		</Item>
+		<Item Name="Examples" Type="Folder">
+			<Item Name="01a-add_two_numbers.vi" Type="VI" URL="../VIs/01a-add_two_numbers.vi"/>
+			<Item Name="01b-add_two_numbers.vi" Type="VI" URL="../VIs/01b-add_two_numbers.vi"/>
+			<Item Name="02-sqrt_with_error_processing.vi" Type="VI" URL="../VIs/02-sqrt_with_error_processing.vi"/>
+			<Item Name="03-without_args_and_returned_val.vi" Type="VI" URL="../VIs/03-without_args_and_returned_val.vi"/>
+			<Item Name="04-nested_data_structures.vi" Type="VI" URL="../VIs/04-nested_data_structures.vi"/>
+			<Item Name="05a-multiple_functions.vi" Type="VI" URL="../VIs/05a-multiple_functions.vi"/>
+			<Item Name="05b-multiple_functions.vi" Type="VI" URL="../VIs/05b-multiple_functions.vi"/>
+			<Item Name="06a-arrays.vi" Type="VI" URL="../VIs/06a-arrays.vi"/>
+			<Item Name="06b-arrays.vi" Type="VI" URL="../VIs/06b-arrays.vi"/>
+			<Item Name="06c-arrays.vi" Type="VI" URL="../VIs/06c-arrays.vi"/>
+			<Item Name="07-get-and_display_image.vi" Type="VI" URL="../VIs/07-get-and_display_image.vi"/>
+			<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
+			<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
+			<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
+		</Item>
 		<Item Name="exercises" Type="Folder">
 			<Item Name="compare versions.vi" Type="VI" URL="../VIs/compare versions.vi"/>
 			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
@@ -75,13 +90,12 @@
 			<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 		</Item>
 		<Item Name="tests (LV-Jl)" Type="Folder">
-			<Item Name="Examples?" Type="Folder">
-				<Item Name="example3.vi" Type="VI" URL="../VIs/example3.vi"/>
-				<Item Name="example4.vi" Type="VI" URL="../VIs/example4.vi"/>
-				<Item Name="single REQ.vi" Type="VI" URL="../VIs/single REQ.vi"/>
-				<Item Name="test_simple_examples v0.vi" Type="VI" URL="../VIs/test_simple_examples v0.vi"/>
-			</Item>
-			<Item Name="more?" Type="Folder">
+			<Item Name="send&amp;receive_BigRndArr.vi" Type="VI" URL="../VIs/send&amp;receive_BigRndArr.vi"/>
+			<Item Name="send&amp;receive_img.vi" Type="VI" URL="../VIs/send&amp;receive_img.vi"/>
+			<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
+		</Item>
+		<Item Name="unused" Type="Folder">
+			<Item Name="to delete" Type="Folder">
 				<Item Name="send arr of complex.vi" Type="VI" URL="../VIs/send arr of complex.vi"/>
 				<Item Name="send arr of some type.vi" Type="VI" URL="../VIs/send arr of some type.vi"/>
 				<Item Name="send&amp;receive_AnyArr.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr.vi"/>
@@ -96,31 +110,11 @@
 				<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
 				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
 			</Item>
-			<Item Name="using_LabView0mqJlExamples" Type="Folder">
-				<Item Name="01a-add_two_numbers.vi" Type="VI" URL="../VIs/01a-add_two_numbers.vi"/>
-				<Item Name="01b-add_two_numbers.vi" Type="VI" URL="../VIs/01b-add_two_numbers.vi"/>
-				<Item Name="02-sqrt_with_error_processing.vi" Type="VI" URL="../VIs/02-sqrt_with_error_processing.vi"/>
-				<Item Name="03-without_args_and_returned_val.vi" Type="VI" URL="../VIs/03-without_args_and_returned_val.vi"/>
-				<Item Name="04-nested_data_structures.vi" Type="VI" URL="../VIs/04-nested_data_structures.vi"/>
-				<Item Name="05a-multiple_functions.vi" Type="VI" URL="../VIs/05a-multiple_functions.vi"/>
-				<Item Name="05b-multiple_functions.vi" Type="VI" URL="../VIs/05b-multiple_functions.vi"/>
-				<Item Name="06a-arrays.vi" Type="VI" URL="../VIs/06a-arrays.vi"/>
-				<Item Name="06b-arrays.vi" Type="VI" URL="../VIs/06b-arrays.vi"/>
-				<Item Name="06c-arrays.vi" Type="VI" URL="../VIs/06c-arrays.vi"/>
-				<Item Name="07-get-and_display_image.vi" Type="VI" URL="../VIs/07-get-and_display_image.vi"/>
-				<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
-				<Item Name="simple_examples.vi" Type="VI" URL="../VIs/simple_examples.vi"/>
-				<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
-			</Item>
-			<Item Name="send&amp;receive_2_arrs, call foo.vi" Type="VI" URL="../VIs/send&amp;receive_2_arrs, call foo.vi"/>
-			<Item Name="send&amp;receive_BigRndArr.vi" Type="VI" URL="../VIs/send&amp;receive_BigRndArr.vi"/>
-			<Item Name="send&amp;receive_img.vi" Type="VI" URL="../VIs/send&amp;receive_img.vi"/>
-			<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 		</Item>
-		<Item Name="unused" Type="Folder"/>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
 				<Item Name="jl-scripts path.vi" Type="VI" URL="../VIs/jl-scripts path.vi"/>
+				<Item Name="version nos global.vi" Type="VI" URL="../VIs/version nos global.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="add element to sample.vi" Type="VI" URL="../VIs/add element to sample.vi"/>
@@ -162,7 +156,6 @@
 			<Item Name="set ZMQ timeouts - low level.vi" Type="VI" URL="../VIs/set ZMQ timeouts - low level.vi"/>
 			<Item Name="Start Jl Server, Init LV client, check comm.vi" Type="VI" URL="../VIs/Start Jl Server, Init LV client, check comm.vi"/>
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
-			<Item Name="version nos.vi" Type="VI" URL="../VIs/version nos.vi"/>
 		</Item>
 	</Item>
 </Library>
