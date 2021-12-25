@@ -34,12 +34,14 @@
 		<Item Name="example args cluster.ctl" Type="VI" URL="../VIs/example args cluster.ctl"/>
 		<Item Name="example Fun&amp;args cluster.ctl" Type="VI" URL="../VIs/example Fun&amp;args cluster.ctl"/>
 		<Item Name="example server response cluster.ctl" Type="VI" URL="../VIs/example server response cluster.ctl"/>
+		<Item Name="expected server response.ctl" Type="VI" URL="../VIs/expected server response.ctl"/>
 		<Item Name="extended error cluster.ctl" Type="VI" URL="../VIs/extended error cluster.ctl"/>
 		<Item Name="Numeric Types enum.ctl" Type="VI" URL="../VIs/Numeric Types enum.ctl"/>
 		<Item Name="placeholder arguments cluster.ctl" Type="VI" URL="../VIs/placeholder arguments cluster.ctl"/>
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
 		<Item Name="simple examples functions.ctl" Type="VI" URL="../VIs/simple examples functions.ctl"/>
 		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
+		<Item Name="statistics.ctl" Type="VI" URL="../VIs/statistics.ctl"/>
 		<Item Name="timestamped jl err info.ctl" Type="VI" URL="../VIs/timestamped jl err info.ctl"/>
 		<Item Name="VersionNumber.ctl" Type="VI" URL="../VIs/VersionNumber.ctl"/>
 		<Item Name="ZMQ timeouts.ctl" Type="VI" URL="../VIs/ZMQ timeouts.ctl"/>
@@ -90,26 +92,7 @@
 			<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 		</Item>
 		<Item Name="tests (LV-Jl)" Type="Folder">
-			<Item Name="send&amp;receive_BigRndArr.vi" Type="VI" URL="../VIs/send&amp;receive_BigRndArr.vi"/>
-			<Item Name="send&amp;receive_img.vi" Type="VI" URL="../VIs/send&amp;receive_img.vi"/>
 			<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
-		</Item>
-		<Item Name="unused" Type="Folder">
-			<Item Name="to delete" Type="Folder">
-				<Item Name="send arr of complex.vi" Type="VI" URL="../VIs/send arr of complex.vi"/>
-				<Item Name="send arr of some type.vi" Type="VI" URL="../VIs/send arr of some type.vi"/>
-				<Item Name="send&amp;receive_AnyArr.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr.vi"/>
-				<Item Name="send&amp;receive_AnyArr_v2.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr_v2.vi"/>
-				<Item Name="send&amp;receive_AnyArr_v3.vi" Type="VI" URL="../VIs/send&amp;receive_AnyArr_v3.vi"/>
-				<Item Name="send&amp;receive_multy_arrs.vi" Type="VI" URL="../VIs/send&amp;receive_multy_arrs.vi"/>
-				<Item Name="sendAnyArr.vi" Type="VI" URL="../VIs/sendAnyArr.vi"/>
-				<Item Name="sendFloat32.vi" Type="VI" URL="../VIs/sendFloat32.vi"/>
-				<Item Name="sendInt32.vi" Type="VI" URL="../VIs/sendInt32.vi"/>
-				<Item Name="sendRGBimg.vi" Type="VI" URL="../VIs/sendRGBimg.vi"/>
-				<Item Name="test single REQ v2.vi" Type="VI" URL="../VIs/test single REQ v2.vi"/>
-				<Item Name="test single REQ v3.vi" Type="VI" URL="../VIs/test single REQ v3.vi"/>
-				<Item Name="test single REQ.vi" Type="VI" URL="../VIs/test single REQ.vi"/>
-			</Item>
 		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
@@ -135,7 +118,6 @@
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
 			<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
-			<Item Name="convert Jl functions enum to string.vi" Type="VI" URL="../VIs/convert Jl functions enum to string.vi"/>
 			<Item Name="convert to some numtype.vim" Type="VI" URL="../VIs/convert to some numtype.vim"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
 			<Item Name="elapsed time with FGV.vi" Type="VI" URL="../VIs/elapsed time with FGV.vi"/>
