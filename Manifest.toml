@@ -180,6 +180,14 @@ git-tree-sha1 = "7d58534ffb62cd947950b3aa9b993e63307a6125"
 uuid = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
 version = "1.9.2"
 
+[[deps.Jl_0mq_4Labview]]
+deps = ["ColorTypes", "Colors", "ImageCore", "JSON3", "LinearAlgebra", "PkgVersion", "Test", "TestImages", "ZMQ"]
+git-tree-sha1 = "aabd7fc5ab2b642503698558be1c0b1e56011817"
+repo-rev = "main"
+repo-url = "https://github.com/Eben60/Jl_0mq_4Labview.jl"
+uuid = "b45899a3-f603-4de6-8657-71d649cef297"
+version = "0.1.1-alpha.1"
+
 [[deps.LibCURL]]
 deps = ["LibCURL_jll", "MozillaCACerts_jll"]
 uuid = "b27032c2-a3e7-50c8-80cd-2d36dbcbfd21"
