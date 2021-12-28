@@ -1,11 +1,11 @@
-using LabView0mqJl
+using Labview2Jl
 using Test
 
-@testset "LabView0mqJl.jl" begin
+@testset "Labview2Jl.jl" begin
     # Write your tests here.
 
     # Here are the tests:
-    @test LabView0mqJl.tmp_test(0) == 0
-    @test LabView0mqJl.tmp_test(3) == 3
-    @test LabView0mqJl.tmp_test(5) == 5
+    @test Labview2Jl.tmp_test(0) == 0
+    @test Labview2Jl.tmp_test(3) == 3
+    @test Labview2Jl.tmp_test(5) == 5
 end

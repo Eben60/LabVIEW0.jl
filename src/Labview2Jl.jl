@@ -1,4 +1,4 @@
-module LabView0mqJl
+module Labview2Jl
 
 using ZMQ, JSON3, ImageCore, Colors, PkgVersion
 

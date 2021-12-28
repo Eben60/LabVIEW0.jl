@@ -4,7 +4,7 @@ include("./conversions.jl")
 """
     setglobals(;isOK, extant=scriptexists, excpn = nothing)
 
-Set the globals of the `LabView0mqJl` module. By default do not change the value of `scriptexists`.
+Set the globals of the `Labview2Jl` module. By default do not change the value of `scriptexists`.
 Use this function from the top-level scripts, e.g. as executing from LabVIEW.
 
 # Examples
@@ -74,9 +74,9 @@ A helper function: return path to the LabVIEW library `LV-Julia_ZMQ-Roundtrip_li
 # Examples
 ```julia-repl
 
-julia> using LabView0mqJl
+julia> using Labview2Jl
 julia> get_LVlib_path()
-C:/_LabView_projects/ZMQ/LabView0mqJl.jl/src/LabVIEW
+C:/_LabView_projects/ZMQ/Labview2Jl.jl/src/LabVIEW
 ```
 """
 function get_LVlib_path()
@@ -248,6 +248,6 @@ function parse_REQ(b)
 end
 
 function version_this_pkg()
-    v = PkgVersion.Version(LabView0mqJl)
+    v = PkgVersion.Version(Labview2Jl)
     return (; major=v.major, minor=v.minor, patch=v.patch)
 end
