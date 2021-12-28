@@ -62,6 +62,9 @@
 		<Item Name="tests (LV only)" Type="Folder">
 			<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 		</Item>
+		<Item Name="trials &amp; errors" Type="Folder">
+			<Item Name="test init Jl server.vi" Type="VI" URL="../VIs/test init Jl server.vi"/>
+		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
 				<Item Name="jl-scripts path.vi" Type="VI" URL="../VIs/jl-scripts path.vi"/>
@@ -96,6 +99,7 @@
 			<Item Name="get numtype.vim" Type="VI" URL="../VIs/get numtype.vim"/>
 			<Item Name="img2ByteArr.vi" Type="VI" URL="../VIs/img2ByteArr.vi"/>
 			<Item Name="Init REQ Socket.vi" Type="VI" URL="../VIs/Init REQ Socket.vi"/>
+			<Item Name="jl-script examples base path.vi" Type="VI" URL="../VIs/jl-script examples base path.vi"/>
 			<Item Name="JSON elem to Complex.vi" Type="VI" URL="../VIs/JSON elem to Complex.vi"/>
 			<Item Name="log jl exceptions.vi" Type="VI" URL="../VIs/log jl exceptions.vi"/>
 			<Item Name="parse extended err JSON.vi" Type="VI" URL="../VIs/parse extended err JSON.vi"/>
