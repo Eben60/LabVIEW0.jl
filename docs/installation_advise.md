@@ -10,3 +10,9 @@ Julia is FOSS and can be downloaded from https://julialang.org/downloads/ . The 
 You also need to download [ZMQ for LabVIEW](https://sourceforge.net/projects/labview-zmq/) and install it using [NI Package Manager](https://www.ni.com/en-ie/support/downloads/software-products/download.package-manager.html).
 
 This package is then installed under Julia in the [standard julian way](https://docs.julialang.org/en/v1/stdlib/Pkg/): type `add Labview2Jl` in the  Pkg REPL. The LabVIEW project will be installed as a part of this package. ZMQ for Julia will also be installed as a dependence.
+
+## Getting Started
+
+First, locate the LabVIEW folder within the installed package. You can get it from Julia REPL:  
+`using Labview2Jl`  
+`lv_dir()`
