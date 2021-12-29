@@ -28,3 +28,4 @@ LV code | _err?_ | description
 **5235824** | _err_ | Graphics file format not supported by LabVIEW
 **5235825** | _warn_ | Julia server version higher that LV client
 **5235826** | _warn_ | Julia server version lower that LV client
+**5235827** | _err_ | Julia example scripts folder not found
