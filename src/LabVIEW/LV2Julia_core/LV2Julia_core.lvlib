@@ -53,17 +53,15 @@
 			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 		</Item>
-		<Item Name="exercises" Type="Folder">
-			<Item Name="compare versions.vi" Type="VI" URL="../VIs/compare versions.vi"/>
-			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
-			<Item Name="LinEq-test.vi" Type="VI" URL="../VIs/LinEq-test.vi"/>
-			<Item Name="test random.vi" Type="VI" URL="../VIs/test random.vi"/>
-		</Item>
 		<Item Name="tests (LV only)" Type="Folder">
 			<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 		</Item>
 		<Item Name="trials &amp; errors" Type="Folder">
+			<Item Name="compare versions.vi" Type="VI" URL="../VIs/compare versions.vi"/>
+			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
+			<Item Name="LinEq-test.vi" Type="VI" URL="../VIs/LinEq-test.vi"/>
 			<Item Name="test init Jl server.vi" Type="VI" URL="../VIs/test init Jl server.vi"/>
+			<Item Name="test random.vi" Type="VI" URL="../VIs/test random.vi"/>
 		</Item>
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">

@@ -1,4 +1,13 @@
-using Statistics
+# this script would install Statistics package if not installed,
+# but better you install it in advance manually to avoid ZMQ timeout in LabVIEW
+# during installation.
+
+try
+    using Statistics
+catch
+    import Pkg
+    Pkg.add("Statistics")
+end
 
 function trim_arr(arr; trim_at_begin, trim_at_end)
     if (trim_at_begin + trim_at_end) > 1

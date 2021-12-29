@@ -1,4 +1,14 @@
-using TestImages, ImageMagick
+# this script would install TestImages and ImageMagick packages if not installed,
+# but better you install them in advance manually to avoid ZMQ timeout in LabVIEW
+# during installation.
+
+try
+    using TestImages, ImageMagick
+catch
+    import Pkg
+    Pkg.add("TestImages")
+    Pkg.add("ImageMagick")
+end
 
 is2d_img(s) = ! any(occursin.(["_3d_", "series","stack"], lowercase(s)))
 
