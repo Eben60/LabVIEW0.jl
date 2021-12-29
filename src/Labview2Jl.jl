@@ -1,9 +1,14 @@
 module Labview2Jl
 
+"""
+    lv_dir()
+
+Locate the LabVIEW folder within the project
+"""
 function lv_dir()
     lv_path = @__DIR__
     @show lv_path
-    return path
+    return lv_path
 end
 export lv_dir
 

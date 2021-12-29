@@ -1,7 +1,7 @@
 name = "Labview2Jl"
 uuid = "b5ef6335-26be-4d6f-85a4-8b5df3cbaa06"
 authors = ["Eben60"]
-version = "0.0.1-beta.3"
+version = "0.0.1-beta.4"
 
 [deps]
 Jl_0mq_4Labview = "b45899a3-f603-4de6-8657-71d649cef297"
@@ -10,4 +10,4 @@ Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 [compat]
 julia = "1.6"
 Jl_0mq_4Labview = "0.0.1, 0.1"
-Reexport = "1.2.2"
+Reexport = "1.2"
