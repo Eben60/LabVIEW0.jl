@@ -1,7 +1,7 @@
 # Installation and Getting Started
 
 ## Installation
-Obviously you need both Julia and LabVIEW(TM).
+Obviously you need both Julia and LabVIEW(TM). The LabVIEW part of the package was tested on Windows only. The Julia part was tested on a Mac as well, and should actually work on all supported platforms.
 
 Julia is FOSS and can be downloaded from https://julialang.org/downloads/ . The most current version is higly recommended, but 1.6 (LTS) would also work.
 
@@ -15,4 +15,4 @@ This package is then installed under Julia in the [standard julian way](https://
 
 First, locate the LabVIEW folder within the installed package. You can get it from Julia REPL:  
 `using Labview2Jl`  
-`lv_dir()`
+`lv_dir();`
