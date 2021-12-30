@@ -28,6 +28,7 @@
 		<Item Name="probably unused" Type="Folder">
 			<Item Name="build-in-fns.jl" Type="Document" URL="../jl-scripts/build-in-fns.jl"/>
 			<Item Name="loopback_arr.jl" Type="Document" URL="../jl-scripts/loopback_arr.jl"/>
+			<Item Name="lvtemporary_740858.jl" Type="Document" URL="../jl-scripts/lvtemporary_740858.jl"/>
 		</Item>
 		<Item Name="01-add_two_numbers.jl" Type="Document" URL="../jl-scripts/01-add_two_numbers.jl"/>
 		<Item Name="02-sqrt_with_error_processing.jl" Type="Document" URL="../jl-scripts/02-sqrt_with_error_processing.jl"/>
@@ -38,9 +39,7 @@
 		<Item Name="07-get-and_display_image.jl" Type="Document" URL="../jl-scripts/07-get-and_display_image.jl"/>
 		<Item Name="08-transform_img.jl" Type="Document" URL="../jl-scripts/08-transform_img.jl"/>
 		<Item Name="09_combined_example.jl" Type="Document" URL="../jl-scripts/09_combined_example.jl"/>
-		<Item Name="lvtemporary_740858.jl" Type="Document" URL="../jl-scripts/lvtemporary_740858.jl"/>
-		<Item Name="simple_examples.jl" Type="Document" URL="../jl-scripts/simple_examples.jl"/>
-		<Item Name="start-from-mac.jl" Type="Document" URL="../jl-scripts/start-from-mac.jl"/>
+		<Item Name="start-on-separate-server.jl" Type="Document" URL="../jl-scripts/start-on-separate-server.jl"/>
 	</Item>
 	<Item Name="other files" Type="Folder">
 		<Item Name="Images" Type="Folder">
