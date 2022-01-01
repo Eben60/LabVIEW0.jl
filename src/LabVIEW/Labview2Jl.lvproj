@@ -10,7 +10,8 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="LV-0mq-Julia_roundtrip-lib.lvlib" Type="Library" URL="../LV-0mq-Julia_roundtrip-lib.lvlib"/>
+		<Item Name="LV2Julia_core.lvlib" Type="Library" URL="../LV2Julia_core/LV2Julia_core.lvlib"/>
+		<Item Name="LV2Julia_examples.lvlib" Type="Library" URL="../LV2Julia_examples/LV2Julia_examples.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
