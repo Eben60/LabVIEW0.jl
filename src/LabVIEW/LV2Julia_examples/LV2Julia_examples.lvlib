@@ -13,6 +13,7 @@
 		<Item Name="04-nested_data_structures.vi" Type="VI" URL="../VIs/04-nested_data_structures.vi"/>
 		<Item Name="05a-multiple_functions.vi" Type="VI" URL="../VIs/05a-multiple_functions.vi"/>
 		<Item Name="05b-multiple_functions.vi" Type="VI" URL="../VIs/05b-multiple_functions.vi"/>
+		<Item Name="05c-multifunc_external-server.vi" Type="VI" URL="../VIs/05c-multifunc_external-server.vi"/>
 		<Item Name="06a-arrays.vi" Type="VI" URL="../VIs/06a-arrays.vi"/>
 		<Item Name="06b-arrays.vi" Type="VI" URL="../VIs/06b-arrays.vi"/>
 		<Item Name="06c-arrays.vi" Type="VI" URL="../VIs/06c-arrays.vi"/>
@@ -33,6 +34,7 @@
 		<Item Name="03-without_args_and_returned_val.jl" Type="Document" URL="../jl-scripts/03-without_args_and_returned_val.jl"/>
 		<Item Name="04-nested_data_structures.jl" Type="Document" URL="../jl-scripts/04-nested_data_structures.jl"/>
 		<Item Name="05-multiple_functions.jl" Type="Document" URL="../jl-scripts/05-multiple_functions.jl"/>
+		<Item Name="05-on_external_server.jl" Type="Document" URL="../jl-scripts/05-on_external_server.jl"/>
 		<Item Name="06-arrays.jl" Type="Document" URL="../jl-scripts/06-arrays.jl"/>
 		<Item Name="07-get-and_display_image.jl" Type="Document" URL="../jl-scripts/07-get-and_display_image.jl"/>
 		<Item Name="08-transform_img.jl" Type="Document" URL="../jl-scripts/08-transform_img.jl"/>
