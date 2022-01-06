@@ -20,8 +20,6 @@
 		<Item Name="07-get-and_display_image.vi" Type="VI" URL="../VIs/07-get-and_display_image.vi"/>
 		<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
 		<Item Name="09_another_example.vi" Type="VI" URL="../VIs/09_another_example.vi"/>
-		<Item Name="array statistics.vi" Type="VI" URL="../VIs/array statistics.vi"/>
-		<Item Name="test_get_testimages.vi" Type="VI" URL="../VIs/test_get_testimages.vi"/>
 	</Item>
 	<Item Name="jl-scripts" Type="Folder">
 		<Item Name="probably unused" Type="Folder">
@@ -52,6 +50,7 @@
 			<Item Name="simple examples functions.ctl" Type="VI" URL="../VIs/simple examples functions.ctl"/>
 			<Item Name="statistics.ctl" Type="VI" URL="../VIs/statistics.ctl"/>
 		</Item>
+		<Item Name="array statistics.vi" Type="VI" URL="../VIs/array statistics.vi"/>
 	</Item>
 	<Item Name="tests (LV-Jl)" Type="Folder">
 		<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
