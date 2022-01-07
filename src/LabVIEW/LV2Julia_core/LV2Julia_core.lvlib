@@ -107,4 +107,5 @@
 			<Item Name="start Julia ZMQ server.vi" Type="VI" URL="../VIs/start Julia ZMQ server.vi"/>
 		</Item>
 	</Item>
+	<Item Name="generate rnd sample array.vim" Type="VI" URL="../VIs/generate rnd sample array.vim"/>
 </Library>

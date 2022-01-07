@@ -37,6 +37,7 @@
 		<Item Name="07-get-and_display_image.jl" Type="Document" URL="../jl-scripts/07-get-and_display_image.jl"/>
 		<Item Name="08-transform_img.jl" Type="Document" URL="../jl-scripts/08-transform_img.jl"/>
 		<Item Name="09_another_example.jl" Type="Document" URL="../jl-scripts/09_another_example.jl"/>
+		<Item Name="10_test-suite.jl" Type="Document" URL="../jl-scripts/10_test-suite.jl"/>
 		<Item Name="start-on-separate-server.jl" Type="Document" URL="../jl-scripts/start-on-separate-server.jl"/>
 	</Item>
 	<Item Name="other files" Type="Folder">
@@ -55,4 +56,5 @@
 	<Item Name="tests (LV-Jl)" Type="Folder">
 		<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 	</Item>
+	<Item Name="10-send&amp;receive-arrays.vi" Type="VI" URL="../VIs/10-send&amp;receive-arrays.vi"/>
 </Library>
