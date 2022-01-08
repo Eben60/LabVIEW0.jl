@@ -51,49 +51,10 @@
 				<Item Name="Read JPEG File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Read JPEG File.vi"/>
 				<Item Name="Read PNG File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/png.llb/Read PNG File.vi"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
-				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
 				<Item Name="zeromq.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/zeromq/zeromq.lvlib"/>
 			</Item>
-			<Item Name="args to json.vim" Type="VI" URL="../LV2Julia_core/probably_unused/args to json.vim"/>
-			<Item Name="arr, flatten and get type&amp;size.vim" Type="VI" URL="../LV2Julia_core/probably_unused/arr, flatten and get type&amp;size.vim"/>
-			<Item Name="Bindata description.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/Bindata description.ctl"/>
-			<Item Name="bindata to flat numarray.vim" Type="VI" URL="../LV2Julia_core/probably_unused/bindata to flat numarray.vim"/>
-			<Item Name="bindata to image.vi" Type="VI" URL="../LV2Julia_core/probably_unused/bindata to image.vi"/>
-			<Item Name="bindata to shaped numarray no clustering.vim" Type="VI" URL="../LV2Julia_core/probably_unused/bindata to shaped numarray no clustering.vim"/>
-			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../LV2Julia_core/probably_unused/bindata to shaped numarray.vim"/>
-			<Item Name="Bindata&amp;description.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/Bindata&amp;description.ctl"/>
-			<Item Name="bindata_descr to JSON.vi" Type="VI" URL="../LV2Julia_core/probably_unused/bindata_descr to JSON.vi"/>
-			<Item Name="build json for REQ.vim" Type="VI" URL="../LV2Julia_core/probably_unused/build json for REQ.vim"/>
-			<Item Name="build request.vi" Type="VI" URL="../LV2Julia_core/probably_unused/build request.vi"/>
-			<Item Name="call Jl server fn.vim" Type="VI" URL="../LV2Julia_core/probably_unused/call Jl server fn.vim"/>
-			<Item Name="check cluster field names.vi" Type="VI" URL="../LV2Julia_core/probably_unused/check cluster field names.vi"/>
-			<Item Name="check ID validity.vi" Type="VI" URL="../LV2Julia_core/probably_unused/check ID validity.vi"/>
-			<Item Name="commands LV2Jl.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/commands LV2Jl.ctl"/>
-			<Item Name="Commands.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/Commands.ctl"/>
-			<Item Name="concat JSON.vi" Type="VI" URL="../LV2Julia_core/probably_unused/concat JSON.vi"/>
-			<Item Name="convert to some numtype.vim" Type="VI" URL="../LV2Julia_core/probably_unused/convert to some numtype.vim"/>
-			<Item Name="data to bytearr.vim" Type="VI" URL="../LV2Julia_core/probably_unused/data to bytearr.vim"/>
-			<Item Name="detailed error info.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/detailed error info.ctl"/>
-			<Item Name="example args cluster.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/example args cluster.ctl"/>
-			<Item Name="example server response cluster.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/example server response cluster.ctl"/>
-			<Item Name="flatten images.vim" Type="VI" URL="../LV2Julia_core/probably_unused/flatten images.vim"/>
-			<Item Name="flatten numarrays.vim" Type="VI" URL="../LV2Julia_core/probably_unused/flatten numarrays.vim"/>
-			<Item Name="generate sample array.vim" Type="VI" URL="../LV2Julia_core/probably_unused/generate sample array.vim"/>
-			<Item Name="get numtype.vim" Type="VI" URL="../LV2Julia_core/probably_unused/get numtype.vim"/>
-			<Item Name="img2ByteArr.vi" Type="VI" URL="../LV2Julia_core/probably_unused/img2ByteArr.vi"/>
-			<Item Name="jl-script abs path.vi" Type="VI" URL="../LV2Julia_core/probably_unused/jl-script abs path.vi"/>
-			<Item Name="jl-scripts path.vi" Type="VI" URL="../LV2Julia_core/probably_unused/jl-scripts path.vi"/>
-			<Item Name="Julia functions enum.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/Julia functions enum.ctl"/>
-			<Item Name="log jl exceptions.vi" Type="VI" URL="../LV2Julia_core/probably_unused/log jl exceptions.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
-			<Item Name="Numeric Types enum.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/Numeric Types enum.ctl"/>
-			<Item Name="Parse server response.vi" Type="VI" URL="../LV2Julia_core/probably_unused/Parse server response.vi"/>
-			<Item Name="ping server.vi" Type="VI" URL="../LV2Julia_core/probably_unused/ping server.vi"/>
-			<Item Name="placeholder arguments cluster.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/placeholder arguments cluster.ctl"/>
-			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../LV2Julia_core/probably_unused/REQ full lifecycle.vi"/>
-			<Item Name="Server or client state.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/Server or client state.ctl"/>
-			<Item Name="StackFrame.ctl" Type="VI" URL="../LV2Julia_core/probably_unused/StackFrame.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
