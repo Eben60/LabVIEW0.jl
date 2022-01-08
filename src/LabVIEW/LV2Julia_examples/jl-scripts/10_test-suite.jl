@@ -93,17 +93,18 @@ end
 
 #-----------------
 
-function loopbck2(; returnarrs=true, kwargs...)
+function loopbck2(; returnarrs=true, testarr, kwargs...)
 
-    bigarrs = Dict(pairs(kwargs))
+    bigarrs = (; testarr)
 
-    eltypes = [string(eltype(ar)) for ar in values(bigarrs)]
+    el_type = string(eltype(testarr))
+    arsize = size(testarr)
 
+    ret = (; el_type, arsize)
     if returnarrs
-        return (; bigarrs, eltypes)
-    else
-        return (; eltypes)
+        ret = merge((; bigarrs), ret)
     end
+    return ret
 end
 
 fns = (; sizes123, loopbck2)
