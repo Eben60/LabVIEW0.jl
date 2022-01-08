@@ -1,16 +1,5 @@
 using Primes, Random
 
-function facarr(i)
-    pe = factor(i).pe
-    fs = Int[]
-        for v in pe
-            for i in 1:v.second
-                push!(fs, v.first)
-            end
-        end
-    return fs
-end
-
 function rndpw2(pw2)
     @assert pw2>=5
     r = rand()
@@ -26,7 +15,7 @@ end
 function rndf3(n)
     while true
         n1 = rndpw2(n)
-        fc = facarr(n1)
+        fc = factor(Vector, n1)
         length(fc)>=3 && return fc
     end
 end
@@ -93,7 +82,7 @@ end
 
 #-----------------
 
-function loopbck2(; returnarrs=true, testarr, kwargs...)
+function loopbck2(; returnarrs=true, testarr)
 
     bigarrs = (; testarr)
 
