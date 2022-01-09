@@ -55,11 +55,13 @@
 			<Item Name="simple examples functions.ctl" Type="VI" URL="../VIs/simple examples functions.ctl"/>
 			<Item Name="statistics.ctl" Type="VI" URL="../VIs/statistics.ctl"/>
 		</Item>
-		<Item Name="array statistics.vi" Type="VI" URL="../VIs/array statistics.vi"/>
+		<Item Name="Utils" Type="Folder">
+			<Item Name="array statistics.vi" Type="VI" URL="../VIs/array statistics.vi"/>
+			<Item Name="generate and convert rnd 1,2,3-D arrays.vi" Type="VI" URL="../VIs/utils/generate and convert rnd 1,2,3-D arrays.vi"/>
+		</Item>
 	</Item>
 	<Item Name="tests (LV-Jl)" Type="Folder">
 		<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 	</Item>
 	<Item Name="10-send&amp;receive-arrays-backup.vi" Type="VI" URL="../VIs/10-send&amp;receive-arrays-backup.vi"/>
-	<Item Name="generate and convert rnd 1,2,3-D arrays.vi" Type="VI" URL="../VIs/utils/generate and convert rnd 1,2,3-D arrays.vi"/>
 </Library>
