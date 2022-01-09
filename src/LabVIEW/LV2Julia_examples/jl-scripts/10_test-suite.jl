@@ -69,7 +69,8 @@ end
 
 Fancy way to make up 1D, 2D and 3D array sizes such that their
 number of elements is equal. N of elements is random and approx 2^(pw2+-0.5).
-Factorization of N into 2 and 3 terms is random as well.
+Factorization of N into 2 and 3 terms is random as well. s1=N, s2&s3 are
+corresponding factorizations as tuples.
 """
 function sizes123(; pw2)
     n = rndf3(pw2)
