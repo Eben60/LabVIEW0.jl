@@ -29,3 +29,4 @@ LV code | _err?_ | description
 **5235825** | _warn_ | Julia server version higher that LV client
 **5235826** | _warn_ | Julia server version lower that LV client
 **5235827** | _err_ | Julia example scripts folder not found
+**5235828** | _err_ | please define byte order for this platform 

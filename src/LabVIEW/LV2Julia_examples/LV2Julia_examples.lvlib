@@ -49,6 +49,7 @@
 			<Item Name="peppers_color_256.png" Type="Document" URL="../other_files/peppers_color_256.png"/>
 		</Item>
 		<Item Name="typedefs" Type="Folder">
+			<Item Name="array 123D sizes.ctl" Type="VI" URL="../VIs/array 123D sizes.ctl"/>
 			<Item Name="example args cluster.ctl" Type="VI" URL="../VIs/example args cluster.ctl"/>
 			<Item Name="example Fun&amp;args cluster.ctl" Type="VI" URL="../VIs/example Fun&amp;args cluster.ctl"/>
 			<Item Name="example server response cluster.ctl" Type="VI" URL="../VIs/example server response cluster.ctl"/>
