@@ -13,6 +13,6 @@ end
 export lv_dir
 
 using Reexport
-@reexport using Jl_0mq_4Labview
+@reexport using LVServer
 
 end
