@@ -1,7 +1,7 @@
 name = "Labview2Jl"
 uuid = "b5ef6335-26be-4d6f-85a4-8b5df3cbaa06"
 authors = ["Eben60"]
-version = "0.0.2-alpha.2"
+version = "0.2.0"
 
 [deps]
 LVServer = "b45899a3-f603-4de6-8657-71d649cef297"
