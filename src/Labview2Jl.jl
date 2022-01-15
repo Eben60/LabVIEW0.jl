@@ -1,4 +1,4 @@
-module Labview2Jl
+module LabVIEW0
 
 """
     lv_dir()

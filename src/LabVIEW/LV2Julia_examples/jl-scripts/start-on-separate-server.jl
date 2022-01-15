@@ -1,11 +1,11 @@
-using Labview2Jl
+using LabVIEW0
 
 try
     # change the path accordingly
-    include(get_script_path(raw"/users/eben60/Desktop/Julia/Labview2Jl.jl/src/LabVIEW/jl-scripts/09_combined_example.jl"))
-    Labview2Jl.setglobals(isOK=true)
+    include(get_script_path(raw"/users/eben60/Desktop/Julia/LabVIEW0.jl/src/LabVIEW/jl-scripts/09_combined_example.jl"))
+    LabVIEW0.setglobals(isOK=true)
 catch excep
-    Labview2Jl.setglobals(isOK=false, excpn=(;excep, stack_trace=backtrace()))
+    LabVIEW0.setglobals(isOK=false, excpn=(;excep, stack_trace=backtrace()))
 end
 
 server_0mq4lv(fns)

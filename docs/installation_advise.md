@@ -9,15 +9,15 @@ Julia is FOSS and can be downloaded from https://julialang.org/downloads/ . The 
 
 You also need to download [ZMQ for LabVIEW](https://sourceforge.net/projects/labview-zmq/) and install it using [NI Package Manager](https://www.ni.com/en-ie/support/downloads/software-products/download.package-manager.html).
 
-This package is then installed under Julia in the [standard julian way](https://docs.julialang.org/en/v1/stdlib/Pkg/): type `add Labview2Jl` in the  Pkg REPL. The LabVIEW project will be installed as a part of this package. ZMQ for Julia will also be installed as a dependence.
+This package is then installed under Julia in the [standard julian way](https://docs.julialang.org/en/v1/stdlib/Pkg/): type `add LabVIEW0` in the  Pkg REPL. The LabVIEW project will be installed as a part of this package. ZMQ for Julia will also be installed as a dependence.
 
 ## Getting Started
 
 First, locate the `LabVIEW` folder within the installed package. You can get it from Julia REPL:  
-`using Labview2Jl`  
+`using LabVIEW0`  
 `lv_dir();`
 
-Second, study the examples from the ´LV2Julia_examples.lvlib´ library within the LabVIEW project ´Labview2Jl.lvproj´: The VIs as well as the corresponding Julia scripts.
+Second, study the examples from the ´LV2Julia_examples.lvlib´ library within the LabVIEW project ´LabVIEW0.lvproj´: The VIs as well as the corresponding Julia scripts.
 
 Third, include the ´LV2Julia_core.lvlib´ library into your own project and use it in combination with your own scripts.
 
