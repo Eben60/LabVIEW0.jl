@@ -1,0 +1,8 @@
+Improve documentation, learn Documenter
+
+Implement LV server - Julia client
+API to add custom types
+
+LV Package distribution
+Precompilation
+Multithreading, parallel access
