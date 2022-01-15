@@ -63,5 +63,4 @@
 	<Item Name="tests (LV-Jl)" Type="Folder">
 		<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 	</Item>
-	<Item Name="10-send&amp;receive-arrays-backup.vi" Type="VI" URL="../VIs/10-send&amp;receive-arrays-backup.vi"/>
 </Library>
