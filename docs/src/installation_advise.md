@@ -19,7 +19,7 @@ First, locate the `LabVIEW` folder within the installed package. You can get it 
 
 Second, study the examples from the ´LV2Julia_examples.lvlib´ library within the LabVIEW project ´LabVIEW0.lvproj´: The VIs as well as the corresponding Julia scripts.
 
-Third, include the ´LV2Julia_core.lvlib´ library into your own project and use it in combination with your own scripts.
+Third, include the ´LV2Julia_core.lvlib´ library into your own project and use it in combination with your own scripts. Here [explanations](./writing_Julia_scripts.md) how to write your Julia scripts to be used from Julia.
 
 ### Well, maybe not exactly that simple
 
