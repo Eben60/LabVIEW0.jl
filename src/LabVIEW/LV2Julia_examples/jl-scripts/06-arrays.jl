@@ -7,7 +7,7 @@ function lineq(;m, v, invert=false)
     else
         invm=inv(m)
         detm = det(m)
-        return (; detm, bigarrs=(; s, invm), )
+        return (; detm, bigarrs=(; s, invm))
     end
 end
 

@@ -10,10 +10,10 @@ function foo(;x, y)
     return (; f=f)
 end
 
-function baz(;qux)
-    q = qux(x, y)
-    return (; q)
+function rnd8(;n)
+    r = rand(UInt8, n)
+    return (; bigarrs=(; r))
 end
 
-(; foo=foo, baz=baz)
+(; foo=foo, rnd8)
 ```
