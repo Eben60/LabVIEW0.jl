@@ -81,5 +81,11 @@ This file contains a short information on each example, so that you can get a fi
 
 Note: Julia script needs some additional packages, it is better to install them manually before actually running the test (see the script)
 
+## 08-send-and-receive-img.vi
+* [Wiring diagram](./LV-Screenshots/08-send-and-receive-img/diagramm.png) 
+* [Front panel](./LV-Screenshots/08-send-and-receive-img/FP.png)
+* Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/08-transform_img.jl)
 
+After studying the above examples you should be able to use this package for your purposes.
 
+For the examples **09** and **10** - you may try them after installing the package on your computer. 
