@@ -23,9 +23,14 @@ This file contains a short information on each example, so that you can get a fi
 * [Front panel](./LV-Screenshots/02-sqrt_with_error_processing/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/02-sqrt_with_error_processing.jl)
 
-
 ## 03-without_args_and_returned_val.vi
 * Printing "Hello World" in the Julia terminal window
 * [Wiring diagram](./LV-Screenshots/03-without_args_and_returned_val/diagramm.png) 
 * [Front panel](./LV-Screenshots/03-without_args_and_returned_val/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/03-without_args_and_returned_val.jl)
+
+## 04-nested_data_structures.vi
+* Somewhat more complex data structures with JSON-encoding
+* [Wiring diagram](./LV-Screenshots/04-nested_data_structures/diagramm.png) 
+* [Front panel](./LV-Screenshots/04-nested_data_structures/FP.png)
+* Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/04-nested_data_structures.jl)
