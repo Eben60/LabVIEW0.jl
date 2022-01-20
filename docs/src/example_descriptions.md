@@ -51,4 +51,4 @@ This file contains a short information on each example, so that you can get a fi
 * The same, but Julia server started externally (and can be on a different computer)
 * [Wiring diagram](./LV-Screenshots/05c-multifunc_external-server/diagramm.png) 
 * [Front panel](./LV-Screenshots/05c-multifunc_external-server/FP.png)
-* Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/05c-multifunc_external-server.jl)
+* Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/05-on_external_server.jl)
