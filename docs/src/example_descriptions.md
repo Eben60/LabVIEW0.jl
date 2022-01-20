@@ -55,7 +55,7 @@ This file contains a short information on each example, so that you can get a fi
 
 ## 06a-arrays.vi
 * Let Julia solve a system of linear equations and invert a matrix. For this purpose send and receive a 2D and a 1D array.
-* Demonstrate flattening and unflattening of numeric arrays to/from a binary format. 
+* Demonstrate flattening and unflattening of numeric arrays to/from a binary format. JSON-encoded data are sent and received here, too.
 * [Wiring diagram](./LV-Screenshots/06a-arrays/diagramm.png) 
 * [Front panel](./LV-Screenshots/06a-arrays/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/06-arrays.jl)
