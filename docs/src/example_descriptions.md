@@ -18,7 +18,7 @@ This file contains a short information on each example, so that you can get a fi
 
 ## 02-sqrt_with_error_processing.vi
 * Square root
-* Demonstrate error processing
+* Demonstrates error processing
 * [Wiring diagram](./LV-Screenshots/02-sqrt_with_error_processing/diagramm.png) 
 * [Front panel](./LV-Screenshots/02-sqrt_with_error_processing/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/02-sqrt_with_error_processing.jl)
@@ -34,3 +34,15 @@ This file contains a short information on each example, so that you can get a fi
 * [Wiring diagram](./LV-Screenshots/04-nested_data_structures/diagramm.png) 
 * [Front panel](./LV-Screenshots/04-nested_data_structures/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/04-nested_data_structures.jl)
+
+## 05a-multiple_functions.vi
+* Access to different Julia-implemented functions
+* [Wiring diagram](./LV-Screenshots/05a-multiple_functions/diagramm.png) 
+* [Front panel](./LV-Screenshots/05a-multiple_functions/FP.png)
+* Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/05-multiple_functions.jl)
+
+## 05b-multiple_functions.vi
+* The same, but getting the list of available function from the server
+* [Wiring diagram](./LV-Screenshots/05b-multiple_functions/diagramm.png) 
+* [Front panel](./LV-Screenshots/05b-multiple_functions/FP.png)
+* Julia script: see 01a
