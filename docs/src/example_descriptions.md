@@ -36,7 +36,7 @@ This file contains a short information on each example, so that you can get a fi
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/04-nested_data_structures.jl)
 
 ## 05a-multiple_functions.vi
-* Access to different Julia-implemented functions
+* Access to multiple Julia-implemented functions
 * [Wiring diagram](./LV-Screenshots/05a-multiple_functions/diagramm.png) 
 * [Front panel](./LV-Screenshots/05a-multiple_functions/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/05-multiple_functions.jl)
