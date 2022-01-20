@@ -45,4 +45,10 @@ This file contains a short information on each example, so that you can get a fi
 * The same, but getting the list of available function from the server
 * [Wiring diagram](./LV-Screenshots/05b-multiple_functions/diagramm.png) 
 * [Front panel](./LV-Screenshots/05b-multiple_functions/FP.png)
-* Julia script: see 01a
+* Julia script: see 05a
+
+## 05c-multifunc_external-server .vi
+* The same, but Julia server started externally (and can be on a different computer)
+* [Wiring diagram](./LV-Screenshots/05c-multifunc_external-server/diagramm.png) 
+* [Front panel](./LV-Screenshots/05c-multifunc_external-server/FP.png)
+* Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/05c-multifunc_external-server.jl)
