@@ -11,14 +11,14 @@ This file contains a short information on each example, so that you can get a fi
 
 ## 01b_add_two_numbers.vi
 * Adding two numbers and getting result back
-* Demonstrates slightly different way to get data encoded
+* Demonstrate slightly different way to get data encoded
 * [Wiring diagram](./LV-Screenshots/01b_add_two_numbers/diagramm.png) 
 * [Front panel](./LV-Screenshots/01b_add_two_numbers/FP.png)
 * Julia script: see 01a
 
 ## 02-sqrt_with_error_processing.vi
 * Square root
-* Demonstrates error processing
+* Demonstrate error processing
 * [Wiring diagram](./LV-Screenshots/02-sqrt_with_error_processing/diagramm.png) 
 * [Front panel](./LV-Screenshots/02-sqrt_with_error_processing/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/02-sqrt_with_error_processing.jl)
@@ -47,8 +47,15 @@ This file contains a short information on each example, so that you can get a fi
 * [Front panel](./LV-Screenshots/05b-multiple_functions/FP.png)
 * Julia script: see 05a
 
-## 05c-multifunc_external-server .vi
+## 05c-multifunc_external-server.vi
 * The same, but Julia server started externally (and can be on a different computer)
 * [Wiring diagram](./LV-Screenshots/05c-multifunc_external-server/diagramm.png) 
 * [Front panel](./LV-Screenshots/05c-multifunc_external-server/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/05-on_external_server.jl)
+
+## 06a-arrays.vi
+* Let Julia solve a system of linear equations and invert a matrix. For this purpose send and receive a 2D and a 1D array.
+* Demonstrate flattening and unflattening of numeric arrays to/from a binary format. 
+* [Wiring diagram](./LV-Screenshots/06a-arrays/diagramm.png) 
+* [Front panel](./LV-Screenshots/06a-arrays/FP.png)
+* Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/06-arrays.jl)
