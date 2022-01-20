@@ -59,3 +59,9 @@ This file contains a short information on each example, so that you can get a fi
 * [Wiring diagram](./LV-Screenshots/06a-arrays/diagramm.png) 
 * [Front panel](./LV-Screenshots/06a-arrays/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/06-arrays.jl)
+
+## 06b-arrays.vi
+* The same, with random generated arrays of arbitrary (withing reasonable) size. Comparing LabVIEW and Julia computation time.
+* [Wiring diagram](./LV-Screenshots/06b-arrays/diagramm.png) 
+* [Front panel](./LV-Screenshots/06b-arrays/FP.png)
+* * Julia script: see 06a
