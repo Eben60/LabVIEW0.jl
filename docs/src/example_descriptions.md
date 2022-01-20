@@ -78,5 +78,8 @@ This file contains a short information on each example, so that you can get a fi
 * [Wiring diagram](./LV-Screenshots/07-get-and_display_image/diagramm.png) 
 * [Front panel](./LV-Screenshots/07-get-and_display_image/FP.png)
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/07-get-and_display_image.jl)
+
 Note: Julia script needs some additional packages, it is better to install them manually before actually running the test (see the script)
+
+
 
