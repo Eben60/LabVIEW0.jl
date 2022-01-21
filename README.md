@@ -12,4 +12,4 @@ Data get flattened to a byte array. Data description is sent separately using JS
 
 Currently 1D, 2D & 3D arrays of most numeric formats (integers, floats, and complex of different size as well as boolean), and RGB images are supported in both directions.
 
-For details of usage, see the [Julia Scripts Advice](docs\src\writing_Julia_scripts.md) page as well  [Examples](docs\src\example_descriptions.md) page. 
+For details of usage, see the [Julia Scripts Advice](docs/src/writing_Julia_scripts.md) page as well  [Examples](docs/src/example_descriptions.md) page. 
