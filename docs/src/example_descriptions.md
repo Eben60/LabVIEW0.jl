@@ -67,7 +67,7 @@ This file contains a short information on each example, so that you can get a fi
 * Julia script: see 06a
 
 ## 06c-arrays.vi
-* Demonstrate concurrent access to Julia server: Solving a system of equations in one loop, and computing eigenvalues in separate one
+* Demonstrate concurrent access to Julia server: Solving a system of equations in one loop, and computing eigenvalues in a separate one.
 * [Wiring diagram](./LV-Screenshots/06c-arrays/diagramm.png) 
 * [Front panel](./LV-Screenshots/06c-arrays/FP.png)
 * Julia script: see 06a
