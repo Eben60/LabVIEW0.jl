@@ -15,5 +15,5 @@ function rnd8(;n)
     return (; bigarrs=(; r))
 end
 
-(; foo=foo, rnd8)
+fns = (; foo=foo, rnd8)
 ```
