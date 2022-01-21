@@ -17,9 +17,9 @@ This package is then installed under Julia in the [standard julian way](https://
 `using LabVIEW0`  
 `lv_dir();`
 
-**Second**, study the examples from the ´LV2Julia_examples.lvlib´ library within the LabVIEW project ´LabVIEW0.lvproj´: The VIs as well as the corresponding Julia scripts.
+**Second**, open the LabVIEW project `LabVIEW0.lvproj` in the "items view", open the folder `Examples` of the `LV2Julia_examples.lvlib` library, and study the examples: The VIs as well as the corresponding Julia scripts. See also this [documentation page on Julia scripts](writing_Julia_scripts.md).  
 
-**Third**, include the ´LV2Julia_core.lvlib´ library into your own project and use it in combination with your own scripts. Here [explanations](./writing_Julia_scripts.md) how to write your Julia scripts to be used from Julia.
+**Third**, include the ´LV2Julia_core.lvlib´ library into your own project and use it in combination with your own scripts. 
 
 ### Well, maybe not exactly that simple
 
