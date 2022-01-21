@@ -48,7 +48,6 @@
 			<Item Name="RGBimg2bin2RGBimg.vi" Type="VI" URL="../VIs/RGBimg2bin2RGBimg.vi"/>
 		</Item>
 		<Item Name="trials &amp; errors" Type="Folder">
-			<Item Name="compare versions.vi" Type="VI" URL="../VIs/compare versions.vi"/>
 			<Item Name="int random.vi" Type="VI" URL="../VIs/int random.vi"/>
 			<Item Name="LinEq-test.vi" Type="VI" URL="../VIs/LinEq-test.vi"/>
 			<Item Name="some type random.vi" Type="VI" URL="../VIs/some type random.vi"/>
@@ -77,6 +76,7 @@
 			<Item Name="check if special command.vi" Type="VI" URL="../VIs/check if special command.vi"/>
 			<Item Name="check JSON validity.vi" Type="VI" URL="../VIs/check JSON validity.vi"/>
 			<Item Name="Clean up REQ Socket.vi" Type="VI" URL="../VIs/Clean up REQ Socket.vi"/>
+			<Item Name="compare versions.vi" Type="VI" URL="../VIs/compare versions.vi"/>
 			<Item Name="concat JSON.vi" Type="VI" URL="../VIs/concat JSON.vi"/>
 			<Item Name="convert to some numtype.vim" Type="VI" URL="../VIs/convert to some numtype.vim"/>
 			<Item Name="Convert U32 to byte array.vi" Type="VI" URL="../VIs/Convert U32 to byte array.vi"/>
