@@ -1,5 +1,5 @@
 # LabVIEW0.jl
-Calling Julia functions from LabVIEW (TM) using ZMQ
+Calling Julia functions from LabVIEW (TM) using [ZeroMQ](https://zeromq.org/)
 
 Two ways of data exchange between LV client and Julia server are supported:
 
