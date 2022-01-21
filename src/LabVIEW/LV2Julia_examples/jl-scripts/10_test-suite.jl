@@ -1,4 +1,12 @@
-using Primes, Random
+using Random
+
+try
+    using Primes
+catch
+    import Pkg
+    Pkg.add("Primes")
+end
+
 
 function rndpw2(pw2)
     @assert pw2>=5
