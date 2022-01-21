@@ -1,7 +1,7 @@
 name = "LabVIEW0"
 uuid = "b5ef6335-26be-4d6f-85a4-8b5df3cbaa06"
 authors = ["Eben60"]
-version = "0.2.0"
+version = "0.1.1"
 
 [deps]
 LVServer = "b45899a3-f603-4de6-8657-71d649cef297"
