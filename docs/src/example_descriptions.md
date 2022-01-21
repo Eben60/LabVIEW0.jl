@@ -61,7 +61,7 @@ This file contains a short information on each example, so that you can get a fi
 * Accompanying [Julia script](../../src/LabVIEW/LV2Julia_examples/jl-scripts/06-arrays.jl)
 
 ## 06b-arrays.vi
-* Solving a system of linear equations with random generated arrays of arbitrary (within reasonable) size. Comparing LabVIEW and Julia computation time.
+* Solving a system of linear equations with random generated arrays of an arbitrary size (within reasonable). Comparing LabVIEW and Julia computation time.
 * [Wiring diagram](./LV-Screenshots/06b-arrays/diagramm.png) 
 * [Front panel](./LV-Screenshots/06b-arrays/FP.png)
 * Julia script: see 06a
