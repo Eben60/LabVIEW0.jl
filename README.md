@@ -14,4 +14,4 @@ Currently 1D, 2D & 3D arrays of most numeric formats (integers, floats, and comp
 
 For details of usage, see the [Julia Scripts Advice](docs/src/writing_Julia_scripts.md) page as well  [Examples](docs/src/example_descriptions.md) page. See also [Installation Advice](docs/src/installation_advise.md).
 
-Currently, LV part has been tested on Windows only. For other plattforms, some minor changes could be necessary. Julia part (mostly separated into [LVServer](https://github.com/Eben60/LVServer.jl)), should work equally on all plattforms.
+Currently, LV part of the package has been tested on Windows only. For other plattforms, some minor changes could be necessary. Julia part (mostly separated into [LVServer](https://github.com/Eben60/LVServer.jl)), should work equally on all plattforms.
