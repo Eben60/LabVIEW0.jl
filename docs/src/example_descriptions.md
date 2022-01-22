@@ -12,8 +12,8 @@ This file contains a short information on each example, so that you can get a fi
 ## 01b_add_two_numbers.vi
 * Adding two numbers and getting result back
 * Demonstrate slightly different way to get data encoded
-* [Wiring diagram](./LV-Screenshots/01b_add_two_numbers/diagramm.png)
-* [Front panel](./LV-Screenshots/01b_add_two_numbers/FP.png)
+* [Wiring diagram](./LV-Screenshots/01b-add_two_numbers/diagramm.png)
+* [Front panel](./LV-Screenshots/01b-add_two_numbers/FP.png)
 * Julia script: see 01a
 
 ## 02-sqrt_with_error_processing.vi
