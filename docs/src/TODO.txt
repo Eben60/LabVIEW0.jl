@@ -1,6 +1,8 @@
 Improve documentation, learn Documenter
 
 Implement LV server - Julia client
+   Stopping LV server from LV by starting a LV client and sending "Stop" command
+
 API to add custom types
 
 LV Package distribution
@@ -12,3 +14,5 @@ Multithreading, parallel access
 zmq Port
 zmq address range (Server)
 LabVIEW0 / LVServer / LV2Julia_core version check on server
+   deprecate current "version_this_pkg()"
+   write "versioncheck(; LV2Julia_v, warn=true)" for triple-way version check
