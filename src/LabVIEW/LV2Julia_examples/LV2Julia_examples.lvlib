@@ -42,6 +42,7 @@
 		<Item Name="08-transform_img.jl" Type="Document" URL="../jl-scripts/08-transform_img.jl"/>
 		<Item Name="09_another_example.jl" Type="Document" URL="../jl-scripts/09_another_example.jl"/>
 		<Item Name="10_test-suite.jl" Type="Document" URL="../jl-scripts/10_test-suite.jl"/>
+		<Item Name="11-async.jl" Type="Document" URL="../jl-scripts/11-async.jl"/>
 		<Item Name="start-on-separate-server.jl" Type="Document" URL="../jl-scripts/start-on-separate-server.jl"/>
 	</Item>
 	<Item Name="other files" Type="Folder">
