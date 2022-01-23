@@ -8,6 +8,7 @@ API to add custom types
 LV Package distribution
 Precompilation
 Multithreading, parallel access
+   non-blocking access with @spawn and polling (see threading in ThisAndThat)
 
 ----
 
