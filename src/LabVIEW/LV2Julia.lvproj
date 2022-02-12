@@ -10,6 +10,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="12-check_version_test.vi" Type="VI" URL="../LV2Julia_examples/VIs/12-check_version_test.vi"/>
 		<Item Name="LV2Julia_core.lvlib" Type="Library" URL="../LV2Julia_core/LV2Julia_core.lvlib"/>
 		<Item Name="LV2Julia_examples.lvlib" Type="Library" URL="../LV2Julia_examples/LV2Julia_examples.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
