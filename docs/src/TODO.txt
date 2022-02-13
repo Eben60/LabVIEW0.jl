@@ -8,12 +8,12 @@ API to add custom types
 LV Package distribution
 Precompilation
 Multithreading, parallel access
-   non-blocking access with @spawn and polling (see threading in ThisAndThat)
+   non-blocking access with @spawn and polling (in progress)
 
 ----
 
 zmq Port
 zmq address range (Server)
-LabVIEW0 / LVServer / LV2Julia_core version check on server
-   deprecate current "version_this_pkg()"
-   write "versioncheck(; LV2Julia_v, warn=true)" for triple-way version check
+LabVIEW0 / LVServer / LV2Julia_core version check on server (done)
+   deprecate current "version_this_pkg()" / not necessary
+   write "versioncheck(; LV2Julia_v, warn=true)" for triple-way version check 
