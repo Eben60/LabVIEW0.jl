@@ -28,6 +28,7 @@
 		<Item Name="API" Type="Folder">
 			<Item Name="globals" Type="Folder">
 				<Item Name="jl stack traces global.vi" Type="VI" URL="../VIs/jl stack traces global.vi"/>
+				<Item Name="packages versions global.vi" Type="VI" URL="../VIs/packages versions global.vi"/>
 				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
 			</Item>
 			<Item Name="bindata to image.vi" Type="VI" URL="../VIs/bindata to image.vi"/>
