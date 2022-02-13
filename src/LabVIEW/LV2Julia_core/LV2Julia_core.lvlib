@@ -29,6 +29,7 @@
 			<Item Name="globals" Type="Folder">
 				<Item Name="jl stack traces global.vi" Type="VI" URL="../VIs/jl stack traces global.vi"/>
 				<Item Name="packages versions global.vi" Type="VI" URL="../VIs/packages versions global.vi"/>
+				<Item Name="prot version global.vi" Type="VI" URL="../VIs/prot version global.vi"/>
 				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
 			</Item>
 			<Item Name="bindata to image.vi" Type="VI" URL="../VIs/bindata to image.vi"/>
@@ -58,7 +59,6 @@
 		<Item Name="Utils" Type="Folder">
 			<Item Name="globals" Type="Folder">
 				<Item Name="jl-scripts path.vi" Type="VI" URL="../VIs/jl-scripts path.vi"/>
-				<Item Name="version nos global.vi" Type="VI" URL="../VIs/version nos global.vi"/>
 			</Item>
 			<Item Name="4-bytes subarray to U32.vi" Type="VI" URL="../VIs/4-bytes subarray to U32.vi"/>
 			<Item Name="add element to sample.vi" Type="VI" URL="../VIs/add element to sample.vi"/>
