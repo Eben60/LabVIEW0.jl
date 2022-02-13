@@ -23,6 +23,7 @@
 		<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
 		<Item Name="09_another_example.vi" Type="VI" URL="../VIs/09_another_example.vi"/>
 		<Item Name="10-send&amp;receive-arrays.vi" Type="VI" URL="../VIs/10-send&amp;receive-arrays.vi"/>
+		<Item Name="11-async.vi" Type="VI" URL="../VIs/11-async.vi"/>
 	</Item>
 	<Item Name="jl-scripts" Type="Folder">
 		<Item Name="probably unused" Type="Folder">
@@ -41,6 +42,7 @@
 		<Item Name="08-transform_img.jl" Type="Document" URL="../jl-scripts/08-transform_img.jl"/>
 		<Item Name="09_another_example.jl" Type="Document" URL="../jl-scripts/09_another_example.jl"/>
 		<Item Name="10_test-suite.jl" Type="Document" URL="../jl-scripts/10_test-suite.jl"/>
+		<Item Name="11-async.jl" Type="Document" URL="../jl-scripts/11-async.jl"/>
 		<Item Name="start-on-separate-server.jl" Type="Document" URL="../jl-scripts/start-on-separate-server.jl"/>
 	</Item>
 	<Item Name="other files" Type="Folder">
@@ -59,8 +61,5 @@
 			<Item Name="array statistics.vi" Type="VI" URL="../VIs/array statistics.vi"/>
 			<Item Name="generate and convert rnd 1,2,3-D arrays.vi" Type="VI" URL="../VIs/utils/generate and convert rnd 1,2,3-D arrays.vi"/>
 		</Item>
-	</Item>
-	<Item Name="tests (LV-Jl)" Type="Folder">
-		<Item Name="send&amp;receive_TestSuite.vi" Type="VI" URL="../VIs/send&amp;receive_TestSuite.vi"/>
 	</Item>
 </Library>
