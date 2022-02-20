@@ -32,6 +32,7 @@
 				<Item Name="prot version global.vi" Type="VI" URL="../VIs/prot version global.vi"/>
 				<Item Name="ZMQ timeouts global.vi" Type="VI" URL="../VIs/ZMQ timeouts global.vi"/>
 			</Item>
+			<Item Name="async call &amp; poll.vim" Type="VI" URL="../VIs/async call &amp; poll.vim"/>
 			<Item Name="bindata to image.vi" Type="VI" URL="../VIs/bindata to image.vi"/>
 			<Item Name="bindata to shaped numarray.vim" Type="VI" URL="../VIs/bindata to shaped numarray.vim"/>
 			<Item Name="build json for REQ.vim" Type="VI" URL="../VIs/build json for REQ.vim"/>
@@ -44,6 +45,7 @@
 			<Item Name="jl-script abs path.vi" Type="VI" URL="../VIs/jl-script abs path.vi"/>
 			<Item Name="list available jl functions.vi" Type="VI" URL="../VIs/list available jl functions.vi"/>
 			<Item Name="ping server.vi" Type="VI" URL="../VIs/ping server.vi"/>
+			<Item Name="poll spawned task.vi" Type="VI" URL="../VIs/poll spawned task.vi"/>
 			<Item Name="REQ full lifecycle.vi" Type="VI" URL="../VIs/REQ full lifecycle.vi"/>
 		</Item>
 		<Item Name="tests (LV only)" Type="Folder">

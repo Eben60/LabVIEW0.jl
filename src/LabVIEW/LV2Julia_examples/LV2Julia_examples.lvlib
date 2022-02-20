@@ -62,4 +62,9 @@
 		</Item>
 		<Item Name="11-async.vi" Type="VI" URL="../VIs/11-async.vi"/>
 	</Item>
+	<Item Name="11a-async.vi" Type="VI" URL="../VIs/11a-async.vi"/>
+	<Item Name="11b-async.vi" Type="VI" URL="../VIs/11b-async.vi"/>
+	<Item Name="11c-async.vi" Type="VI" URL="../VIs/11c-async.vi"/>
+	<Item Name="11d-async.vi" Type="VI" URL="../VIs/11d-async.vi"/>
+	<Item Name="11e-async.vi" Type="VI" URL="../VIs/11e-async.vi"/>
 </Library>

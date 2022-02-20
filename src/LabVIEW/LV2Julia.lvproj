@@ -10,8 +10,10 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="11a-tmp.vi" Type="VI" URL="../tmp/11a-tmp.vi"/>
 		<Item Name="LV2Julia_core.lvlib" Type="Library" URL="../LV2Julia_core/LV2Julia_core.lvlib"/>
 		<Item Name="LV2Julia_examples.lvlib" Type="Library" URL="../LV2Julia_examples/LV2Julia_examples.lvlib"/>
+		<Item Name="polling control.ctl" Type="VI" URL="../LV2Julia_core/VIs/polling control.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
