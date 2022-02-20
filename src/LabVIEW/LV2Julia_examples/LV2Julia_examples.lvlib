@@ -8,6 +8,7 @@
 
 </Property>
 	<Item Name="Examples" Type="Folder">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="01a-add_two_numbers.vi" Type="VI" URL="../VIs/01a-add_two_numbers.vi"/>
 		<Item Name="01b-add_two_numbers.vi" Type="VI" URL="../VIs/01b-add_two_numbers.vi"/>
 		<Item Name="02-sqrt_with_error_processing.vi" Type="VI" URL="../VIs/02-sqrt_with_error_processing.vi"/>
@@ -21,8 +22,8 @@
 		<Item Name="06c-arrays.vi" Type="VI" URL="../VIs/06c-arrays.vi"/>
 		<Item Name="07-get-and_display_image.vi" Type="VI" URL="../VIs/07-get-and_display_image.vi"/>
 		<Item Name="08-send-and-receive-img.vi" Type="VI" URL="../VIs/08-send-and-receive-img.vi"/>
-		<Item Name="09_another_example.vi" Type="VI" URL="../VIs/09_another_example.vi"/>
 		<Item Name="10-send&amp;receive-arrays.vi" Type="VI" URL="../VIs/10-send&amp;receive-arrays.vi"/>
+		<Item Name="09_another_example.vi" Type="VI" URL="../VIs/09_another_example.vi"/>
 	</Item>
 	<Item Name="jl-scripts" Type="Folder">
 		<Item Name="probably unused" Type="Folder">

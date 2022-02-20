@@ -18,6 +18,7 @@
 		<Item Name="extended error cluster.ctl" Type="VI" URL="../VIs/extended error cluster.ctl"/>
 		<Item Name="Numeric Types enum.ctl" Type="VI" URL="../VIs/Numeric Types enum.ctl"/>
 		<Item Name="placeholder arguments cluster.ctl" Type="VI" URL="../VIs/placeholder arguments cluster.ctl"/>
+		<Item Name="polling control.ctl" Type="VI" URL="../VIs/polling control.ctl"/>
 		<Item Name="Server or client state.ctl" Type="VI" URL="../VIs/Server or client state.ctl"/>
 		<Item Name="StackFrame.ctl" Type="VI" URL="../VIs/StackFrame.ctl"/>
 		<Item Name="timestamped jl err info.ctl" Type="VI" URL="../VIs/timestamped jl err info.ctl"/>
